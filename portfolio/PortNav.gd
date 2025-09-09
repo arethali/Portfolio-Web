@@ -3,12 +3,39 @@ extends Control
 @onready var home_pos = 1920
 @onready var projects_pos = 3840
 @onready var personal_pos = 0
+@export var camera : Camera2D
+#@export var to_projects_button : Button
+#@export var to_presonal_button : Button
+#@export var to_projects_button : TextureButton
+
+var root_window
+
+
+func _ready():
+	root_window = get_tree().root
+	DisplayServer.window_set_min_size(Vector2i(0, 480))
+	root_window.size_changed.connect(_on_window_size_changed)
+	
+#
+func _on_window_size_changed():
+	var aspect_ratio = float(get_viewport().size.x)/float(get_viewport().size.y)
+	if aspect_ratio <= 1920.0/1080.0:
+		camera.offset.y = 0
+		root_window.content_scale_mode = Window.CONTENT_SCALE_MODE_CANVAS_ITEMS
+	else: 
+		root_window.content_scale_mode = Window.CONTENT_SCALE_MODE_DISABLED
+		camera.offset.y = float(1080.0 - float(get_viewport().size.y))
+	
 
 func _on_button_pressed():
-	$Camera2D.position.x = projects_pos
+	camera.position.x = projects_pos
 	#$AnimationPlayer.play("Cam_Home_to_Projects")
 
 
 func _on_button_2_pressed():
-	$Camera2D.position.x = home_pos
+	camera.position.x = home_pos
 	#$AnimationPlayer.play_backwards("Cam_Home_to_Projects")
+
+
+func _on_button_3_pressed():
+	camera.position.x = personal_pos
