@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u7e5vy8j15as"
-path="res://.godot/imported/Home Contact Open first shadow3.png-5649bd8ad25b9886eb2150669302adf2.ctex"
+uid="uid://bjedyf3vgsyxa"
+path="res://.godot/imported/Trash.png-5de2b5f1e001a06144ccddf71843fd97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Mail/Home Contact Open first/Home Contact Open first shadow3.png"
-dest_files=["res://.godot/imported/Home Contact Open first shadow3.png-5649bd8ad25b9886eb2150669302adf2.ctex"]
+source_file="res://Assets/Tent/Trash.png"
+dest_files=["res://.godot/imported/Trash.png-5de2b5f1e001a06144ccddf71843fd97.ctex"]
 
 [params]
 

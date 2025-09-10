@@ -10,12 +10,18 @@ extends Control
 
 var root_window
 
+var arrow = load("res://Assets/UI/Global/Cursor/Arrow_green.png")
+var point = load("res://Assets/UI/Global/Cursor/Pointing Hand small.png")
 
 func _ready():
+	#display settings
 	root_window = get_tree().root
 	DisplayServer.window_set_min_size(Vector2i(0, 480))
 	root_window.size_changed.connect(_on_window_size_changed)
 	
+	#Set cursors
+	Input.set_custom_mouse_cursor(arrow, Input.CURSOR_ARROW)
+	Input.set_custom_mouse_cursor(point, Input.CURSOR_POINTING_HAND)
 #
 func _on_window_size_changed():
 	var aspect_ratio = float(get_viewport().size.x)/float(get_viewport().size.y)

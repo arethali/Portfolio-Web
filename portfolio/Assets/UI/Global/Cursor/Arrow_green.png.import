@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kea8y0dt7t2d"
-path="res://.godot/imported/Home Contact Open first shadow2.png-7503cda209be6f24f0ff3cc8a1892af9.ctex"
+uid="uid://cbkukryxh5xi0"
+path="res://.godot/imported/Arrow_green.png-0285fd9802627874abe7e32c38802ccc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Mail/Home Contact Open first/Home Contact Open first shadow2.png"
-dest_files=["res://.godot/imported/Home Contact Open first shadow2.png-7503cda209be6f24f0ff3cc8a1892af9.ctex"]
+source_file="res://Assets/UI/Global/Cursor/Arrow_green.png"
+dest_files=["res://.godot/imported/Arrow_green.png-0285fd9802627874abe7e32c38802ccc.ctex"]
 
 [params]
 

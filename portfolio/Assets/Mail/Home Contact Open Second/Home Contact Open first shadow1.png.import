@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpk2ibify3gpv"
-path="res://.godot/imported/Projector_Light5.png-23270f85817f1c726ed414d58868f50c.ctex"
+uid="uid://dh0ldsxqwrmpb"
+path="res://.godot/imported/Home Contact Open first shadow1.png-0262b2ffbca7f7078e8f713faf23ecea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Film/Light/Projector_Light5.png"
-dest_files=["res://.godot/imported/Projector_Light5.png-23270f85817f1c726ed414d58868f50c.ctex"]
+source_file="res://Assets/Mail/Home Contact Open Second/Home Contact Open first shadow1.png"
+dest_files=["res://.godot/imported/Home Contact Open first shadow1.png-0262b2ffbca7f7078e8f713faf23ecea.ctex"]
 
 [params]
 
@@ -26,7 +26,7 @@ mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
 process/fix_alpha_border=false
-process/premult_alpha=false
+process/premult_alpha=true
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
