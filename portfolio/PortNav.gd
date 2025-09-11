@@ -33,15 +33,13 @@ func _on_window_size_changed():
 		camera.offset.y = float(1080.0 - float(get_viewport().size.y))
 	
 
-func _on_button_pressed():
+func _on_projects_pressed():
 	camera.position.x = projects_pos
 	#$AnimationPlayer.play("Cam_Home_to_Projects")
 
-
-func _on_button_2_pressed():
-	camera.position.x = home_pos
-	#$AnimationPlayer.play_backwards("Cam_Home_to_Projects")
-
-
-func _on_button_3_pressed():
+func _on_personal_pressed():
 	camera.position.x = personal_pos
+
+
+func _on_back_pressed():
+	camera.position.x = home_pos

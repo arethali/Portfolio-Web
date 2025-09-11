@@ -1,4 +1,4 @@
-[gd_scene load_steps=381 format=3 uid="uid://dfhro4he33mwe"]
+[gd_scene load_steps=413 format=3 uid="uid://dfhro4he33mwe"]
 
 [ext_resource type="Texture2D" uid="uid://bldgwkrwu0770" path="res://Stylized outline.png" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://cvgj45t5itakk" path="res://PortNav.gd" id="1_uu6xs"]
@@ -8,16 +8,23 @@
 [ext_resource type="Texture2D" uid="uid://3kkp4n3bt8ej" path="res://Assets/Background/Origin/Clouds/Planet.png" id="4_4bst2"]
 [ext_resource type="Texture2D" uid="uid://bv4fpplgipoj0" path="res://Assets/Background/Origin/Sky + Mountains/Front Mountains.png" id="4_trn2v"]
 [ext_resource type="Texture2D" uid="uid://bx5s4wranypso" path="res://Assets/Background/Origin/Crashed/Crashed/Crashed1.png" id="4_w3rk5"]
+[ext_resource type="Script" uid="uid://df3psg0innjpd" path="res://cloud_generation.gd" id="5_3fgw6"]
 [ext_resource type="Texture2D" uid="uid://dfkjqjmfdoui8" path="res://Assets/Background/Origin/Sky + Mountains/Highway.png" id="5_03owx"]
 [ext_resource type="Texture2D" uid="uid://bu6765ii3foll" path="res://Assets/Background/Origin/Crashed/Crashed/Crashed2.png" id="5_5mvff"]
 [ext_resource type="Texture2D" uid="uid://drkmpg7wvwkxl" path="res://Assets/Background/Below/Ground/Desert.png" id="6_03owx"]
 [ext_resource type="Texture2D" uid="uid://iihtsv0l2u36" path="res://Assets/Background/Origin/Crashed/Crashed/Crashed3.png" id="6_oye8v"]
+[ext_resource type="Texture2D" uid="uid://bjnnafigxmd4h" path="res://Assets/Background/Origin/Clouds/Cloud1.png" id="6_spkrm"]
 [ext_resource type="Texture2D" uid="uid://dhxb5y8aeah1x" path="res://Assets/Background/Origin/Crashed/Crashed/Crashed4.png" id="7_40n85"]
+[ext_resource type="Texture2D" uid="uid://56y8fh3y65em" path="res://Assets/Background/Origin/Clouds/Cloud2.png" id="7_kq445"]
 [ext_resource type="Texture2D" uid="uid://dvrn7fj4od0vs" path="res://Assets/Background/Below/Ground/Rock+pillars.png" id="7_wkp8b"]
 [ext_resource type="Texture2D" uid="uid://c7eye3dcv8b30" path="res://Assets/Background/Below/Ground/Underground.png" id="8_20pc6"]
 [ext_resource type="Texture2D" uid="uid://cpofp77wpnkhn" path="res://Assets/Background/Origin/Crashed/Crashed/Crashed5.png" id="8_gb15f"]
+[ext_resource type="Texture2D" uid="uid://cepk0s35784je" path="res://Assets/Background/Origin/Clouds/Cloud3.png" id="8_r15k5"]
+[ext_resource type="Texture2D" uid="uid://cfkt5cm4kadc7" path="res://Assets/Background/Origin/Clouds/Cloud4.png" id="9_3b7lf"]
 [ext_resource type="Texture2D" uid="uid://jcu7s6avs8tt" path="res://Assets/Background/Origin/Crashed/Crashed/Crashed6.png" id="9_sph85"]
 [ext_resource type="Texture2D" uid="uid://enn7x50wymiu" path="res://Assets/Background/Origin/Crashed/Crashed/Crashed7.png" id="10_o7g6l"]
+[ext_resource type="Texture2D" uid="uid://ba6y5ldpvm6o8" path="res://Assets/Background/Origin/Clouds/Cloud5.png" id="10_suda2"]
+[ext_resource type="Texture2D" uid="uid://brtl5wlb45yoy" path="res://Assets/Background/Origin/Clouds/Cloud6.png" id="11_t7f7l"]
 [ext_resource type="Texture2D" uid="uid://25et715c7b8u" path="res://Assets/Background/Origin/Crashed/Crashed/Crashed8.png" id="11_vi5kq"]
 [ext_resource type="Texture2D" uid="uid://jp2pi1184gl2" path="res://Assets/Background/Origin/Crashed/Crashed/Crashed9.png" id="12_5mkgo"]
 [ext_resource type="Texture2D" uid="uid://xu843bjk80xh" path="res://Assets/Background/Origin/Crashed/Crashed/Crashed10.png" id="13_3ccbu"]
@@ -67,7 +74,6 @@
 [ext_resource type="Texture2D" uid="uid://cybvickcuyn5p" path="res://Assets/Mail/Home Contact Open Second/Home Contact Open second1.png" id="63_xurl6"]
 [ext_resource type="Texture2D" uid="uid://c3m7akflnrliu" path="res://Assets/Mail/Home Contact Open Second/Home Contact Open second2.png" id="64_hjwua"]
 [ext_resource type="Texture2D" uid="uid://550owtg0iw1f" path="res://Assets/About Me/Head/Me Head2.png" id="64_m6lip"]
-[ext_resource type="Texture2D" uid="uid://hsb10p1xemci" path="res://Assets/Mail/Home Contact Open Second/Home Contact Open second3.png" id="65_ush3o"]
 [ext_resource type="Texture2D" uid="uid://dux7iy4mbh8l4" path="res://Assets/About Me/Head/Me Head3.png" id="65_uy73y"]
 [ext_resource type="Texture2D" uid="uid://d0esqr0rr131l" path="res://Assets/Mail/Home Contact Open Second/Home Contact Open second4.png" id="66_j3xfc"]
 [ext_resource type="Texture2D" uid="uid://djpfwiajsh87j" path="res://Assets/About Me/Head/Me Head4.png" id="66_slndv"]
@@ -126,6 +132,7 @@
 [ext_resource type="Texture2D" uid="uid://hrj5oli8x5i2" path="res://Assets/Birbs/Leo/Sleep/Leo Sleep3.png" id="101_vybqf"]
 [ext_resource type="Texture2D" uid="uid://b42xgaqgh373b" path="res://Assets/Birbs/Leo/Sleep/Leo Sleep4.png" id="102_marsu"]
 [ext_resource type="Texture2D" uid="uid://b24tb5ch11bk2" path="res://Assets/Birbs/Leo/Sleep/Leo Sleep5.png" id="103_imbc2"]
+[ext_resource type="Script" uid="uid://dcdpg3cv8c24w" path="res://random_cycle_animation.gd" id="104_3fgw6"]
 [ext_resource type="Texture2D" uid="uid://dopb130c2aeaa" path="res://Assets/Birbs/Leo/Yell/Leo Yell1.png" id="104_6xmvy"]
 [ext_resource type="Texture2D" uid="uid://yehapm2jesog" path="res://Assets/Birbs/Leo/Yell/Leo Yell2.png" id="105_xkfyu"]
 [ext_resource type="Texture2D" uid="uid://c2swhjjmovyiw" path="res://Assets/Birbs/Leo/Yell/Leo Yell3.png" id="106_ep5lf"]
@@ -230,10 +237,15 @@
 [ext_resource type="Texture2D" uid="uid://cqpbcr4vgdcm6" path="res://Assets/Notebook/notebook6.png" id="228_37kty"]
 [ext_resource type="Texture2D" uid="uid://7whxhatym780" path="res://Assets/Notebook/notebook7.png" id="229_885yc"]
 [ext_resource type="Texture2D" uid="uid://bjedyf3vgsyxa" path="res://Assets/Tent/Trash.png" id="230_5imdm"]
+[ext_resource type="Texture2D" uid="uid://bok46fmqdalbc" path="res://Assets/Tent/Tent/Flap1.png" id="231_fd508"]
 [ext_resource type="Texture2D" uid="uid://bgp0nwj12ip73" path="res://Assets/Tent/Lamp/lamp1.png" id="231_yawk4"]
+[ext_resource type="Texture2D" uid="uid://ccokuno1gbjda" path="res://Assets/Tent/Tent/Flap2.png" id="232_33eqb"]
 [ext_resource type="Texture2D" uid="uid://fcxr641ras0l" path="res://Assets/Tent/Lamp/lamp2.png" id="232_44fi5"]
 [ext_resource type="Texture2D" uid="uid://crgtpxgvvyj12" path="res://Assets/Tent/Lamp/lamp3.png" id="233_d3eug"]
+[ext_resource type="Texture2D" uid="uid://cyxdvhish60dc" path="res://Assets/Tent/Tent/Flap3.png" id="233_olcpl"]
 [ext_resource type="Texture2D" uid="uid://c0185e3i07avr" path="res://Assets/Tent/Lamp/lamp4.png" id="234_cwb7a"]
+[ext_resource type="Texture2D" uid="uid://c5i3t8mc6vfa6" path="res://Assets/Tent/Tent/Flap4.png" id="234_jyltq"]
+[ext_resource type="Texture2D" uid="uid://dxcai1yoouv1p" path="res://Assets/Tent/Tent/Flap5.png" id="235_02iwb"]
 [ext_resource type="Texture2D" uid="uid://8bdatf3yoe86" path="res://Assets/Tent/Lamp/lamp5.png" id="235_y5dcv"]
 [ext_resource type="Texture2D" uid="uid://s1r1ayauxba6" path="res://Assets/Tent/Tent shadow.png" id="236_ler6j"]
 [ext_resource type="Texture2D" uid="uid://bkekmr17424wg" path="res://Assets/Yarn/Yarn shadow2.png" id="237_2f3j5"]
@@ -275,6 +287,7 @@
 [ext_resource type="Texture2D" uid="uid://duy4fsebjb6pv" path="res://Assets/Chair Spin/Chair2.png" id="273_oy43p"]
 [ext_resource type="Texture2D" uid="uid://bwwlyac5fgnk" path="res://Assets/Chair Spin/Chair3.png" id="274_0skh4"]
 [ext_resource type="Texture2D" uid="uid://mywtqvv06cnn" path="res://Assets/Chair Spin/Chair4.png" id="275_qh77x"]
+[ext_resource type="Texture2D" uid="uid://bxltgp66cf7wn" path="res://Assets/Signs/Back.png" id="276_4jki6"]
 [ext_resource type="Texture2D" uid="uid://bn3prywghjc07" path="res://Assets/Chair Spin/Chair5.png" id="276_o3gv5"]
 [ext_resource type="Texture2D" uid="uid://d14jrj67qvcv1" path="res://Assets/Desk Stuff/Desks Shadow.png" id="277_fd508"]
 [ext_resource type="Texture2D" uid="uid://r48oav0d4cka" path="res://Assets/Desk Stuff/Desks.png" id="278_33eqb"]
@@ -505,8 +518,7 @@ animations = [{
 
 [sub_resource type="Animation" id="Animation_1w2xm"]
 resource_name = "Explode"
-length = 0.8
-loop_mode = 2
+length = 0.9
 step = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -515,10 +527,10 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [7, 6, 5, 4, 3, 2, 1, 0]
+"values": [8, 7, 6, 5, 4, 3, 2, 1, 0]
 }
 
 [sub_resource type="Animation" id="Animation_38apo"]
@@ -793,68 +805,6 @@ _data = {
 &"Spark3": SubResource("Animation_4bst2")
 }
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_jhmog"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("63_xurl6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("64_hjwua")
-}, {
-"duration": 1.0,
-"texture": ExtResource("65_ush3o")
-}, {
-"duration": 1.0,
-"texture": ExtResource("66_j3xfc")
-}],
-"loop": true,
-"name": &"After Open",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("67_livak")
-}],
-"loop": true,
-"name": &"Closed",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("68_fatcg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("69_tmkk1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("70_uupql")
-}, {
-"duration": 1.0,
-"texture": ExtResource("71_nakit")
-}, {
-"duration": 1.0,
-"texture": ExtResource("72_o25de")
-}, {
-"duration": 1.0,
-"texture": ExtResource("73_k1ahk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("74_mk7o0")
-}],
-"loop": true,
-"name": &"First Open",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("66_j3xfc")
-}],
-"loop": true,
-"name": &"Open",
-"speed": 5.0
-}]
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_aquj3"]
 animations = [{
 "frames": [{
@@ -920,6 +870,365 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_spkrm"]
+resource_name = "First_Open"
+length = 1.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"First Open"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.6, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_kq445"]
+resource_name = "After_open"
+length = 0.6
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"After Open"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 3]
+}
+
+[sub_resource type="Animation" id="Animation_r15k5"]
+resource_name = "Opened"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Open"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_3b7lf"]
+resource_name = "Closed"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Closed"]
+}
+
+[sub_resource type="Animation" id="Animation_suda2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"First Open"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t7f7l"]
+_data = {
+&"After_open": SubResource("Animation_kq445"),
+&"Closed": SubResource("Animation_3b7lf"),
+&"First_Open": SubResource("Animation_spkrm"),
+&"Opened": SubResource("Animation_r15k5"),
+&"RESET": SubResource("Animation_suda2")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jhmog"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("63_xurl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_hjwua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_j3xfc")
+}],
+"loop": true,
+"name": &"After Open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("67_livak")
+}],
+"loop": true,
+"name": &"Closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("68_fatcg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_tmkk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_uupql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_nakit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_o25de")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_k1ahk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_mk7o0")
+}],
+"loop": true,
+"name": &"First Open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("66_j3xfc")
+}],
+"loop": true,
+"name": &"Open",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_nnlqo"]
+resource_name = "First_Open"
+length = 1.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.6, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"First Open"]
+}
+
+[sub_resource type="Animation" id="Animation_62ef8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"After Open"]
+}
+
+[sub_resource type="Animation" id="Animation_3h7hk"]
+resource_name = "Open"
+length = 0.6
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"After Open"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_c5871"]
+resource_name = "Opened"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Open"]
+}
+
+[sub_resource type="Animation" id="Animation_26oun"]
+resource_name = "Closed"
+length = 0.1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Closed"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_km5g2"]
+_data = {
+&"Closed": SubResource("Animation_26oun"),
+&"First_Open": SubResource("Animation_nnlqo"),
+&"Open": SubResource("Animation_3h7hk"),
+&"Opened": SubResource("Animation_c5871"),
+&"RESET": SubResource("Animation_62ef8")
+}
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_y5qkn"]
 animations = [{
 "frames": [{
@@ -960,6 +1269,44 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="Animation" id="Animation_gaorv"]
+resource_name = "Hair_blow"
+length = 2.0
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+}
+
+[sub_resource type="Animation" id="Animation_x33kr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mqe6h"]
+_data = {
+&"Hair_blow": SubResource("Animation_gaorv"),
+&"RESET": SubResource("Animation_x33kr")
+}
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_08030"]
 animations = [{
@@ -1003,6 +1350,68 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="Animation" id="Animation_3fgw6"]
+resource_name = "Wave"
+length = 1.8
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Wave"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+
+[sub_resource type="Animation" id="Animation_t7f7l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Wave"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nnlqo"]
+_data = {
+&"RESET": SubResource("Animation_t7f7l"),
+&"Wave": SubResource("Animation_3fgw6")
+}
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vybqf"]
 animations = [{
@@ -1569,6 +1978,37 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_jijyb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("231_fd508")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("231_fd508")
+}, {
+"duration": 1.0,
+"texture": ExtResource("232_33eqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("233_olcpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("234_jyltq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("235_02iwb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_by8td"]
 animations = [{
 "frames": [{
@@ -2090,6 +2530,104 @@ texture_filter = 1
 position = Vector2(2550, 419)
 texture = ExtResource("4_4bst2")
 
+[node name="Clouds" type="Node" parent="Background" node_paths=PackedStringArray("cloud_arr", "timer_arr")]
+script = ExtResource("5_3fgw6")
+cloud_arr = [NodePath("Cloud1"), NodePath("Cloud2"), NodePath("Cloud3"), NodePath("Cloud4"), NodePath("Cloud5"), NodePath("Cloud6"), NodePath("Cloud7"), NodePath("Cloud8"), NodePath("Cloud9"), NodePath("Cloud10"), NodePath("Cloud11"), NodePath("Cloud12")]
+timer_arr = [NodePath("Timer_1"), NodePath("Timer_2"), NodePath("Timer_3"), NodePath("Timer_4")]
+
+[node name="Cloud1" type="Sprite2D" parent="Background/Clouds"]
+visible = false
+texture_filter = 1
+texture = ExtResource("6_spkrm")
+centered = false
+offset = Vector2(0, -8)
+
+[node name="Cloud2" type="Sprite2D" parent="Background/Clouds"]
+visible = false
+texture_filter = 1
+texture = ExtResource("7_kq445")
+centered = false
+offset = Vector2(-4, -16)
+
+[node name="Cloud3" type="Sprite2D" parent="Background/Clouds"]
+visible = false
+texture_filter = 1
+texture = ExtResource("8_r15k5")
+centered = false
+
+[node name="Cloud4" type="Sprite2D" parent="Background/Clouds"]
+visible = false
+texture_filter = 1
+texture = ExtResource("9_3b7lf")
+centered = false
+
+[node name="Cloud5" type="Sprite2D" parent="Background/Clouds"]
+visible = false
+texture_filter = 1
+texture = ExtResource("10_suda2")
+centered = false
+
+[node name="Cloud6" type="Sprite2D" parent="Background/Clouds"]
+visible = false
+texture_filter = 1
+texture = ExtResource("11_t7f7l")
+centered = false
+
+[node name="Cloud7" type="Sprite2D" parent="Background/Clouds"]
+visible = false
+modulate = Color(1, 1, 1, 0.215686)
+texture_filter = 1
+texture = ExtResource("6_spkrm")
+centered = false
+offset = Vector2(0, -8)
+
+[node name="Cloud8" type="Sprite2D" parent="Background/Clouds"]
+visible = false
+texture_filter = 1
+texture = ExtResource("7_kq445")
+centered = false
+offset = Vector2(-4, -16)
+
+[node name="Cloud9" type="Sprite2D" parent="Background/Clouds"]
+visible = false
+texture_filter = 1
+texture = ExtResource("8_r15k5")
+centered = false
+
+[node name="Cloud10" type="Sprite2D" parent="Background/Clouds"]
+visible = false
+texture_filter = 1
+texture = ExtResource("9_3b7lf")
+centered = false
+
+[node name="Cloud11" type="Sprite2D" parent="Background/Clouds"]
+visible = false
+texture_filter = 1
+texture = ExtResource("10_suda2")
+centered = false
+
+[node name="Cloud12" type="Sprite2D" parent="Background/Clouds"]
+visible = false
+texture_filter = 1
+texture = ExtResource("11_t7f7l")
+centered = false
+
+[node name="Timer_1" type="Timer" parent="Background/Clouds"]
+wait_time = 5.0
+autostart = true
+
+[node name="Timer_2" type="Timer" parent="Background/Clouds"]
+wait_time = 10.0
+autostart = true
+
+[node name="Timer_3" type="Timer" parent="Background/Clouds"]
+wait_time = 15.0
+autostart = true
+
+[node name="Timer_4" type="Timer" parent="Background/Clouds"]
+wait_time = 30.0
+autostart = true
+
 [node name="Back Mountains" type="TextureRect" parent="Background"]
 texture_filter = 1
 offset_top = 568.0
@@ -2220,6 +2758,7 @@ position = Vector2(2932, 1848)
 texture = ExtResource("42_ac6pf")
 
 [node name="Spark1" type="AnimatedSprite2D" parent="Background/Lever"]
+visible = false
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_a43ws")
 
@@ -2247,43 +2786,30 @@ texture_filter = 1
 texture = ExtResource("1_glv2v")
 centered = false
 
-[node name="Button" type="Button" parent="Buttons"]
-offset_left = 3637.0
-offset_top = 839.0
-offset_right = 3698.0
-offset_bottom = 919.0
-mouse_default_cursor_shape = 2
-
-[node name="Button2" type="Button" parent="Buttons"]
-offset_left = 3930.0
-offset_top = 847.0
-offset_right = 3991.0
-offset_bottom = 927.0
-mouse_default_cursor_shape = 2
-
-[node name="Button3" type="Button" parent="Buttons"]
-offset_left = 1988.0
-offset_top = 816.0
-offset_right = 2049.0
-offset_bottom = 896.0
-mouse_default_cursor_shape = 2
-
 [node name="Home" type="Node" parent="."]
-
-[node name="Mail" type="AnimatedSprite2D" parent="Home"]
-texture_filter = 1
-position = Vector2(2752, 898)
-sprite_frames = SubResource("SpriteFrames_jhmog")
-animation = &"Closed"
 
 [node name="Mail Shadow" type="AnimatedSprite2D" parent="Home"]
 modulate = Color(1, 1, 1, 0.580392)
 texture_filter = 1
 position = Vector2(2752, 898)
 sprite_frames = SubResource("SpriteFrames_aquj3")
+animation = &"First Open"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Home/Mail Shadow"]
+libraries = {
+&"": SubResource("AnimationLibrary_t7f7l")
+}
+
+[node name="Mail" type="AnimatedSprite2D" parent="Home"]
+texture_filter = 1
+position = Vector2(2752, 898)
+sprite_frames = SubResource("SpriteFrames_jhmog")
 animation = &"After Open"
-frame = 3
-frame_progress = 0.611768
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Home/Mail"]
+libraries = {
+&"": SubResource("AnimationLibrary_km5g2")
+}
 
 [node name="Butt Shadow" type="Sprite2D" parent="Home"]
 modulate = Color(1, 1, 1, 0.580392)
@@ -2291,18 +2817,30 @@ texture_filter = 1
 position = Vector2(2945, 968)
 texture = ExtResource("63_a7p2d")
 
-[node name="Head" type="AnimatedSprite2D" parent="Home"]
+[node name="Head" type="AnimatedSprite2D" parent="Home" node_paths=PackedStringArray("player")]
 texture_filter = 1
 position = Vector2(2929, 836)
 sprite_frames = SubResource("SpriteFrames_y5qkn")
-frame = 2
-frame_progress = 0.251587
+script = ExtResource("104_3fgw6")
+player = NodePath("AnimationPlayer")
+anim_name = "Hair_blow"
+target = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Home/Head"]
+libraries = {
+&"": SubResource("AnimationLibrary_mqe6h")
+}
 
 [node name="Body" type="AnimatedSprite2D" parent="Home"]
 texture_filter = 1
 position = Vector2(2931, 910)
 sprite_frames = SubResource("SpriteFrames_08030")
 animation = &"Wave"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Home/Body"]
+libraries = {
+&"": SubResource("AnimationLibrary_nnlqo")
+}
 
 [node name="Legs" type="AnimatedSprite2D" parent="Home"]
 texture_filter = 1
@@ -2366,17 +2904,21 @@ offset_top = 840.0
 offset_right = 2316.0
 offset_bottom = 936.0
 mouse_default_cursor_shape = 2
+shortcut_feedback = false
+shortcut_in_tooltip = false
 texture_normal = ExtResource("127_xkfyu")
 texture_pressed = ExtResource("127_xkfyu")
 texture_hover = ExtResource("127_xkfyu")
 
-[node name="TextureButton2" type="TextureButton" parent="Home"]
+[node name="Projects" type="TextureButton" parent="Home"]
 texture_filter = 1
 offset_left = 3420.0
 offset_top = 832.0
 offset_right = 3652.0
 offset_bottom = 928.0
 mouse_default_cursor_shape = 2
+shortcut_feedback = false
+shortcut_in_tooltip = false
 texture_normal = ExtResource("128_ep5lf")
 texture_pressed = ExtResource("128_ep5lf")
 texture_hover = ExtResource("128_ep5lf")
@@ -2386,16 +2928,15 @@ texture_filter = 1
 position = Vector2(2036, 586)
 sprite_frames = SubResource("SpriteFrames_6qke2")
 animation = &"Default"
-frame = 9
-frame_progress = 0.173633
+frame = 10
+frame_progress = 0.46662
 
 [node name="LampLSand" type="AnimatedSprite2D" parent="Home"]
 texture_filter = 1
 position = Vector2(2068, 584)
 sprite_frames = SubResource("SpriteFrames_8um1n")
-animation = &"Sand_fall"
-frame = 7
-frame_progress = 0.853816
+animation = &"Default"
+frame_progress = 0.912275
 
 [node name="LampR" type="AnimatedSprite2D" parent="Home"]
 texture_filter = 1
@@ -2438,18 +2979,30 @@ sprite_frames = SubResource("SpriteFrames_qr1df")
 animation = &"Flash"
 frame_progress = 0.0778273
 
+[node name="TentShadow" type="Sprite2D" parent="Personal"]
+modulate = Color(1, 1, 1, 0.580392)
+texture_filter = 1
+position = Vector2(348, 928)
+texture = ExtResource("236_ler6j")
+
 [node name="Tent" type="AnimatedSprite2D" parent="Personal"]
 texture_filter = 1
 position = Vector2(350, 848)
 sprite_frames = SubResource("SpriteFrames_f6xhr")
-animation = &"Idle"
+frame_progress = 0.318168
 
 [node name="Notebook" type="AnimatedSprite2D" parent="Personal"]
 texture_filter = 1
 position = Vector2(424, 916)
 sprite_frames = SubResource("SpriteFrames_3yc0b")
 animation = &"Open"
-frame_progress = 0.187098
+
+[node name="TentFlap" type="AnimatedSprite2D" parent="Personal"]
+texture_filter = 1
+position = Vector2(372, 852)
+sprite_frames = SubResource("SpriteFrames_jijyb")
+frame = 1
+frame_progress = 0.36497
 
 [node name="Trash" type="Sprite2D" parent="Personal"]
 texture_filter = 1
@@ -2460,12 +3013,6 @@ texture = ExtResource("230_5imdm")
 texture_filter = 1
 position = Vector2(426, 836)
 sprite_frames = SubResource("SpriteFrames_by8td")
-
-[node name="TentShadow" type="Sprite2D" parent="Personal"]
-modulate = Color(1, 1, 1, 0.580392)
-texture_filter = 1
-position = Vector2(348, 928)
-texture = ExtResource("236_ler6j")
 
 [node name="YarnShadow" type="AnimatedSprite2D" parent="Personal"]
 modulate = Color(1, 1, 1, 0.580392)
@@ -2534,6 +3081,25 @@ position = Vector2(1836, 584)
 sprite_frames = SubResource("SpriteFrames_mk7o0")
 animation = &"Sand_fall"
 frame_progress = 0.161843
+
+[node name="ToPersonalShadow" type="Sprite2D" parent="Personal"]
+modulate = Color(1, 1, 1, 0.580392)
+texture_filter = 1
+position = Vector2(1684, 906)
+texture = ExtResource("125_imbc2")
+
+[node name="Back" type="TextureButton" parent="Personal"]
+texture_filter = 1
+offset_left = 1564.0
+offset_top = 840.0
+offset_right = 1796.0
+offset_bottom = 936.0
+mouse_default_cursor_shape = 2
+shortcut_feedback = false
+shortcut_in_tooltip = false
+texture_normal = ExtResource("276_4jki6")
+texture_pressed = ExtResource("276_4jki6")
+texture_hover = ExtResource("276_4jki6")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1920, 0)
@@ -2639,6 +3205,35 @@ animation = &"Sand_fall"
 frame = 7
 frame_progress = 0.853816
 
-[connection signal="pressed" from="Buttons/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Buttons/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="Buttons/Button3" to="." method="_on_button_3_pressed"]
+[node name="ToPersonalShadow" type="Sprite2D" parent="Projects"]
+modulate = Color(1, 1, 1, 0.580392)
+texture_filter = 1
+position = Vector2(4104, 898)
+texture = ExtResource("125_imbc2")
+
+[node name="Back" type="TextureButton" parent="Projects"]
+texture_filter = 1
+offset_left = 3984.0
+offset_top = 832.0
+offset_right = 4216.0
+offset_bottom = 928.0
+mouse_default_cursor_shape = 2
+shortcut_feedback = false
+shortcut_in_tooltip = false
+texture_normal = ExtResource("276_4jki6")
+texture_pressed = ExtResource("276_4jki6")
+texture_hover = ExtResource("276_4jki6")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Background/Clouds/Timer_1" to="Background/Clouds" method="_on_timer_1_timeout"]
+[connection signal="timeout" from="Background/Clouds/Timer_2" to="Background/Clouds" method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Background/Clouds/Timer_3" to="Background/Clouds" method="_on_timer_3_timeout"]
+[connection signal="timeout" from="Background/Clouds/Timer_4" to="Background/Clouds" method="_on_timer_4_timeout"]
+[connection signal="pressed" from="Home/Personal" to="." method="_on_personal_pressed"]
+[connection signal="pressed" from="Home/Projects" to="." method="_on_projects_pressed"]
+[connection signal="pressed" from="Personal/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Projects/Back" to="." method="_on_back_pressed"]
+[connection signal="timeout" from="Timer" to="Background" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Home/Head" method="_on_timer_timeout"]
