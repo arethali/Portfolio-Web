@@ -1,4 +1,4 @@
-[gd_scene load_steps=628 format=3 uid="uid://dfhro4he33mwe"]
+[gd_scene load_steps=631 format=3 uid="uid://dfhro4he33mwe"]
 
 [ext_resource type="Texture2D" uid="uid://bldgwkrwu0770" path="res://Stylized outline.png" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://cvgj45t5itakk" path="res://Scripts/PortNav.gd" id="1_uu6xs"]
@@ -359,6 +359,9 @@
 [ext_resource type="Texture2D" uid="uid://6ycivjxovio4" path="res://Font outline.png" id="356_m6ggt"]
 [ext_resource type="FontFile" uid="uid://dsy7a4r455j54" path="res://Fonts/Default.ttf" id="358_4oqqu"]
 [ext_resource type="FontFile" uid="uid://db0nxlp577mr6" path="res://Fonts/Display.ttf" id="359_28u1i"]
+[ext_resource type="Texture2D" uid="uid://b5lolbyvi3d43" path="res://Assets/Particles/Big Particle.png" id="360_28u1i"]
+[ext_resource type="Script" uid="uid://buttteguaeg23" path="res://Scripts/pos_parts.gd" id="360_ypv7r"]
+[ext_resource type="Texture2D" uid="uid://ncql886xovtu" path="res://Assets/Particles/Small Particle.png" id="361_ypv7r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rchyr"]
 animations = [{
@@ -5094,19 +5097,20 @@ point_count = 2
 curve = SubResource("Curve_28u1i")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4cqk1"]
-lifetime_randomness = 0.16
+lifetime_randomness = 0.66
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(20, 180, 1)
-angular_velocity_min = -70.49
-angular_velocity_max = 75.52
+emission_box_extents = Vector3(20, 500, 1)
 directional_velocity_min = 1.0
 directional_velocity_max = 1.0
 directional_velocity_curve = SubResource("CurveXYZTexture_4oqqu")
-gravity = Vector3(-50, 0, 0)
-linear_accel_min = -46.85
-linear_accel_max = 15.38
-damping_max = 8.741
+gravity = Vector3(-100, 0, 0)
+linear_accel_min = -62.24
+linear_accel_max = -44.06
+radial_accel_min = -9.79
+radial_accel_max = 1.4
+tangential_accel_min = -2.1
+tangential_accel_max = 2.8
 turbulence_noise_strength = 0.31
 turbulence_noise_scale = 1.292
 turbulence_influence_min = 0.026
@@ -6257,37 +6261,36 @@ bbcode_enabled = true
 text = "[center]Rage, rage against the dying of the light [/center]"
 fit_content = true
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="Buttons"]
+[node name="VFX" type="Node" parent="." node_paths=PackedStringArray("big_particles", "small_particles")]
+script = ExtResource("360_ypv7r")
+big_particles = NodePath("Big Particles")
+small_particles = NodePath("Smol Particles")
+home_pos = Vector2(3925, 642)
+projects_pos = Vector2(5825, 642)
+personal_pos = Vector2(1945, 642)
+
+[node name="Big Particles" type="GPUParticles2D" parent="VFX"]
+modulate = Color(1, 1, 1, 0.698039)
 texture_filter = 1
-position = Vector2(5838, 650)
-amount = 30
+position = Vector2(5826, 643)
+amount = 5
 amount_ratio = 0.8882
-texture = ExtResource("74_mk7o0")
+texture = ExtResource("360_28u1i")
 lifetime = 60.0
 speed_scale = 4.81
 randomness = 0.47
 process_material = SubResource("ParticleProcessMaterial_4cqk1")
 
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="Buttons"]
+[node name="Smol Particles" type="GPUParticles2D" parent="VFX"]
 texture_filter = 1
-position = Vector2(1911, 659)
-amount = 5
+position = Vector2(5831, 629)
+amount = 15
 amount_ratio = 0.8882
-texture = ExtResource("74_mk7o0")
+texture = ExtResource("361_ypv7r")
 lifetime = 60.0
 speed_scale = 4.81
 randomness = 0.47
-process_material = SubResource("ParticleProcessMaterial_4cqk1")
-
-[node name="GPUParticles2D3" type="GPUParticles2D" parent="Buttons"]
-texture_filter = 1
-position = Vector2(3849, 624)
-amount = 5
-amount_ratio = 0.8882
-texture = ExtResource("74_mk7o0")
-lifetime = 60.0
-speed_scale = 4.81
-randomness = 0.47
+fixed_fps = 5
 process_material = SubResource("ParticleProcessMaterial_4cqk1")
 
 [node name="Timer" type="Timer" parent="."]
@@ -6298,9 +6301,13 @@ autostart = true
 [connection signal="timeout" from="Background/Clouds/Timer_3" to="Background/Clouds" method="_on_timer_3_timeout"]
 [connection signal="timeout" from="Background/Clouds/Timer_4" to="Background/Clouds" method="_on_timer_4_timeout"]
 [connection signal="pressed" from="Home/Personal" to="." method="_on_personal_pressed"]
+[connection signal="pressed" from="Home/Personal" to="VFX" method="_on_personal_pressed"]
 [connection signal="pressed" from="Home/Projects" to="." method="_on_projects_pressed"]
+[connection signal="pressed" from="Home/Projects" to="VFX" method="_on_projects_pressed"]
 [connection signal="pressed" from="Personal/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Personal/Back" to="VFX" method="_on_back_pressed"]
 [connection signal="pressed" from="Projects/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Projects/Back" to="VFX" method="_on_back_pressed"]
 [connection signal="input_event" from="Buttons/Leo Area" to="Home/Leo" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Buttons/Leo Area" to="Buttons" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/Leo Area" to="Buttons" method="_on_mouse_exited"]

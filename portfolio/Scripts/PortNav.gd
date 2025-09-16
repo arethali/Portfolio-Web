@@ -17,6 +17,7 @@ func _ready():
 	#display settings
 	root_window = get_tree().root
 	DisplayServer.window_set_min_size(Vector2i(0, 480))
+	DisplayServer.window_set_max_size(Vector2i(1920, 4200))
 	root_window.size_changed.connect(_on_window_size_changed)
 	
 	#Set cursors
