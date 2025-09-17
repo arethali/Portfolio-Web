@@ -5047,7 +5047,7 @@ size = Vector2(36, 34)
 size = Vector2(36, 23)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgj11"]
-size = Vector2(97.5, 288)
+size = Vector2(91.5, 279)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6vflr"]
 size = Vector2(70, 128)
@@ -5119,10 +5119,12 @@ turbulence_initial_displacement_min = -26.7
 turbulence_initial_displacement_max = -22.8
 turbulence_influence_over_life = SubResource("CurveTexture_ypv7r")
 
-[node name="Main" type="Node2D" node_paths=PackedStringArray("camera")]
+[node name="Main" type="Node2D" node_paths=PackedStringArray("camera", "label", "color_block")]
 texture_filter = 1
 script = ExtResource("1_uu6xs")
 camera = NodePath("Camera2D")
+label = NodePath("Buttons/HoverLabel")
+color_block = NodePath("Buttons/ColorRect")
 
 [node name="Background" type="Node" parent="." node_paths=PackedStringArray("crashed_anim", "dp_anim", "sparks")]
 script = ExtResource("2_oye8v")
@@ -6129,7 +6131,6 @@ texture_pressed = ExtResource("276_4jki6")
 texture_hover = ExtResource("276_4jki6")
 
 [node name="Buttons" type="Node" parent="."]
-script = ExtResource("69_3b7lf")
 
 [node name="FontOutline" type="Sprite2D" parent="Buttons"]
 visible = false
@@ -6144,27 +6145,43 @@ texture_filter = 1
 texture = ExtResource("1_glv2v")
 centered = false
 
-[node name="Leo Area" type="Area2D" parent="Buttons"]
+[node name="Leo Area" type="Area2D" parent="Buttons" node_paths=PackedStringArray("outline_text", "color_block")]
 position = Vector2(2922, 790)
+script = ExtResource("69_3b7lf")
+outline_text = NodePath("../HoverLabel")
+color_block = NodePath("../ColorRect")
+label_name = "leo"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Leo Area"]
 position = Vector2(7.5, -4)
 shape = SubResource("RectangleShape2D_r15k5")
 
-[node name="Alvis Area" type="Area2D" parent="Buttons"]
+[node name="Alvis Area" type="Area2D" parent="Buttons" node_paths=PackedStringArray("outline_text", "color_block")]
+script = ExtResource("69_3b7lf")
+outline_text = NodePath("../HoverLabel")
+color_block = NodePath("../ColorRect")
+label_name = "alvis"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Alvis Area"]
 position = Vector2(3058, 957.125)
 shape = SubResource("RectangleShape2D_pbhej")
 
-[node name="Phone Area" type="Area2D" parent="Buttons"]
+[node name="Phone Area" type="Area2D" parent="Buttons" node_paths=PackedStringArray("outline_text", "color_block")]
 position = Vector2(-16, 4)
+script = ExtResource("69_3b7lf")
+outline_text = NodePath("../HoverLabel")
+color_block = NodePath("../ColorRect")
+label_name = "fun fact?"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Phone Area"]
 position = Vector2(2870, 961.75)
 shape = SubResource("RectangleShape2D_rlscr")
 
-[node name="Mail Box" type="Area2D" parent="Buttons"]
+[node name="Mail Box" type="Area2D" parent="Buttons" node_paths=PackedStringArray("outline_text", "color_block")]
+script = ExtResource("69_3b7lf")
+outline_text = NodePath("../HoverLabel")
+color_block = NodePath("../ColorRect")
+label_name = "contact"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Mail Box"]
 position = Vector2(2756, 871)
@@ -6174,61 +6191,104 @@ shape = SubResource("RectangleShape2D_ibn8e")
 position = Vector2(2756, 899.5)
 shape = SubResource("RectangleShape2D_wgm2v")
 
-[node name="Body Area" type="Area2D" parent="Buttons"]
+[node name="Body Area" type="Area2D" parent="Buttons" node_paths=PackedStringArray("outline_text", "color_block")]
+script = ExtResource("69_3b7lf")
+outline_text = NodePath("../HoverLabel")
+color_block = NodePath("../ColorRect")
+label_name = "about me"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Body Area"]
-position = Vector2(2929.75, 945)
+position = Vector2(2932.75, 949.5)
 shape = SubResource("RectangleShape2D_vgj11")
 
-[node name="Chair Area" type="Area2D" parent="Buttons"]
+[node name="Chair Area" type="Area2D" parent="Buttons" node_paths=PackedStringArray("outline_text", "color_block")]
+script = ExtResource("69_3b7lf")
+outline_text = NodePath("../HoverLabel")
+color_block = NodePath("../ColorRect")
+label_name = "swivel?"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Chair Area"]
 position = Vector2(4496, 879)
 shape = SubResource("RectangleShape2D_6vflr")
 
-[node name="Book" type="Area2D" parent="Buttons"]
+[node name="Book" type="Area2D" parent="Buttons" node_paths=PackedStringArray("outline_text", "color_block")]
+script = ExtResource("69_3b7lf")
+outline_text = NodePath("../HoverLabel")
+color_block = NodePath("../ColorRect")
+label_name = "book list"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Book"]
 position = Vector2(4627.5, 830)
 shape = SubResource("RectangleShape2D_wpgx8")
 
-[node name="Laptop" type="Area2D" parent="Buttons"]
+[node name="Laptop" type="Area2D" parent="Buttons" node_paths=PackedStringArray("outline_text", "color_block")]
+script = ExtResource("69_3b7lf")
+outline_text = NodePath("../HoverLabel")
+color_block = NodePath("../ColorRect")
+label_name = "projects"
+long = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Laptop"]
 position = Vector2(4748, 818)
 shape = SubResource("RectangleShape2D_5iw6c")
 
-[node name="Keyboard" type="Area2D" parent="Buttons"]
+[node name="Keyboard" type="Area2D" parent="Buttons" node_paths=PackedStringArray("outline_text", "color_block")]
+script = ExtResource("69_3b7lf")
+outline_text = NodePath("../HoverLabel")
+color_block = NodePath("../ColorRect")
+label_name = "type?"
+long = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Keyboard"]
 position = Vector2(4868.5, 851.5)
 shape = SubResource("RectangleShape2D_tvijt")
 
-[node name="Tool Box" type="Area2D" parent="Buttons"]
+[node name="Tool Box" type="Area2D" parent="Buttons" node_paths=PackedStringArray("outline_text", "color_block")]
+script = ExtResource("69_3b7lf")
+outline_text = NodePath("../HoverLabel")
+color_block = NodePath("../ColorRect")
+label_name = "skills"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Tool Box"]
 position = Vector2(5130, 858.25)
 shape = SubResource("RectangleShape2D_wywj0")
 
-[node name="Resume" type="Area2D" parent="Buttons"]
+[node name="Resume" type="Area2D" parent="Buttons" node_paths=PackedStringArray("outline_text", "color_block")]
+script = ExtResource("69_3b7lf")
+outline_text = NodePath("../HoverLabel")
+color_block = NodePath("../ColorRect")
+label_name = "resume"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Resume"]
 position = Vector2(5140, 920.125)
 shape = SubResource("RectangleShape2D_ueh3w")
 
-[node name="BoomBox Area" type="Area2D" parent="Buttons"]
+[node name="BoomBox Area" type="Area2D" parent="Buttons" node_paths=PackedStringArray("outline_text", "color_block")]
+script = ExtResource("69_3b7lf")
+outline_text = NodePath("../HoverLabel")
+color_block = NodePath("../ColorRect")
+label_name = "music"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/BoomBox Area"]
 position = Vector2(604.5, 902.25)
 shape = SubResource("RectangleShape2D_4i1ne")
 
-[node name="Camera Area" type="Area2D" parent="Buttons"]
+[node name="Camera Area" type="Area2D" parent="Buttons" node_paths=PackedStringArray("outline_text", "color_block")]
+script = ExtResource("69_3b7lf")
+outline_text = NodePath("../HoverLabel")
+color_block = NodePath("../ColorRect")
+label_name = "photos"
+long = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Camera Area"]
 position = Vector2(610.5, 962)
 shape = SubResource("RectangleShape2D_m6ggt")
 
-[node name="NoteBook Area" type="Area2D" parent="Buttons"]
+[node name="NoteBook Area" type="Area2D" parent="Buttons" node_paths=PackedStringArray("outline_text", "color_block")]
+script = ExtResource("69_3b7lf")
+outline_text = NodePath("../HoverLabel")
+color_block = NodePath("../ColorRect")
+label_name = "art"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/NoteBook Area"]
 position = Vector2(437, 918.5)
@@ -6240,7 +6300,11 @@ shape = SubResource("RectangleShape2D_4oqqu")
 position = Vector2(510.5, 944)
 shape = SubResource("RectangleShape2D_4ac16")
 
-[node name="Film Area" type="Area2D" parent="Buttons"]
+[node name="Film Area" type="Area2D" parent="Buttons" node_paths=PackedStringArray("outline_text", "color_block")]
+script = ExtResource("69_3b7lf")
+outline_text = NodePath("../HoverLabel")
+color_block = NodePath("../ColorRect")
+label_name = "films"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Film Area"]
 position = Vector2(903.25, 867.5)
@@ -6260,6 +6324,27 @@ theme_override_font_sizes/bold_font_size = 40
 bbcode_enabled = true
 text = "[center]Rage, rage against the dying of the light [/center]"
 fit_content = true
+
+[node name="ColorRect" type="ColorRect" parent="Buttons"]
+offset_right = 22.0
+offset_bottom = 19.0
+mouse_filter = 2
+color = Color(0.635, 0.627, 0.455, 1)
+
+[node name="HoverLabel" type="RichTextLabel" parent="Buttons"]
+texture_filter = 1
+offset_right = 22.0
+offset_bottom = 19.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 0.949, 0.769, 1)
+theme_override_fonts/normal_font = ExtResource("358_4oqqu")
+theme_override_fonts/bold_font = ExtResource("359_28u1i")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+text = "y"
+fit_content = true
+autowrap_mode = 0
 
 [node name="VFX" type="Node" parent="." node_paths=PackedStringArray("big_particles", "small_particles")]
 script = ExtResource("360_ypv7r")
@@ -6309,54 +6394,84 @@ autostart = true
 [connection signal="pressed" from="Projects/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Projects/Back" to="VFX" method="_on_back_pressed"]
 [connection signal="input_event" from="Buttons/Leo Area" to="Home/Leo" method="_on_area_2d_input_event"]
-[connection signal="mouse_entered" from="Buttons/Leo Area" to="Buttons" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Buttons/Leo Area" to="Buttons" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Leo Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="Buttons/Leo Area" to="Buttons/Leo Area" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Leo Area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Buttons/Leo Area" to="Buttons/Leo Area" method="_on_mouse_exited"]
 [connection signal="input_event" from="Buttons/Alvis Area" to="Home/Alvis" method="_on_area_2d_input_event"]
-[connection signal="mouse_entered" from="Buttons/Alvis Area" to="Buttons" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Buttons/Alvis Area" to="Buttons" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Alvis Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="Buttons/Alvis Area" to="Buttons/Alvis Area" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Alvis Area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Buttons/Alvis Area" to="Buttons/Alvis Area" method="_on_mouse_exited"]
 [connection signal="input_event" from="Buttons/Phone Area" to="Home/Phone" method="_on_area_input_event"]
-[connection signal="mouse_entered" from="Buttons/Phone Area" to="Buttons" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Buttons/Phone Area" to="Buttons" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Phone Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="Buttons/Phone Area" to="Buttons/Phone Area" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Phone Area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Buttons/Phone Area" to="Buttons/Phone Area" method="_on_mouse_exited"]
 [connection signal="input_event" from="Buttons/Mail Box" to="Home/Mail Shadow" method="_on_input_event"]
 [connection signal="input_event" from="Buttons/Mail Box" to="Home/Mail" method="_on_input_event"]
-[connection signal="mouse_entered" from="Buttons/Mail Box" to="Buttons" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Buttons/Mail Box" to="Buttons" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Mail Box" to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="Buttons/Mail Box" to="Buttons/Mail Box" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Mail Box" to="." method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Buttons/Mail Box" to="Buttons/Mail Box" method="_on_mouse_exited"]
 [connection signal="input_event" from="Buttons/Body Area" to="Home/Body" method="_on_area_input_event"]
-[connection signal="mouse_entered" from="Buttons/Body Area" to="Buttons" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Buttons/Body Area" to="Buttons" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Body Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="Buttons/Body Area" to="Buttons/Body Area" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Body Area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Buttons/Body Area" to="Buttons/Body Area" method="_on_mouse_exited"]
 [connection signal="input_event" from="Buttons/Chair Area" to="Projects/Chair" method="_on_chair_area_input_event"]
-[connection signal="mouse_entered" from="Buttons/Chair Area" to="Buttons" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Buttons/Chair Area" to="Buttons" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Chair Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="Buttons/Chair Area" to="Buttons/Chair Area" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Chair Area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Buttons/Chair Area" to="Buttons/Chair Area" method="_on_mouse_exited"]
 [connection signal="input_event" from="Buttons/Book" to="Projects/Book" method="_on_area_input_event"]
-[connection signal="mouse_entered" from="Buttons/Book" to="Buttons" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Buttons/Book" to="Buttons" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Book" to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="Buttons/Book" to="Buttons/Book" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Book" to="." method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Buttons/Book" to="Buttons/Book" method="_on_mouse_exited"]
 [connection signal="input_event" from="Buttons/Laptop" to="Projects/Laptop" method="_on_laptop_input_event"]
-[connection signal="mouse_entered" from="Buttons/Laptop" to="Buttons" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Buttons/Laptop" to="Buttons" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Laptop" to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="Buttons/Laptop" to="Buttons/Laptop" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Laptop" to="." method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Buttons/Laptop" to="Buttons/Laptop" method="_on_mouse_exited"]
 [connection signal="input_event" from="Buttons/Keyboard" to="Projects/Keyboard" method="_on_area_input_event"]
-[connection signal="mouse_entered" from="Buttons/Keyboard" to="Buttons" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Buttons/Keyboard" to="Buttons" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Keyboard" to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="Buttons/Keyboard" to="Buttons/Keyboard" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Keyboard" to="." method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Buttons/Keyboard" to="Buttons/Keyboard" method="_on_mouse_exited"]
 [connection signal="input_event" from="Buttons/Tool Box" to="Projects/Tool" method="_on_area_input_event"]
-[connection signal="mouse_entered" from="Buttons/Tool Box" to="Buttons" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Buttons/Tool Box" to="Buttons" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Tool Box" to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="Buttons/Tool Box" to="Buttons/Tool Box" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Tool Box" to="." method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Buttons/Tool Box" to="Buttons/Tool Box" method="_on_mouse_exited"]
 [connection signal="input_event" from="Buttons/Resume" to="Projects/Resume" method="_on_area_input_event"]
-[connection signal="mouse_entered" from="Buttons/Resume" to="Buttons" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Buttons/Resume" to="Buttons" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Resume" to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="Buttons/Resume" to="Buttons/Resume" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Resume" to="." method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Buttons/Resume" to="Buttons/Resume" method="_on_mouse_exited"]
 [connection signal="input_event" from="Buttons/BoomBox Area" to="Personal/BoomBox" method="_on_area_input_event"]
-[connection signal="mouse_entered" from="Buttons/BoomBox Area" to="Buttons" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Buttons/BoomBox Area" to="Buttons" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/BoomBox Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="Buttons/BoomBox Area" to="Buttons/BoomBox Area" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/BoomBox Area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Buttons/BoomBox Area" to="Buttons/BoomBox Area" method="_on_mouse_exited"]
 [connection signal="input_event" from="Buttons/Camera Area" to="Personal/Camera" method="_on_area_input_event"]
-[connection signal="mouse_entered" from="Buttons/Camera Area" to="Buttons" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Buttons/Camera Area" to="Buttons" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Camera Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="Buttons/Camera Area" to="Buttons/Camera Area" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Camera Area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Buttons/Camera Area" to="Buttons/Camera Area" method="_on_mouse_exited"]
 [connection signal="input_event" from="Buttons/NoteBook Area" to="Personal/Notebook" method="_on_area_input_event"]
-[connection signal="mouse_entered" from="Buttons/NoteBook Area" to="Buttons" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Buttons/NoteBook Area" to="Buttons" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/NoteBook Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="Buttons/NoteBook Area" to="Buttons/NoteBook Area" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/NoteBook Area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Buttons/NoteBook Area" to="Buttons/NoteBook Area" method="_on_mouse_exited"]
 [connection signal="input_event" from="Buttons/Yarn Area" to="Personal/YarnShadow" method="_on_area_input_event"]
-[connection signal="mouse_entered" from="Buttons/Yarn Area" to="Buttons" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Buttons/Yarn Area" to="Buttons" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Yarn Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Yarn Area" to="." method="_on_mouse_exited"]
 [connection signal="input_event" from="Buttons/Film Area" to="Personal/Film" method="_on_area_input_event"]
-[connection signal="mouse_entered" from="Buttons/Film Area" to="Buttons" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Buttons/Film Area" to="Buttons" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Buttons/Film Area" to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="Buttons/Film Area" to="Buttons/Film Area" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Film Area" to="." method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Buttons/Film Area" to="Buttons/Film Area" method="_on_mouse_exited"]
 [connection signal="timeout" from="Timer" to="Background" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="Home/Head" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="Home/Legs" method="_on_timer_timeout"]

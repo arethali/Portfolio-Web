@@ -7,6 +7,8 @@ extends Node2D
 #@export var to_projects_button : Button
 #@export var to_presonal_button : Button
 #@export var to_projects_button : TextureButton
+@export var label : RichTextLabel
+@export var color_block : ColorRect
 
 var root_window
 
@@ -24,8 +26,9 @@ func _ready():
 	Input.set_custom_mouse_cursor(arrow, Input.CURSOR_ARROW, Vector2(10,10))
 	Input.set_custom_mouse_cursor(point, Input.CURSOR_POINTING_HAND, Vector2(5,5))
 	await get_tree().process_frame
-	#Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
-	#print(Input.get_current_cursor_shape())
+	label.hide()
+	color_block.hide()
+	set_process(false)
 #
 func _on_window_size_changed():
 	var aspect_ratio = float(get_viewport().size.x)/float(get_viewport().size.y)
@@ -47,3 +50,21 @@ func _on_personal_pressed():
 
 func _on_back_pressed():
 	camera.position.x = home_pos
+
+func _on_mouse_entered():
+	label.show()
+	color_block.show()
+	set_process(true)
+	Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
+
+func _on_mouse_exited():
+	label.hide()
+	color_block.hide()
+	set_process(false)
+	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
+
+func _process(delta):
+	var mouse_pos = get_global_mouse_position()
+	label.position = mouse_pos + Vector2(-1,-1) + Vector2(4 ,4)
+	color_block.position = mouse_pos + Vector2(-1,-1) + Vector2(4 ,4)
+	
