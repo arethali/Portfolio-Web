@@ -1,4 +1,4 @@
-[gd_scene load_steps=631 format=3 uid="uid://dfhro4he33mwe"]
+[gd_scene load_steps=633 format=3 uid="uid://dfhro4he33mwe"]
 
 [ext_resource type="Texture2D" uid="uid://bldgwkrwu0770" path="res://Stylized outline.png" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://cvgj45t5itakk" path="res://Scripts/PortNav.gd" id="1_uu6xs"]
@@ -360,7 +360,9 @@
 [ext_resource type="FontFile" uid="uid://dsy7a4r455j54" path="res://Fonts/Default.ttf" id="358_4oqqu"]
 [ext_resource type="FontFile" uid="uid://db0nxlp577mr6" path="res://Fonts/Display.ttf" id="359_28u1i"]
 [ext_resource type="Texture2D" uid="uid://b5lolbyvi3d43" path="res://Assets/Particles/Big Particle.png" id="360_28u1i"]
+[ext_resource type="Texture2D" uid="uid://cbkukryxh5xi0" path="res://Assets/UI/Global/Cursor/Arrow_green.png" id="360_pbhej"]
 [ext_resource type="Script" uid="uid://buttteguaeg23" path="res://Scripts/pos_parts.gd" id="360_ypv7r"]
+[ext_resource type="Texture2D" uid="uid://b5xccs31gtrjx" path="res://Assets/UI/Global/Cursor/Pointing Hand.png" id="361_4i1ne"]
 [ext_resource type="Texture2D" uid="uid://ncql886xovtu" path="res://Assets/Particles/Small Particle.png" id="361_ypv7r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rchyr"]
@@ -6181,7 +6183,7 @@ shape = SubResource("RectangleShape2D_rlscr")
 script = ExtResource("69_3b7lf")
 outline_text = NodePath("../HoverLabel")
 color_block = NodePath("../ColorRect")
-label_name = "contact"
+label_name = "contact me"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Mail Box"]
 position = Vector2(2756, 871)
@@ -6329,14 +6331,14 @@ fit_content = true
 offset_right = 22.0
 offset_bottom = 19.0
 mouse_filter = 2
-color = Color(0.635, 0.627, 0.455, 1)
+color = Color(0.635294, 0.627451, 0.454902, 1)
 
 [node name="HoverLabel" type="RichTextLabel" parent="Buttons"]
 texture_filter = 1
 offset_right = 22.0
 offset_bottom = 19.0
 mouse_filter = 2
-theme_override_colors/default_color = Color(1, 0.949, 0.769, 1)
+theme_override_colors/default_color = Color(1, 0.94902, 0.768627, 1)
 theme_override_fonts/normal_font = ExtResource("358_4oqqu")
 theme_override_fonts/bold_font = ExtResource("359_28u1i")
 theme_override_font_sizes/normal_font_size = 20
@@ -6345,6 +6347,16 @@ bbcode_enabled = true
 text = "y"
 fit_content = true
 autowrap_mode = 0
+
+[node name="ArrowGreen" type="Sprite2D" parent="Buttons"]
+visible = false
+position = Vector2(102, 214)
+texture = ExtResource("360_pbhej")
+
+[node name="PointingHand" type="Sprite2D" parent="Buttons"]
+visible = false
+position = Vector2(177, 187)
+texture = ExtResource("361_4i1ne")
 
 [node name="VFX" type="Node" parent="." node_paths=PackedStringArray("big_particles", "small_particles")]
 script = ExtResource("360_ypv7r")

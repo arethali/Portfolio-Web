@@ -11,9 +11,8 @@ extends Area2D
 
 func _on_mouse_entered():
 	outline_text.text = label_name
-	outline_text.position.y += 1
-	var text_size_x = outline_text.get_content_width()-1
-	var text_size_y = outline_text.get_content_height()
+	var text_size_x = outline_text.get_content_width() + 7
+	var text_size_y = outline_text.get_content_height() + 4
 	if long == true:
 		text_size_y += 8
 		outline_text.size.y = 27
