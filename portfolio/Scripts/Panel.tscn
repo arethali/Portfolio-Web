@@ -1,0 +1,136 @@
+[gd_scene load_steps=14 format=3 uid="uid://kp4lldtw5wvt"]
+
+[ext_resource type="Texture2D" uid="uid://dw2ap6lakiv4v" path="res://Assets/UI/Panel Tiles/TileMap.png" id="1_7tpco"]
+[ext_resource type="Script" uid="uid://byneh2xh5h2ro" path="res://Scripts/panel_script.gd" id="2_iwtbq"]
+[ext_resource type="Texture2D" uid="uid://ivh0hy8sbn0t" path="res://Assets/UI/Global/Arrow/Arrow1.png" id="3_d7o5g"]
+[ext_resource type="Texture2D" uid="uid://dodl7pcoo1g6j" path="res://Assets/UI/Global/Arrow/Arrow2.png" id="4_vu0vy"]
+[ext_resource type="Texture2D" uid="uid://0tfmglilfhsm" path="res://Assets/UI/Global/Arrow/Arrow3.png" id="5_ny4dj"]
+[ext_resource type="Texture2D" uid="uid://1ltglve64vyf" path="res://Assets/UI/Global/Arrow/Arrow4.png" id="6_qtg28"]
+[ext_resource type="Texture2D" uid="uid://ppufg6h08w87" path="res://Assets/UI/Global/Arrow/Arrow5.png" id="7_unhe0"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iwtbq"]
+texture = ExtResource("1_7tpco")
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/0 = 0
+0:2/size_in_atlas = Vector2i(2, 2)
+0:2/0 = 0
+2:2/size_in_atlas = Vector2i(2, 2)
+2:2/0 = 0
+4:2/size_in_atlas = Vector2i(2, 2)
+4:2/0 = 0
+0:4/size_in_atlas = Vector2i(2, 2)
+0:4/0 = 0
+2:4/size_in_atlas = Vector2i(2, 2)
+2:4/0 = 0
+4:4/size_in_atlas = Vector2i(2, 2)
+4:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_vt1hh"]
+tile_size = Vector2i(32, 32)
+custom_data_layer_0/name = ""
+custom_data_layer_0/type = 0
+sources/1 = SubResource("TileSetAtlasSource_iwtbq")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c2hsg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_d7o5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vu0vy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ny4dj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qtg28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_unhe0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_kb0gd"]
+resource_name = "Idle"
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+
+[sub_resource type="Animation" id="Animation_hg7cn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4i33e"]
+_data = {
+&"Idle": SubResource("Animation_kb0gd"),
+&"RESET": SubResource("Animation_hg7cn")
+}
+
+[node name="Panel" type="TileMapLayer" node_paths=PackedStringArray("arrow_sprite", "anim_play")]
+texture_filter = 1
+tile_set = SubResource("TileSet_vt1hh")
+rendering_quadrant_size = 32
+script = ExtResource("2_iwtbq")
+height = 20
+width = 40
+arrow_sprite = NodePath("Arrow")
+anim_play = NodePath("Arrow/AnimationPlayer")
+
+[node name="Arrow" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_c2hsg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Arrow"]
+libraries = {
+&"": SubResource("AnimationLibrary_4i33e")
+}

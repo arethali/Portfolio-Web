@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://cgd2k7ycmvr22"]
+
+[ext_resource type="PackedScene" uid="uid://kp4lldtw5wvt" path="res://Scripts/Panel.tscn" id="1_4a88q"]
+[ext_resource type="Script" uid="uid://ceydd2wfjf7au" path="res://Scripts/default_window.gd" id="1_u3agq"]
+[ext_resource type="Texture2D" uid="uid://cdtq8fwys0gat" path="res://Assets/UI/Global/Exit/Exit_normal.png" id="2_b24j5"]
+[ext_resource type="Texture2D" uid="uid://bn5u3fyhjn0wi" path="res://Assets/UI/Global/Exit/Exit_Pressed.png" id="3_u3agq"]
+[ext_resource type="Script" uid="uid://dx3byof2jsdf3" path="res://Scripts/place_exit.gd" id="4_b24j5"]
+[ext_resource type="FontFile" uid="uid://dsy7a4r455j54" path="res://Fonts/Default.ttf" id="6_v7ar0"]
+[ext_resource type="FontFile" uid="uid://db0nxlp577mr6" path="res://Fonts/Display.ttf" id="7_63ls6"]
+[ext_resource type="Script" uid="uid://bewtg5jxap88a" path="res://Scripts/set_title.gd" id="8_c010p"]
+
+[node name="Window" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u3agq")
+
+[node name="Panel" parent="." instance=ExtResource("1_4a88q")]
+
+[node name="Exit" type="TextureButton" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+texture_normal = ExtResource("2_b24j5")
+texture_pressed = ExtResource("3_u3agq")
+texture_hover = ExtResource("3_u3agq")
+script = ExtResource("4_b24j5")
+padding = Vector2(-20, 8)
+
+[node name="Title" type="RichTextLabel" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 455.0
+offset_bottom = 112.0
+theme_override_colors/default_color = Color(0.635294, 0.627451, 0.454902, 1)
+theme_override_constants/line_separation = 16
+theme_override_fonts/normal_font = ExtResource("6_v7ar0")
+theme_override_fonts/bold_font = ExtResource("7_63ls6")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+text = "[b]Projects [/b]"
+fit_content = true
+script = ExtResource("8_c010p")
+title = "[b]Personal[/b]"
+padding = Vector2(0, 4)
+
+[connection signal="top_left" from="Panel" to="Title" method="_on_panel_top_left"]
+[connection signal="top_right" from="Panel" to="Exit" method="_on_panel_top_right"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

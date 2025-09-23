@@ -6328,12 +6328,14 @@ text = "[center]Rage, rage against the dying of the light [/center]"
 fit_content = true
 
 [node name="ColorRect" type="ColorRect" parent="Buttons"]
+visible = false
 offset_right = 22.0
 offset_bottom = 19.0
 mouse_filter = 2
 color = Color(0.635294, 0.627451, 0.454902, 1)
 
 [node name="HoverLabel" type="RichTextLabel" parent="Buttons"]
+visible = false
 texture_filter = 1
 offset_right = 22.0
 offset_bottom = 19.0
