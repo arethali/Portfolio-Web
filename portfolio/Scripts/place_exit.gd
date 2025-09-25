@@ -8,5 +8,6 @@ func _on_panel_top_right(dimes):
 	panel_top_right_corner = dimes + Vector2(-20, 0)
 
 func _ready():
+	await get_tree().process_frame
 	position = panel_top_right_corner - Vector2(padding.x, padding.y * -1)
 	#print(position)

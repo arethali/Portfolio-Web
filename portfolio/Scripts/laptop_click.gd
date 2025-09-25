@@ -11,12 +11,7 @@ func _ready():
 func _on_laptop_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			if on_off == false:
-				_choose_screen()
-				on_off = !on_off
-			else:
-				play("Off")
-				on_off = !on_off
+			_toggle_screen()
 
 func  _choose_screen():
 	var rand_num = randi_range(1,100)
@@ -27,3 +22,19 @@ func  _choose_screen():
 		play("Aesprite")
 		return
 	play("Desktop")
+
+func _toggle_screen():
+	if on_off == false:
+		_choose_screen()
+		on_off = !on_off
+	else:
+		play("Off")
+		on_off = !on_off
+
+func _on_exit_pressed():
+	_toggle_screen()
+
+func _on_panel_gui_input(event):
+	if event is InputEventMouseButton and event.pressed:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			_toggle_screen()

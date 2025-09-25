@@ -1,6 +1,6 @@
 extends Control
 
-@export_enum("Text", "Buttons", "Bios", "Resume", "Skills") var format: String
+@export_enum("Text", "Buttons", "Bios", "Resume", "Skills") var format: String = ""
 @export var panel : Panel 
 @export var click_box : Area2D
 @onready var text = %Text
@@ -15,19 +15,27 @@ var panel_size_y
 func _ready():
 	match format:
 		"Text":
+			text.process_mode = Node.PROCESS_MODE_INHERIT
 			text.visible = true
 		"Buttons":
+			buttons.process_mode = Node.PROCESS_MODE_INHERIT
 			buttons.visible = true
 		"Resume":
+			resume.process_mode = Node.PROCESS_MODE_INHERIT
 			resume.visible = true
 		"Skills":
+			skills.process_mode = Node.PROCESS_MODE_INHERIT
 			skills.visible = true
 		"Bios":
+			bios.process_mode = Node.PROCESS_MODE_INHERIT
 			bios.visible = true
 		_:
 			print_debug("No format selected.")
 			return
-	position = Vector2(position.x - (panel_size_x/2), position.y - panel_size_y)
+	#Disabled for debugging
+	#await get_tree().process_frame
+	#position = Vector2(position.x - (panel_size_x/2), position.y - panel_size_y)
+
 func _on_exit_pressed():
 	if visible == true:
 		visible = false
@@ -54,6 +62,7 @@ func _on_panel_gui_input(event):
 
 func _on_panel_x_size(size):
 	panel_size_x = size
+	
 
 
 func _on_panel_y_size(size):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=636 format=3 uid="uid://dfhro4he33mwe"]
+[gd_scene load_steps=638 format=3 uid="uid://dfhro4he33mwe"]
 
 [ext_resource type="Texture2D" uid="uid://bldgwkrwu0770" path="res://Stylized outline.png" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://cvgj45t5itakk" path="res://Scripts/PortNav.gd" id="1_uu6xs"]
@@ -5089,6 +5089,12 @@ size = Vector2(127.5, 169)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4hi06"]
 size = Vector2(64.5, 100.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1st7y"]
+size = Vector2(52.5, 82.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhavo"]
+size = Vector2(52.5, 102.125)
+
 [sub_resource type="Curve" id="Curve_m6ggt"]
 _data = [Vector2(0.0927419, 0.0634649), 0.0, 0.0, 0, 0, Vector2(0.870968, 0.498285), 0.0, 0.0, 0, 0]
 point_count = 2
@@ -5338,7 +5344,7 @@ stretch_mode = 2
 
 [node name="Clippy" type="Sprite2D" parent="Background"]
 texture_filter = 1
-position = Vector2(3754, 2054)
+position = Vector2(5378, 2034)
 texture = ExtResource("30_yf3a2")
 
 [node name="Dead Pixel" type="AnimatedSprite2D" parent="Background"]
@@ -6330,6 +6336,28 @@ label_name = "Look?"
 position = Vector2(399.75, 1806.75)
 shape = SubResource("RectangleShape2D_4hi06")
 
+[node name="NokKing Poster" type="Area2D" parent="Buttons" node_paths=PackedStringArray("outline_text", "color_block")]
+script = ExtResource("69_3b7lf")
+outline_text = NodePath("../HoverLabel")
+color_block = NodePath("../ColorRect")
+label_name = "Look?"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/NokKing Poster"]
+position = Vector2(3646.75, 1570.88)
+shape = SubResource("RectangleShape2D_1st7y")
+
+[node name="Clippy" type="Area2D" parent="Buttons" node_paths=PackedStringArray("outline_text", "color_block")]
+position = Vector2(1461, -9)
+script = ExtResource("69_3b7lf")
+outline_text = NodePath("../HoverLabel")
+color_block = NodePath("../ColorRect")
+label_name = "I'm tired."
+long = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Clippy"]
+position = Vector2(3912, 2041)
+shape = SubResource("RectangleShape2D_qhavo")
+
 [node name="Panel" type="Panel" parent="Buttons"]
 visible = false
 modulate = Color(1, 1, 1, 0)
@@ -6362,6 +6390,52 @@ width = 12
 [node name="Body" parent="Buttons/AI Poster Look/Text" index="1"]
 body_text = "[center]Rage, rage against the dying of the light[/center]"
 margin_y = 25
+
+[node name="No King Look" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
+visible = false
+offset_left = 3646.0
+offset_top = 1524.0
+offset_right = 1726.0
+offset_bottom = 444.0
+panel = NodePath("../Panel")
+click_box = NodePath("../NokKing Poster")
+
+[node name="Panel" parent="Buttons/No King Look" index="0"]
+height = 4
+width = 8
+
+[node name="Body" parent="Buttons/No King Look/Text" index="1"]
+body_text = "[center]sic semper tyrannis[/center]"
+margin_y = 10
+
+[node name="Clippy Look" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
+visible = false
+offset_left = 5374.0
+offset_top = 1962.0
+offset_right = 3454.0
+offset_bottom = 882.0
+panel = NodePath("../Panel")
+click_box = NodePath("../Clippy")
+
+[node name="Panel" parent="Buttons/Clippy Look" index="0"]
+height = 3
+width = 13
+
+[node name="Body" parent="Buttons/Clippy Look/Text" index="1"]
+body_text = "[center]He just wanted to help.[/center]"
+
+[node name="Projects" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
+visible = false
+offset_left = 4750.0
+offset_top = 746.0
+offset_right = 2830.0
+offset_bottom = -334.0
+panel = NodePath("../Panel")
+click_box = NodePath("../Laptop")
+
+[node name="Panel" parent="Buttons/Projects" index="0"]
+height = 20
+width = 40
 
 [node name="Outline Text" type="RichTextLabel" parent="Buttons"]
 visible = false
@@ -6496,6 +6570,7 @@ autostart = true
 [connection signal="mouse_exited" from="Buttons/Book" to="." method="_on_mouse_exited"]
 [connection signal="mouse_exited" from="Buttons/Book" to="Buttons/Book" method="_on_mouse_exited"]
 [connection signal="input_event" from="Buttons/Laptop" to="Projects/Laptop" method="_on_laptop_input_event"]
+[connection signal="input_event" from="Buttons/Laptop" to="Buttons/Projects" method="_on_input_event"]
 [connection signal="mouse_entered" from="Buttons/Laptop" to="." method="_on_mouse_entered"]
 [connection signal="mouse_entered" from="Buttons/Laptop" to="Buttons/Laptop" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/Laptop" to="." method="_on_mouse_exited"]
@@ -6543,8 +6618,22 @@ autostart = true
 [connection signal="mouse_entered" from="Buttons/NOAI Poster" to="Buttons/NOAI Poster" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/NOAI Poster" to="." method="_on_mouse_exited"]
 [connection signal="mouse_exited" from="Buttons/NOAI Poster" to="Buttons/NOAI Poster" method="_on_mouse_exited"]
+[connection signal="input_event" from="Buttons/NokKing Poster" to="Buttons/No King Look" method="_on_input_event"]
+[connection signal="mouse_entered" from="Buttons/NokKing Poster" to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="Buttons/NokKing Poster" to="Buttons/NokKing Poster" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/NokKing Poster" to="." method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Buttons/NokKing Poster" to="Buttons/NokKing Poster" method="_on_mouse_exited"]
+[connection signal="input_event" from="Buttons/Clippy" to="Buttons/Clippy Look" method="_on_input_event"]
+[connection signal="mouse_entered" from="Buttons/Clippy" to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="Buttons/Clippy" to="Buttons/Clippy" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Clippy" to="." method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Buttons/Clippy" to="Buttons/Clippy" method="_on_mouse_exited"]
+[connection signal="gui_input" from="Buttons/Panel" to="Projects/Laptop" method="_on_panel_gui_input"]
 [connection signal="gui_input" from="Buttons/Panel" to="Buttons/AI Poster Look" method="_on_panel_gui_input"]
-[connection signal="visibility_changed" from="Buttons/Panel" to="Buttons/Panel" method="_on_visibility_changed"]
+[connection signal="gui_input" from="Buttons/Panel" to="Buttons/No King Look" method="_on_panel_gui_input"]
+[connection signal="gui_input" from="Buttons/Panel" to="Buttons/Clippy Look" method="_on_panel_gui_input"]
+[connection signal="gui_input" from="Buttons/Panel" to="Buttons/Projects" method="_on_panel_gui_input"]
+[connection signal="pressed" from="Buttons/Projects/Exit" to="Projects/Laptop" method="_on_exit_pressed"]
 [connection signal="timeout" from="Timer" to="Background" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="Home/Head" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="Home/Legs" method="_on_timer_timeout"]
@@ -6560,3 +6649,6 @@ autostart = true
 [connection signal="timeout" from="Timer" to="Projects/LampLSand_Projects" method="_on_timer_timeout"]
 
 [editable path="Buttons/AI Poster Look"]
+[editable path="Buttons/No King Look"]
+[editable path="Buttons/Clippy Look"]
+[editable path="Buttons/Projects"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cgd2k7ycmvr22"]
+[gd_scene load_steps=38 format=3 uid="uid://cgd2k7ycmvr22"]
 
 [ext_resource type="PackedScene" uid="uid://kp4lldtw5wvt" path="res://Scripts/Panel.tscn" id="1_4a88q"]
 [ext_resource type="Script" uid="uid://ceydd2wfjf7au" path="res://Scripts/default_window.gd" id="1_u3agq"]
@@ -10,6 +10,28 @@
 [ext_resource type="FontFile" uid="uid://db0nxlp577mr6" path="res://Fonts/Display.ttf" id="7_63ls6"]
 [ext_resource type="Script" uid="uid://c44erpmssj1ao" path="res://Scripts/set_body.gd" id="8_63ls6"]
 [ext_resource type="Script" uid="uid://bewtg5jxap88a" path="res://Scripts/set_title.gd" id="8_c010p"]
+[ext_resource type="Script" uid="uid://gmcbmsgph3p3" path="res://Scripts/setting_buttons_panel.gd" id="10_7vdy2"]
+[ext_resource type="Texture2D" uid="uid://d1xncv25l4wsi" path="res://Assets/UI/Projects/CoAS_normal.png" id="11_br3nd"]
+[ext_resource type="Texture2D" uid="uid://3jicf14fnfiq" path="res://Assets/UI/Projects/Basline_normal.png" id="11_ecr05"]
+[ext_resource type="Texture2D" uid="uid://dfpiwolyxn7ks" path="res://Assets/UI/Projects/CoAS_pressed.png" id="12_4kbrp"]
+[ext_resource type="Script" uid="uid://yo2oetqdsmvh" path="res://Scripts/place_v_box.gd" id="12_7p8p1"]
+[ext_resource type="Texture2D" uid="uid://cmarfcxu8t4p4" path="res://Assets/UI/Projects/Basline_pressed.png" id="12_7vdy2"]
+[ext_resource type="Script" uid="uid://chpoheav505me" path="res://Scripts/project_body.gd" id="12_jjry7"]
+[ext_resource type="Texture2D" uid="uid://dmjtrbdbrbpgx" path="res://Assets/UI/Projects/Basline_hovered.png" id="13_7p8p1"]
+[ext_resource type="Texture2D" uid="uid://dck4jhgd1rg7g" path="res://Assets/UI/Projects/CoAS_hovered.png" id="13_dw7sr"]
+[ext_resource type="Texture2D" uid="uid://bem8lhkowx0hr" path="res://Assets/UI/Projects/TRW_normal.png" id="14_6v0q4"]
+[ext_resource type="Texture2D" uid="uid://c05r48hfx2rys" path="res://Assets/UI/Projects/TRW_pressed.png" id="15_jjry7"]
+[ext_resource type="Script" uid="uid://cnqkkm3ny15q2" path="res://Scripts/project_buttons.gd" id="16_6v0q4"]
+[ext_resource type="Texture2D" uid="uid://dwdn1r0vnvyy4" path="res://Assets/UI/Projects/TRW_hovered.png" id="16_sp3od"]
+[ext_resource type="Texture2D" uid="uid://d3tuhbhwfpcs2" path="res://Assets/UI/Projects/portfolio_normal.png" id="17_v4qw7"]
+[ext_resource type="Texture2D" uid="uid://bfv8w67ntq5q6" path="res://Assets/UI/Projects/portfolio_pressed.png" id="18_03ihb"]
+[ext_resource type="Texture2D" uid="uid://d0j7tt141ojwu" path="res://Assets/UI/Projects/portfolio_hovered.png" id="19_lbclf"]
+[ext_resource type="Texture2D" uid="uid://b4yxtumsuw182" path="res://Assets/UI/Projects/Grocery_normal.png" id="20_jay7j"]
+[ext_resource type="Texture2D" uid="uid://bhaxyovl6j2yr" path="res://Assets/UI/Projects/Grocery_pressed.png" id="21_n78kt"]
+[ext_resource type="Texture2D" uid="uid://dp2sy6cstbyvk" path="res://Assets/UI/Projects/Grocery_hovered.png" id="22_07gwf"]
+[ext_resource type="Texture2D" uid="uid://bthbyth2kf6r7" path="res://Assets/UI/Projects/Ecotime_normal.png" id="23_l77b0"]
+[ext_resource type="Texture2D" uid="uid://4g3ts2mbp5ex" path="res://Assets/UI/Projects/Ecotime_pressed.png" id="24_tvm31"]
+[ext_resource type="Texture2D" uid="uid://bae4d2aeb607k" path="res://Assets/UI/Projects/Ecotime_hovered.png" id="25_7yh8u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0i73k"]
 bg_color = Color(1, 0.94902, 0.768627, 1)
@@ -42,10 +64,18 @@ offset_bottom = -1080.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_u3agq")
-format = "Text"
+format = "Buttons"
+metadata/_edit_vertical_guides_ = [84.0]
 
 [node name="Panel" parent="." instance=ExtResource("1_4a88q")]
 width = 16
+override = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 1, 1, 0.375)
 
 [node name="Exit" type="TextureButton" parent="."]
 texture_filter = 1
@@ -61,6 +91,7 @@ padding = Vector2(20, 20)
 
 [node name="Text" type="Control" parent="."]
 unique_name_in_owner = true
+process_mode = 4
 visible = false
 anchors_preset = 0
 offset_right = 40.0
@@ -102,26 +133,24 @@ left_margin = 20
 right_margin = 40
 margin_y = 20
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(1, 1, 1, 0.508)
-
-[node name="Buttons" type="Control" parent="."]
+[node name="Buttons" type="Control" parent="." node_paths=PackedStringArray("buttons", "buttons_container")]
 unique_name_in_owner = true
+process_mode = 4
 visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 1
+script = ExtResource("10_7vdy2")
+button_format = "Projects"
+buttons = [NodePath("Project_TCOAS"), NodePath("Project_Portfolio"), NodePath("Project_TRW"), NodePath("Project_Ecotime"), NodePath("Project_grocery"), NodePath("Project_Basline")]
+buttons_container = NodePath("Button Container/HBoxContainer")
 
 [node name="Title" type="RichTextLabel" parent="Buttons"]
 texture_filter = 1
 layout_mode = 0
 offset_right = 455.0
 offset_bottom = 112.0
-mouse_filter = 2
 theme_override_colors/default_color = Color(0.635294, 0.627451, 0.454902, 1)
 theme_override_constants/line_separation = 16
 theme_override_fonts/normal_font = ExtResource("6_v7ar0")
@@ -133,36 +162,215 @@ text = "[b]Title[/b]"
 fit_content = true
 autowrap_mode = 0
 script = ExtResource("8_c010p")
-title = "[b]Personal[/b]"
-padding = Vector2(20, 28)
+content = "[b]Projects[/b]"
+padding = Vector2(20, 36)
+
+[node name="Project Name" type="RichTextLabel" parent="Buttons"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 455.0
+offset_bottom = 112.0
+theme_override_colors/default_color = Color(0.635294, 0.627451, 0.454902, 1)
+theme_override_constants/line_separation = 16
+theme_override_fonts/normal_font = ExtResource("6_v7ar0")
+theme_override_fonts/bold_font = ExtResource("7_63ls6")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+text = "[b]Title[/b]"
+fit_content = true
+autowrap_mode = 0
+script = ExtResource("8_c010p")
+content = "[b]Hover for more information[/b]"
+padding = Vector2(20, 320)
+
+[node name="Body" type="RichTextLabel" parent="Buttons"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 455.0
+offset_bottom = 112.0
+theme_override_colors/default_color = Color(0.635294, 0.627451, 0.454902, 1)
+theme_override_constants/line_separation = 16
+theme_override_fonts/normal_font = ExtResource("6_v7ar0")
+theme_override_fonts/bold_font = ExtResource("7_63ls6")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+script = ExtResource("12_jjry7")
+padding = Vector2(20, 380)
+padding_bottom = 20
+
+[node name="Button Container" type="VBoxContainer" parent="Buttons"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 0
+script = ExtResource("12_7p8p1")
+side_padding = 20
+top_padding = 120
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Buttons/Button Container"]
+layout_mode = 2
+mouse_filter = 0
+theme_override_constants/separation = 16
+
+[node name="Project_Basline" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "body_label")]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_right = 168.0
+offset_bottom = 168.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("11_ecr05")
+texture_pressed = ExtResource("12_7vdy2")
+texture_hover = ExtResource("13_7p8p1")
+script = ExtResource("16_6v0q4")
+title_label = NodePath("../Project Name")
+body_label = NodePath("../Body")
+title = "Baseline Bootcamp"
+body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Basline"
+
+[node name="Project_TRW" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "body_label")]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_right = 168.0
+offset_bottom = 168.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("14_6v0q4")
+texture_pressed = ExtResource("15_jjry7")
+texture_hover = ExtResource("16_sp3od")
+script = ExtResource("16_6v0q4")
+title_label = NodePath("../Project Name")
+body_label = NodePath("../Body")
+title = "The Reason Why"
+body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  TRW"
+
+[node name="Project_Portfolio" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "body_label")]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_right = 168.0
+offset_bottom = 168.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("17_v4qw7")
+texture_pressed = ExtResource("18_03ihb")
+texture_hover = ExtResource("19_lbclf")
+script = ExtResource("16_6v0q4")
+title_label = NodePath("../Project Name")
+body_label = NodePath("../Body")
+title = "(WIP) Portfolio"
+body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Portfolio"
+
+[node name="Project_grocery" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "body_label")]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_right = 168.0
+offset_bottom = 168.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("20_jay7j")
+texture_pressed = ExtResource("21_n78kt")
+texture_hover = ExtResource("22_07gwf")
+script = ExtResource("16_6v0q4")
+title_label = NodePath("../Project Name")
+body_label = NodePath("../Body")
+title = "GroceryGuide"
+body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  GG"
+
+[node name="Project_Ecotime" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "body_label")]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_right = 168.0
+offset_bottom = 168.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("23_l77b0")
+texture_pressed = ExtResource("24_tvm31")
+texture_hover = ExtResource("25_7yh8u")
+script = ExtResource("16_6v0q4")
+title_label = NodePath("../Project Name")
+body_label = NodePath("../Body")
+title = "Ecotime Redesign"
+body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ecotime"
+
+[node name="Project_TCOAS" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "body_label")]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_right = 168.0
+offset_bottom = 168.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("11_br3nd")
+texture_pressed = ExtResource("12_4kbrp")
+texture_hover = ExtResource("13_dw7sr")
+script = ExtResource("16_6v0q4")
+title_label = NodePath("../Project Name")
+body_label = NodePath("../Body")
+title = "(WIP) The Case of Aradia Springs"
+body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  TCOAS"
 
 [node name="Bios" type="Control" parent="."]
 unique_name_in_owner = true
+process_mode = 4
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Resume" type="Control" parent="."]
 unique_name_in_owner = true
+process_mode = 4
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Skills" type="Control" parent="."]
 unique_name_in_owner = true
+process_mode = 4
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [connection signal="top_left" from="Panel" to="Buttons/Title" method="_on_panel_top_left"]
+[connection signal="top_left" from="Panel" to="Buttons/Project Name" method="_on_panel_top_left"]
+[connection signal="top_left" from="Panel" to="Buttons/Body" method="_on_panel_top_left"]
+[connection signal="top_left" from="Panel" to="Buttons/Button Container" method="_on_panel_top_left"]
 [connection signal="top_right" from="Panel" to="Exit" method="_on_panel_top_right"]
 [connection signal="top_right" from="Panel" to="Text/VScrollBar" method="_on_panel_top_right"]
 [connection signal="x_size" from="Panel" to="." method="_on_panel_x_size"]
 [connection signal="x_size" from="Panel" to="Text/Body" method="_on_panel_x_size"]
 [connection signal="x_size" from="Panel" to="Buttons/Title" method="_on_panel_x_size"]
+[connection signal="x_size" from="Panel" to="Buttons/Project Name" method="_on_panel_x_size"]
+[connection signal="x_size" from="Panel" to="Buttons/Body" method="_on_panel_x_size"]
+[connection signal="x_size" from="Panel" to="Buttons/Button Container" method="_on_panel_x_size"]
 [connection signal="y_size" from="Panel" to="." method="_on_panel_y_size"]
 [connection signal="y_size" from="Panel" to="Text/VScrollBar" method="_on_panel_y_size"]
 [connection signal="y_size" from="Panel" to="Text/Body" method="_on_panel_y_size"]
 [connection signal="y_size" from="Panel" to="Buttons/Title" method="_on_panel_y_size"]
+[connection signal="y_size" from="Panel" to="Buttons/Project Name" method="_on_panel_y_size"]
+[connection signal="y_size" from="Panel" to="Buttons/Body" method="_on_panel_y_size"]
+[connection signal="y_size" from="Panel" to="Buttons/Button Container" method="_on_panel_y_size"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
 [connection signal="value_changed" from="Text/VScrollBar" to="Text/VScrollBar" method="_on_value_changed"]
+[connection signal="overide_panel_size" from="Buttons" to="Panel" method="_on_overide_panel_size"]
+[connection signal="mouse_entered" from="Buttons/Project_Basline" to="Buttons/Project_Basline" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Project_Basline" to="Buttons/Project_Basline" method="_on_mouse_exited"]
+[connection signal="set_body" from="Buttons/Project_Basline" to="Buttons/Body" method="_on_set_body"]
+[connection signal="mouse_entered" from="Buttons/Project_TRW" to="Buttons/Project_TRW" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Project_TRW" to="Buttons/Project_TRW" method="_on_mouse_exited"]
+[connection signal="set_body" from="Buttons/Project_TRW" to="Buttons/Body" method="_on_set_body"]
+[connection signal="mouse_entered" from="Buttons/Project_Portfolio" to="Buttons/Project_Portfolio" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Project_Portfolio" to="Buttons/Project_Portfolio" method="_on_mouse_exited"]
+[connection signal="set_body" from="Buttons/Project_Portfolio" to="Buttons/Body" method="_on_set_body"]
+[connection signal="mouse_entered" from="Buttons/Project_grocery" to="Buttons/Project_grocery" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Project_grocery" to="Buttons/Project_grocery" method="_on_mouse_exited"]
+[connection signal="set_body" from="Buttons/Project_grocery" to="Buttons/Body" method="_on_set_body"]
+[connection signal="mouse_entered" from="Buttons/Project_Ecotime" to="Buttons/Project_Ecotime" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Project_Ecotime" to="Buttons/Project_Ecotime" method="_on_mouse_exited"]
+[connection signal="set_body" from="Buttons/Project_Ecotime" to="Buttons/Body" method="_on_set_body"]
+[connection signal="mouse_entered" from="Buttons/Project_TCOAS" to="Buttons/Project_TCOAS" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Project_TCOAS" to="Buttons/Project_TCOAS" method="_on_mouse_exited"]
+[connection signal="set_body" from="Buttons/Project_TCOAS" to="Buttons/Body" method="_on_set_body"]

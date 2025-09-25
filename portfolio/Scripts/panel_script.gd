@@ -2,9 +2,11 @@ extends TileMapLayer
 
 @export var height : int
 @export var width : int
+@export var override : bool
 
 @export var arrow_sprite : AnimatedSprite2D
 @export var anim_play : AnimationPlayer
+@onready var color_rect = $ColorRect
 
 var source_id : int = 1
 var layer : int = 0
@@ -29,13 +31,15 @@ signal x_size(size : int)
 signal y_size(size : int)
 
 func _ready():
+	if override:
+		await get_tree().process_frame
 	if height < 1:
 		print_debug("Set height to positive number")
 		return
 	if width < 1:
 		print_debug("Set height to width number")
 		return
-		
+	
 	var loop_height = height - 1
 	var loop_width = width - 1
 	var tile_to_place : Vector2i
@@ -80,10 +84,10 @@ func get_global_dimensions():
 	global_bottom_right = map_to_local(get_rect.position + get_rect.size) - Vector2(20, 20)
 	global_top_left = map_to_local(get_rect.position) - Vector2(16, 16)
 	global_top_right = map_to_local(get_rect.position + Vector2i(get_rect.size.x, 0)) - Vector2(16, 16)
-	#$ColorRect.size = Vector2i(global_bottom_right.x - global_bottom_left.x, global_bottom_left.y - global_top_left.y) #+ Vector2i(32, 32)
+	color_rect.size = Vector2i(global_bottom_right.x - global_bottom_left.x, global_bottom_left.y - global_top_left.y) #+ Vector2i(32, 32)
 	#print($ColorRect.size)
 	#print(global_bottom_left)
-	#$ColorRect.position =  global_top_right
+	color_rect.position =  global_top_left
 	emit_signal("bot_left", global_bottom_left)
 	emit_signal("bot_right", global_bottom_right)
 	emit_signal("top_left", global_top_left)
@@ -99,3 +103,8 @@ func _get_bottom_center():
 	
 #func _process(delta):
 	#print(get_viewport().get_mouse_position())
+
+
+func _on_overide_panel_size(h, w):
+	height = h
+	width = w

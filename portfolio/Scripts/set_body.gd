@@ -13,6 +13,7 @@ func _on_panel_top_left(dimes):
 	panel_top_left_corner = dimes
 
 func _ready():
+	await get_tree().process_frame
 	get_v_scroll_bar().modulate.a = 0
 	var body_size_x = panel_x_size - left_margin - right_margin
 	var body_size_y = panel_y_size - margin_y * 2
