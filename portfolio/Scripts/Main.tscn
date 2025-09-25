@@ -1,4 +1,4 @@
-[gd_scene load_steps=633 format=3 uid="uid://dfhro4he33mwe"]
+[gd_scene load_steps=636 format=3 uid="uid://dfhro4he33mwe"]
 
 [ext_resource type="Texture2D" uid="uid://bldgwkrwu0770" path="res://Stylized outline.png" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://cvgj45t5itakk" path="res://Scripts/PortNav.gd" id="1_uu6xs"]
@@ -357,6 +357,8 @@
 [ext_resource type="Texture2D" uid="uid://dy318prthnr1a" path="res://Assets/Barriers/Right/R_Barrier.png" id="330_vgoi8"]
 [ext_resource type="Texture2D" uid="uid://re8aqwmkfv8v" path="res://Assets/Barriers/Right/R_Barrier_shadow.png" id="331_rb3cd"]
 [ext_resource type="Texture2D" uid="uid://6ycivjxovio4" path="res://Font outline.png" id="356_m6ggt"]
+[ext_resource type="Script" uid="uid://ccijqkmwxdmwc" path="res://Scripts/exit_panel.gd" id="358_4hi06"]
+[ext_resource type="PackedScene" uid="uid://cgd2k7ycmvr22" path="res://Scripts/Default Window.tscn" id="358_4i1ne"]
 [ext_resource type="FontFile" uid="uid://dsy7a4r455j54" path="res://Fonts/Default.ttf" id="358_4oqqu"]
 [ext_resource type="FontFile" uid="uid://db0nxlp577mr6" path="res://Fonts/Display.ttf" id="359_28u1i"]
 [ext_resource type="Texture2D" uid="uid://b5lolbyvi3d43" path="res://Assets/Particles/Big Particle.png" id="360_28u1i"]
@@ -5084,6 +5086,9 @@ size = Vector2(63, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_28u1i"]
 size = Vector2(127.5, 169)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4hi06"]
+size = Vector2(64.5, 100.5)
+
 [sub_resource type="Curve" id="Curve_m6ggt"]
 _data = [Vector2(0.0927419, 0.0634649), 0.0, 0.0, 0, 0, Vector2(0.870968, 0.498285), 0.0, 0.0, 0, 0]
 point_count = 2
@@ -5349,6 +5354,7 @@ libraries = {
 }
 
 [node name="Underground1" type="TextureRect" parent="Background"]
+texture_filter = 1
 offset_top = 2688.0
 offset_right = 5760.0
 offset_bottom = 6840.0
@@ -5356,6 +5362,7 @@ mouse_filter = 2
 texture = ExtResource("8_20pc6")
 
 [node name="Underground2" type="TextureRect" parent="Background"]
+texture_filter = 1
 offset_top = 6840.0
 offset_right = 5760.0
 offset_bottom = 10992.0
@@ -5368,6 +5375,7 @@ position = Vector2(400, 1806)
 texture = ExtResource("28_5mvff")
 
 [node name="Underground3" type="TextureRect" parent="Background"]
+texture_filter = 1
 offset_top = 10992.0
 offset_right = 5760.0
 offset_bottom = 15144.0
@@ -6312,7 +6320,51 @@ label_name = "films"
 position = Vector2(903.25, 867.5)
 shape = SubResource("RectangleShape2D_28u1i")
 
+[node name="NOAI Poster" type="Area2D" parent="Buttons" node_paths=PackedStringArray("outline_text", "color_block")]
+script = ExtResource("69_3b7lf")
+outline_text = NodePath("../HoverLabel")
+color_block = NodePath("../ColorRect")
+label_name = "Look?"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/NOAI Poster"]
+position = Vector2(399.75, 1806.75)
+shape = SubResource("RectangleShape2D_4hi06")
+
+[node name="Panel" type="Panel" parent="Buttons"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 3840.0
+offset_bottom = 14064.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("358_4hi06")
+
+[node name="AI Poster Look" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
+visible = false
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 400.0
+offset_top = 1748.0
+offset_right = 400.0
+offset_bottom = 1748.0
+grow_horizontal = 1
+grow_vertical = 1
+panel = NodePath("../Panel")
+click_box = NodePath("../NOAI Poster")
+
+[node name="Panel" parent="Buttons/AI Poster Look" index="0"]
+width = 12
+
+[node name="Body" parent="Buttons/AI Poster Look/Text" index="1"]
+body_text = "[center]Rage, rage against the dying of the light[/center]"
+margin_y = 25
+
 [node name="Outline Text" type="RichTextLabel" parent="Buttons"]
+visible = false
 texture_filter = 1
 offset_left = 240.0
 offset_top = 1639.0
@@ -6486,6 +6538,13 @@ autostart = true
 [connection signal="mouse_entered" from="Buttons/Film Area" to="Buttons/Film Area" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/Film Area" to="." method="_on_mouse_exited"]
 [connection signal="mouse_exited" from="Buttons/Film Area" to="Buttons/Film Area" method="_on_mouse_exited"]
+[connection signal="input_event" from="Buttons/NOAI Poster" to="Buttons/AI Poster Look" method="_on_input_event"]
+[connection signal="mouse_entered" from="Buttons/NOAI Poster" to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="Buttons/NOAI Poster" to="Buttons/NOAI Poster" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/NOAI Poster" to="." method="_on_mouse_exited"]
+[connection signal="mouse_exited" from="Buttons/NOAI Poster" to="Buttons/NOAI Poster" method="_on_mouse_exited"]
+[connection signal="gui_input" from="Buttons/Panel" to="Buttons/AI Poster Look" method="_on_panel_gui_input"]
+[connection signal="visibility_changed" from="Buttons/Panel" to="Buttons/Panel" method="_on_visibility_changed"]
 [connection signal="timeout" from="Timer" to="Background" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="Home/Head" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="Home/Legs" method="_on_timer_timeout"]
@@ -6499,3 +6558,5 @@ autostart = true
 [connection signal="timeout" from="Timer" to="Projects/Perch" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="Projects/Cup" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="Projects/LampLSand_Projects" method="_on_timer_timeout"]
+
+[editable path="Buttons/AI Poster Look"]

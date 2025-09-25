@@ -9,6 +9,7 @@ extends Node2D
 #@export var to_projects_button : TextureButton
 @export var label : RichTextLabel
 @export var color_block : ColorRect
+@onready var panel = $Buttons/Panel
 
 var root_window
 

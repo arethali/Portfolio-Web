@@ -52,6 +52,7 @@ texture_filter = 1
 layout_mode = 0
 offset_right = 20.0
 offset_bottom = 20.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource("2_b24j5")
 texture_pressed = ExtResource("3_u3agq")
 texture_hover = ExtResource("3_u3agq")
@@ -135,6 +136,12 @@ script = ExtResource("8_c010p")
 title = "[b]Personal[/b]"
 padding = Vector2(20, 28)
 
+[node name="Bios" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="Resume" type="Control" parent="."]
 unique_name_in_owner = true
 anchors_preset = 0
@@ -150,10 +157,12 @@ offset_bottom = 40.0
 [connection signal="top_left" from="Panel" to="Buttons/Title" method="_on_panel_top_left"]
 [connection signal="top_right" from="Panel" to="Exit" method="_on_panel_top_right"]
 [connection signal="top_right" from="Panel" to="Text/VScrollBar" method="_on_panel_top_right"]
+[connection signal="x_size" from="Panel" to="." method="_on_panel_x_size"]
 [connection signal="x_size" from="Panel" to="Text/Body" method="_on_panel_x_size"]
 [connection signal="x_size" from="Panel" to="Buttons/Title" method="_on_panel_x_size"]
+[connection signal="y_size" from="Panel" to="." method="_on_panel_y_size"]
+[connection signal="y_size" from="Panel" to="Text/VScrollBar" method="_on_panel_y_size"]
 [connection signal="y_size" from="Panel" to="Text/Body" method="_on_panel_y_size"]
 [connection signal="y_size" from="Panel" to="Buttons/Title" method="_on_panel_y_size"]
-[connection signal="y_size" from="Panel" to="Text/VScrollBar" method="_on_panel_y_size"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
 [connection signal="value_changed" from="Text/VScrollBar" to="Text/VScrollBar" method="_on_value_changed"]
