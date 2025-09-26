@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://cgd2k7ycmvr22"]
+[gd_scene load_steps=42 format=3 uid="uid://cgd2k7ycmvr22"]
 
 [ext_resource type="PackedScene" uid="uid://kp4lldtw5wvt" path="res://Scripts/Panel.tscn" id="1_4a88q"]
 [ext_resource type="Script" uid="uid://ceydd2wfjf7au" path="res://Scripts/default_window.gd" id="1_u3agq"]
@@ -33,6 +33,9 @@
 [ext_resource type="Texture2D" uid="uid://bthbyth2kf6r7" path="res://Assets/UI/Projects/Ecotime_normal.png" id="23_l77b0"]
 [ext_resource type="Texture2D" uid="uid://4g3ts2mbp5ex" path="res://Assets/UI/Projects/Ecotime_pressed.png" id="24_tvm31"]
 [ext_resource type="Texture2D" uid="uid://bae4d2aeb607k" path="res://Assets/UI/Projects/Ecotime_hovered.png" id="25_7yh8u"]
+[ext_resource type="Texture2D" uid="uid://d2do4pnir6005" path="res://Assets/UI/Film/Video Button Normal.png" id="34_lbclf"]
+[ext_resource type="Texture2D" uid="uid://dhoqxoknqhmly" path="res://Assets/UI/Film/Video Button Pressed.png" id="35_jay7j"]
+[ext_resource type="Texture2D" uid="uid://dglacirtehkhk" path="res://Assets/UI/Film/Video Button hovered.png" id="36_n78kt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0i73k"]
 bg_color = Color(1, 0.94902, 0.768627, 1)
@@ -70,6 +73,7 @@ metadata/_edit_vertical_guides_ = [84.0]
 
 [node name="Panel" parent="." instance=ExtResource("1_4a88q")]
 width = 16
+override = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
@@ -79,6 +83,7 @@ offset_bottom = 40.0
 color = Color(1, 1, 1, 0.375)
 
 [node name="Exit" type="TextureButton" parent="."]
+unique_name_in_owner = true
 texture_filter = 1
 layout_mode = 0
 offset_right = 20.0
@@ -133,7 +138,7 @@ body_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu
 left_margin = 20
 right_margin = 40
 
-[node name="Buttons" type="Control" parent="." node_paths=PackedStringArray("buttons", "buttons_container")]
+[node name="Buttons" type="Control" parent="." node_paths=PackedStringArray("project_buttons", "film_buttons", "row_container", "buttons_container")]
 unique_name_in_owner = true
 process_mode = 4
 visible = false
@@ -142,9 +147,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 1
 script = ExtResource("10_7vdy2")
-button_format = "Projects"
-buttons = [NodePath("Project_TCOAS"), NodePath("Project_Portfolio"), NodePath("Project_TRW"), NodePath("Project_Ecotime"), NodePath("Project_grocery"), NodePath("Project_Basline")]
-buttons_container = NodePath("Button Container/HBoxContainer")
+project_buttons = [NodePath("Project_TCOAS"), NodePath("Project_Portfolio"), NodePath("Project_TRW"), NodePath("Project_Ecotime"), NodePath("Project_grocery"), NodePath("Project_Basline")]
+film_buttons = [NodePath("Film1"), NodePath("Film2"), NodePath("Film3"), NodePath("Film4"), NodePath("Film5"), NodePath("Film6"), NodePath("Film10"), NodePath("Film7"), NodePath("Film8"), NodePath("Film9")]
+row_container = [NodePath("Button Container/Row 1"), NodePath("Button Container/Row 2")]
+buttons_container = NodePath("Button Container")
 
 [node name="Title" type="RichTextLabel" parent="Buttons"]
 texture_filter = 1
@@ -181,8 +187,24 @@ text = "[b]Title[/b]"
 fit_content = true
 autowrap_mode = 0
 script = ExtResource("8_c010p")
-content = "Hover for more information"
-padding = Vector2(20, 320)
+content = "Hover for more information."
+
+[node name="TimeLine" type="RichTextLabel" parent="Buttons"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_right = 455.0
+offset_bottom = 112.0
+theme_override_colors/default_color = Color(0.677629, 0.670038, 0.497546, 1)
+theme_override_constants/line_separation = 16
+theme_override_fonts/normal_font = ExtResource("6_v7ar0")
+theme_override_fonts/bold_font = ExtResource("7_63ls6")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+horizontal_alignment = 2
+script = ExtResource("8_c010p")
+content = "Dates"
 
 [node name="Body" type="RichTextLabel" parent="Buttons"]
 texture_filter = 1
@@ -190,14 +212,14 @@ layout_mode = 0
 offset_right = 455.0
 offset_bottom = 112.0
 theme_override_colors/default_color = Color(0.635294, 0.627451, 0.454902, 1)
-theme_override_constants/line_separation = 16
+theme_override_constants/line_separation = 8
 theme_override_fonts/normal_font = ExtResource("6_v7ar0")
 theme_override_fonts/bold_font = ExtResource("7_63ls6")
 theme_override_font_sizes/normal_font_size = 40
 theme_override_font_sizes/bold_font_size = 40
 bbcode_enabled = true
 script = ExtResource("12_jjry7")
-padding = Vector2(20, 380)
+padding = Vector2(20, 388)
 padding_bottom = 20
 
 [node name="Button Container" type="VBoxContainer" parent="Buttons"]
@@ -205,16 +227,21 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 0
+theme_override_constants/separation = 16
 script = ExtResource("12_7p8p1")
 side_padding = 20
-top_padding = 120
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Buttons/Button Container"]
+[node name="Row 1" type="HBoxContainer" parent="Buttons/Button Container"]
 layout_mode = 2
 mouse_filter = 0
 theme_override_constants/separation = 16
 
-[node name="Project_Basline" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "body_label")]
+[node name="Row 2" type="HBoxContainer" parent="Buttons/Button Container"]
+layout_mode = 2
+mouse_filter = 0
+theme_override_constants/separation = 16
+
+[node name="Project_Basline" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label", "body_label")]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -226,11 +253,13 @@ texture_pressed = ExtResource("12_7vdy2")
 texture_hover = ExtResource("13_7p8p1")
 script = ExtResource("16_6v0q4")
 title_label = NodePath("../Project Name")
+time_label = NodePath("../TimeLine")
 body_label = NodePath("../Body")
 title = "Baseline Bootcamp"
+time = "June 2025 - July 2025"
 body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Basline"
 
-[node name="Project_TRW" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "body_label")]
+[node name="Project_TRW" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label", "body_label")]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -242,11 +271,13 @@ texture_pressed = ExtResource("15_jjry7")
 texture_hover = ExtResource("16_sp3od")
 script = ExtResource("16_6v0q4")
 title_label = NodePath("../Project Name")
+time_label = NodePath("../TimeLine")
 body_label = NodePath("../Body")
-title = "The Reason Why"
+title = "The Reason Why (ARG)"
+time = "Jan. 2024 - June 2024"
 body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  TRW"
 
-[node name="Project_Portfolio" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "body_label")]
+[node name="Project_Portfolio" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label", "body_label")]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -258,11 +289,13 @@ texture_pressed = ExtResource("18_03ihb")
 texture_hover = ExtResource("19_lbclf")
 script = ExtResource("16_6v0q4")
 title_label = NodePath("../Project Name")
+time_label = NodePath("../TimeLine")
 body_label = NodePath("../Body")
 title = "(WIP) Portfolio"
+time = "July 2025 - Now"
 body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Portfolio"
 
-[node name="Project_grocery" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "body_label")]
+[node name="Project_grocery" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label", "body_label")]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -274,11 +307,13 @@ texture_pressed = ExtResource("21_n78kt")
 texture_hover = ExtResource("22_07gwf")
 script = ExtResource("16_6v0q4")
 title_label = NodePath("../Project Name")
+time_label = NodePath("../TimeLine")
 body_label = NodePath("../Body")
 title = "GroceryGuide"
+time = "Nov. 2023 - Dec 2023"
 body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  GG"
 
-[node name="Project_Ecotime" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "body_label")]
+[node name="Project_Ecotime" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label", "body_label")]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -290,11 +325,13 @@ texture_pressed = ExtResource("24_tvm31")
 texture_hover = ExtResource("25_7yh8u")
 script = ExtResource("16_6v0q4")
 title_label = NodePath("../Project Name")
+time_label = NodePath("../TimeLine")
 body_label = NodePath("../Body")
 title = "Ecotime Redesign"
+time = "Jan. 2023 - March 2023"
 body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ecotime"
 
-[node name="Project_TCOAS" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "body_label")]
+[node name="Project_TCOAS" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label", "body_label")]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -306,9 +343,171 @@ texture_pressed = ExtResource("12_4kbrp")
 texture_hover = ExtResource("13_dw7sr")
 script = ExtResource("16_6v0q4")
 title_label = NodePath("../Project Name")
+time_label = NodePath("../TimeLine")
 body_label = NodePath("../Body")
 title = "(WIP) The Case of Aradia Springs"
+time = "July 2024 - Now"
 body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  TCOAS"
+
+[node name="Film1" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label", "body_label")]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("34_lbclf")
+texture_pressed = ExtResource("35_jay7j")
+texture_hover = ExtResource("36_n78kt")
+script = ExtResource("16_6v0q4")
+title_label = NodePath("../Project Name")
+time_label = NodePath("../TimeLine")
+body_label = NodePath("../Body")
+title = "The Reason Why (ARG)"
+time = "June 2024"
+body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  TRW"
+
+[node name="Film2" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label", "body_label")]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("34_lbclf")
+texture_pressed = ExtResource("35_jay7j")
+texture_hover = ExtResource("36_n78kt")
+script = ExtResource("16_6v0q4")
+title_label = NodePath("../Project Name")
+time_label = NodePath("../TimeLine")
+body_label = NodePath("../Body")
+title = "Broken Echoes"
+time = "January 2024"
+body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Broken Echos"
+
+[node name="Film3" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label", "body_label")]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("34_lbclf")
+texture_pressed = ExtResource("35_jay7j")
+texture_hover = ExtResource("36_n78kt")
+script = ExtResource("16_6v0q4")
+title_label = NodePath("../Project Name")
+time_label = NodePath("../TimeLine")
+body_label = NodePath("../Body")
+title = "A Letter from the Unremembered"
+time = "Febuary 2024"
+body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  ALFTU"
+
+[node name="Film4" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label", "body_label")]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("34_lbclf")
+texture_pressed = ExtResource("35_jay7j")
+texture_hover = ExtResource("36_n78kt")
+script = ExtResource("16_6v0q4")
+title_label = NodePath("../Project Name")
+time_label = NodePath("../TimeLine")
+body_label = NodePath("../Body")
+title = "Are We Doomed by the Narrative?"
+time = "March 2024"
+body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  AWDBTN"
+
+[node name="Film5" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label", "body_label")]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("34_lbclf")
+texture_pressed = ExtResource("35_jay7j")
+texture_hover = ExtResource("36_n78kt")
+script = ExtResource("16_6v0q4")
+title_label = NodePath("../Project Name")
+time_label = NodePath("../TimeLine")
+body_label = NodePath("../Body")
+title = "i think my life lost its plot"
+time = "December 2023"
+body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lost Plot"
+
+[node name="Film6" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label", "body_label")]
+visible = false
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 72.0
+texture_normal = ExtResource("34_lbclf")
+texture_pressed = ExtResource("35_jay7j")
+texture_hover = ExtResource("36_n78kt")
+script = ExtResource("16_6v0q4")
+title_label = NodePath("../Project Name")
+time_label = NodePath("../TimeLine")
+body_label = NodePath("../Body")
+title = "What Makes You Tick?"
+time = "October 2023"
+body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Tick"
+
+[node name="Film7" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label", "body_label")]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("34_lbclf")
+texture_pressed = ExtResource("35_jay7j")
+texture_hover = ExtResource("36_n78kt")
+script = ExtResource("16_6v0q4")
+title_label = NodePath("../Project Name")
+time_label = NodePath("../TimeLine")
+body_label = NodePath("../Body")
+title = "And One Turns to Two"
+time = "October 2023"
+body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  1 to 2"
+
+[node name="Film8" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label", "body_label")]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("34_lbclf")
+texture_pressed = ExtResource("35_jay7j")
+texture_hover = ExtResource("36_n78kt")
+script = ExtResource("16_6v0q4")
+title_label = NodePath("../Project Name")
+time_label = NodePath("../TimeLine")
+body_label = NodePath("../Body")
+title = "Case 106"
+time = "November 2023"
+body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Case"
+
+[node name="Film9" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label", "body_label")]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("34_lbclf")
+texture_pressed = ExtResource("35_jay7j")
+texture_hover = ExtResource("36_n78kt")
+script = ExtResource("16_6v0q4")
+title_label = NodePath("../Project Name")
+time_label = NodePath("../TimeLine")
+body_label = NodePath("../Body")
+title = "Hello, World!"
+time = "October 2023"
+body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Hello!"
+
+[node name="Film10" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label", "body_label")]
+visible = false
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 72.0
+texture_normal = ExtResource("34_lbclf")
+texture_pressed = ExtResource("35_jay7j")
+texture_hover = ExtResource("36_n78kt")
+script = ExtResource("16_6v0q4")
+title_label = NodePath("../Project Name")
+time_label = NodePath("../TimeLine")
+body_label = NodePath("../Body")
+title = "Cafe 1930"
+time = "August 2021"
+body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Cafe"
 
 [node name="Bios" type="Control" parent="."]
 unique_name_in_owner = true
@@ -336,14 +535,17 @@ offset_bottom = 40.0
 
 [connection signal="top_left" from="Panel" to="Buttons/Title" method="_on_panel_top_left"]
 [connection signal="top_left" from="Panel" to="Buttons/Project Name" method="_on_panel_top_left"]
+[connection signal="top_left" from="Panel" to="Buttons/TimeLine" method="_on_panel_top_left"]
 [connection signal="top_left" from="Panel" to="Buttons/Body" method="_on_panel_top_left"]
 [connection signal="top_left" from="Panel" to="Buttons/Button Container" method="_on_panel_top_left"]
 [connection signal="top_right" from="Panel" to="Exit" method="_on_panel_top_right"]
 [connection signal="top_right" from="Panel" to="Text/VScrollBar" method="_on_panel_top_right"]
+[connection signal="top_right" from="Panel" to="Buttons/TimeLine" method="_on_panel_top_right"]
 [connection signal="x_size" from="Panel" to="." method="_on_panel_x_size"]
 [connection signal="x_size" from="Panel" to="Text/Body" method="_on_panel_x_size"]
 [connection signal="x_size" from="Panel" to="Buttons/Title" method="_on_panel_x_size"]
 [connection signal="x_size" from="Panel" to="Buttons/Project Name" method="_on_panel_x_size"]
+[connection signal="x_size" from="Panel" to="Buttons/TimeLine" method="_on_panel_x_size"]
 [connection signal="x_size" from="Panel" to="Buttons/Body" method="_on_panel_x_size"]
 [connection signal="x_size" from="Panel" to="Buttons/Button Container" method="_on_panel_x_size"]
 [connection signal="y_size" from="Panel" to="." method="_on_panel_y_size"]
@@ -351,6 +553,7 @@ offset_bottom = 40.0
 [connection signal="y_size" from="Panel" to="Text/Body" method="_on_panel_y_size"]
 [connection signal="y_size" from="Panel" to="Buttons/Title" method="_on_panel_y_size"]
 [connection signal="y_size" from="Panel" to="Buttons/Project Name" method="_on_panel_y_size"]
+[connection signal="y_size" from="Panel" to="Buttons/TimeLine" method="_on_panel_y_size"]
 [connection signal="y_size" from="Panel" to="Buttons/Body" method="_on_panel_y_size"]
 [connection signal="y_size" from="Panel" to="Buttons/Button Container" method="_on_panel_y_size"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
@@ -359,18 +562,64 @@ offset_bottom = 40.0
 [connection signal="mouse_entered" from="Buttons/Project_Basline" to="Buttons/Project_Basline" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/Project_Basline" to="Buttons/Project_Basline" method="_on_mouse_exited"]
 [connection signal="set_body" from="Buttons/Project_Basline" to="Buttons/Body" method="_on_set_body"]
+[connection signal="set_hover" from="Buttons/Project_Basline" to="Buttons/TimeLine" method="set_on_hover"]
 [connection signal="mouse_entered" from="Buttons/Project_TRW" to="Buttons/Project_TRW" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/Project_TRW" to="Buttons/Project_TRW" method="_on_mouse_exited"]
 [connection signal="set_body" from="Buttons/Project_TRW" to="Buttons/Body" method="_on_set_body"]
+[connection signal="set_hover" from="Buttons/Project_TRW" to="Buttons/TimeLine" method="set_on_hover"]
 [connection signal="mouse_entered" from="Buttons/Project_Portfolio" to="Buttons/Project_Portfolio" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/Project_Portfolio" to="Buttons/Project_Portfolio" method="_on_mouse_exited"]
 [connection signal="set_body" from="Buttons/Project_Portfolio" to="Buttons/Body" method="_on_set_body"]
+[connection signal="set_hover" from="Buttons/Project_Portfolio" to="Buttons/TimeLine" method="set_on_hover"]
 [connection signal="mouse_entered" from="Buttons/Project_grocery" to="Buttons/Project_grocery" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/Project_grocery" to="Buttons/Project_grocery" method="_on_mouse_exited"]
 [connection signal="set_body" from="Buttons/Project_grocery" to="Buttons/Body" method="_on_set_body"]
+[connection signal="set_hover" from="Buttons/Project_grocery" to="Buttons/TimeLine" method="set_on_hover"]
 [connection signal="mouse_entered" from="Buttons/Project_Ecotime" to="Buttons/Project_Ecotime" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/Project_Ecotime" to="Buttons/Project_Ecotime" method="_on_mouse_exited"]
 [connection signal="set_body" from="Buttons/Project_Ecotime" to="Buttons/Body" method="_on_set_body"]
+[connection signal="set_hover" from="Buttons/Project_Ecotime" to="Buttons/TimeLine" method="set_on_hover"]
 [connection signal="mouse_entered" from="Buttons/Project_TCOAS" to="Buttons/Project_TCOAS" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/Project_TCOAS" to="Buttons/Project_TCOAS" method="_on_mouse_exited"]
 [connection signal="set_body" from="Buttons/Project_TCOAS" to="Buttons/Body" method="_on_set_body"]
+[connection signal="set_hover" from="Buttons/Project_TCOAS" to="Buttons/TimeLine" method="set_on_hover"]
+[connection signal="mouse_entered" from="Buttons/Film1" to="Buttons/Film1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Film1" to="Buttons/Film1" method="_on_mouse_exited"]
+[connection signal="set_body" from="Buttons/Film1" to="Buttons/Body" method="_on_set_body"]
+[connection signal="set_hover" from="Buttons/Film1" to="Buttons/TimeLine" method="set_on_hover"]
+[connection signal="mouse_entered" from="Buttons/Film2" to="Buttons/Film2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Film2" to="Buttons/Film2" method="_on_mouse_exited"]
+[connection signal="set_body" from="Buttons/Film2" to="Buttons/Body" method="_on_set_body"]
+[connection signal="set_hover" from="Buttons/Film2" to="Buttons/TimeLine" method="set_on_hover"]
+[connection signal="mouse_entered" from="Buttons/Film3" to="Buttons/Film3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Film3" to="Buttons/Film3" method="_on_mouse_exited"]
+[connection signal="set_body" from="Buttons/Film3" to="Buttons/Body" method="_on_set_body"]
+[connection signal="set_hover" from="Buttons/Film3" to="Buttons/TimeLine" method="set_on_hover"]
+[connection signal="mouse_entered" from="Buttons/Film4" to="Buttons/Film4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Film4" to="Buttons/Film4" method="_on_mouse_exited"]
+[connection signal="set_body" from="Buttons/Film4" to="Buttons/Body" method="_on_set_body"]
+[connection signal="set_hover" from="Buttons/Film4" to="Buttons/TimeLine" method="set_on_hover"]
+[connection signal="mouse_entered" from="Buttons/Film5" to="Buttons/Film5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Film5" to="Buttons/Film5" method="_on_mouse_exited"]
+[connection signal="set_body" from="Buttons/Film5" to="Buttons/Body" method="_on_set_body"]
+[connection signal="set_hover" from="Buttons/Film5" to="Buttons/TimeLine" method="set_on_hover"]
+[connection signal="mouse_entered" from="Buttons/Film6" to="Buttons/Film6" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Film6" to="Buttons/Film6" method="_on_mouse_exited"]
+[connection signal="set_body" from="Buttons/Film6" to="Buttons/Body" method="_on_set_body"]
+[connection signal="set_hover" from="Buttons/Film6" to="Buttons/TimeLine" method="set_on_hover"]
+[connection signal="mouse_entered" from="Buttons/Film7" to="Buttons/Film7" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Film7" to="Buttons/Film7" method="_on_mouse_exited"]
+[connection signal="set_body" from="Buttons/Film7" to="Buttons/Body" method="_on_set_body"]
+[connection signal="set_hover" from="Buttons/Film7" to="Buttons/TimeLine" method="set_on_hover"]
+[connection signal="mouse_entered" from="Buttons/Film8" to="Buttons/Film8" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Film8" to="Buttons/Film8" method="_on_mouse_exited"]
+[connection signal="set_body" from="Buttons/Film8" to="Buttons/Body" method="_on_set_body"]
+[connection signal="set_hover" from="Buttons/Film8" to="Buttons/TimeLine" method="set_on_hover"]
+[connection signal="mouse_entered" from="Buttons/Film9" to="Buttons/Film9" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Film9" to="Buttons/Film9" method="_on_mouse_exited"]
+[connection signal="set_body" from="Buttons/Film9" to="Buttons/Body" method="_on_set_body"]
+[connection signal="set_hover" from="Buttons/Film9" to="Buttons/TimeLine" method="set_on_hover"]
+[connection signal="mouse_entered" from="Buttons/Film10" to="Buttons/Film10" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Buttons/Film10" to="Buttons/Film10" method="_on_mouse_exited"]
+[connection signal="set_body" from="Buttons/Film10" to="Buttons/Body" method="_on_set_body"]
+[connection signal="set_hover" from="Buttons/Film10" to="Buttons/TimeLine" method="set_on_hover"]

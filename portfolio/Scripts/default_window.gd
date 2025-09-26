@@ -1,6 +1,7 @@
 extends Control
 
 @export_enum("Text", "Buttons", "Bios", "Resume", "Skills") var format: String = ""
+@export var need_exit : bool = true
 @export var panel : Panel 
 @export var click_box : Area2D
 @onready var text = %Text
@@ -8,6 +9,7 @@ extends Control
 @onready var resume = %Resume
 @onready var skills = %Skills
 @onready var bios = %Bios
+@onready var exit = %Exit
 
 var panel_size_x 
 var panel_size_y 
@@ -32,6 +34,8 @@ func _ready():
 		_:
 			print_debug("No format selected.")
 			return
+	if need_exit == false:
+		exit.hide()
 	#Disabled for debugging
 	await get_tree().process_frame
 	position = Vector2(position.x - (panel_size_x/2), position.y - panel_size_y)
@@ -62,8 +66,6 @@ func _on_panel_gui_input(event):
 
 func _on_panel_x_size(size):
 	panel_size_x = size
-	
-
 
 func _on_panel_y_size(size):
 	panel_size_y = size

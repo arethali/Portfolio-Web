@@ -3,6 +3,7 @@ extends AnimatedSprite2D
 @export var god_target : int
 @export var aes_target : int
 
+@onready var laptop = $"../../Buttons/Laptop"
 @onready var on_off = false
 
 func _ready():
@@ -37,5 +38,5 @@ func _on_exit_pressed():
 func _on_panel_gui_input(event):
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			if $"../../Buttons/Laptop".visible == false:
+			if laptop.visible == false:
 				_toggle_screen()

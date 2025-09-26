@@ -33,3 +33,4 @@ func _on_set_body(body : String):
 	var text_size_x = get_content_width()
 	var text_size_y = get_content_height()
 	#$"../../ColorRect".size = Vector2i(body_size_x, body_size_y)
+	#$"../../ColorRect".position = position

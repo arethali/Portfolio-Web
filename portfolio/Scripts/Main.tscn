@@ -5495,7 +5495,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_mqe6h")
 }
 
-[node name="Body" type="AnimatedSprite2D" parent="Home" node_paths=PackedStringArray("anim_player")]
+[node name="Body" type="AnimatedSprite2D" parent="Home" node_paths=PackedStringArray("anim_player", "interact_area")]
 texture_filter = 1
 position = Vector2(2930, 910)
 sprite_frames = SubResource("SpriteFrames_08030")
@@ -5504,6 +5504,7 @@ script = ExtResource("156_gotmd")
 anim_player = NodePath("AnimationPlayer")
 on_anim = "Wave"
 off_anim = "RESET"
+interact_area = NodePath("../../Buttons/Body Area")
 one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Home/Body"]
@@ -5599,7 +5600,7 @@ parameters/conditions/Sleep = false
 parameters/conditions/Yell = false
 parameters/conditions/default = false
 
-[node name="Phone" type="AnimatedSprite2D" parent="Home" node_paths=PackedStringArray("anim_player")]
+[node name="Phone" type="AnimatedSprite2D" parent="Home" node_paths=PackedStringArray("anim_player", "interact_area")]
 texture_filter = 1
 position = Vector2(2854, 964)
 sprite_frames = SubResource("SpriteFrames_6xmvy")
@@ -5607,6 +5608,7 @@ script = ExtResource("156_gotmd")
 anim_player = NodePath("AnimationPlayer")
 on_anim = "On"
 off_anim = "Off"
+interact_area = NodePath("../../Buttons/Phone Area")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Home/Phone"]
 libraries = {
@@ -5740,7 +5742,7 @@ texture_filter = 1
 position = Vector2(650, 968)
 texture = ExtResource("209_6gvty")
 
-[node name="Camera" type="AnimatedSprite2D" parent="Personal" node_paths=PackedStringArray("anim_player")]
+[node name="Camera" type="AnimatedSprite2D" parent="Personal" node_paths=PackedStringArray("anim_player", "interact_area")]
 texture_filter = 1
 position = Vector2(632, 962)
 sprite_frames = SubResource("SpriteFrames_qr1df")
@@ -5749,6 +5751,7 @@ script = ExtResource("156_gotmd")
 anim_player = NodePath("AnimationPlayer")
 on_anim = "Flash"
 off_anim = "RESET"
+interact_area = NodePath("../../Buttons/Camera Area")
 one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Personal/Camera"]
@@ -5777,7 +5780,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_lboh7")
 }
 
-[node name="Notebook" type="AnimatedSprite2D" parent="Personal" node_paths=PackedStringArray("anim_player")]
+[node name="Notebook" type="AnimatedSprite2D" parent="Personal" node_paths=PackedStringArray("anim_player", "interact_area")]
 texture_filter = 1
 position = Vector2(426, 902)
 sprite_frames = SubResource("SpriteFrames_3yc0b")
@@ -5785,6 +5788,7 @@ animation = &"Opening"
 script = ExtResource("156_gotmd")
 anim_player = NodePath("AnimationPlayer")
 on_anim = "Open"
+interact_area = NodePath("../../Buttons/NoteBook Area")
 reversed = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Personal/Notebook"]
@@ -5867,7 +5871,7 @@ texture_filter = 1
 position = Vector2(960, 926)
 texture = ExtResource("255_rrjbx")
 
-[node name="Film" type="AnimatedSprite2D" parent="Personal" node_paths=PackedStringArray("anim_player", "anim_player_2")]
+[node name="Film" type="AnimatedSprite2D" parent="Personal" node_paths=PackedStringArray("anim_player", "anim_player_2", "interact_area")]
 texture_filter = 1
 position = Vector2(902, 868)
 sprite_frames = SubResource("SpriteFrames_uq243")
@@ -5877,6 +5881,7 @@ anim_player = NodePath("AnimationPlayer")
 anim_player_2 = NodePath("../Light/AnimationPlayer")
 on_anim = "Play"
 off_anim = "RESET"
+interact_area = NodePath("../../Buttons/Film Area")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Personal/Film"]
 libraries = {
@@ -5988,7 +5993,7 @@ texture_filter = 1
 position = Vector2(4894, 874)
 texture = ExtResource("278_33eqb")
 
-[node name="Tool" type="AnimatedSprite2D" parent="Projects" node_paths=PackedStringArray("anim_player")]
+[node name="Tool" type="AnimatedSprite2D" parent="Projects" node_paths=PackedStringArray("anim_player", "interact_area")]
 texture_filter = 1
 position = Vector2(5136, 854)
 sprite_frames = SubResource("SpriteFrames_xf3yn")
@@ -5997,13 +6002,15 @@ script = ExtResource("156_gotmd")
 anim_player = NodePath("AnimationPlayer")
 on_anim = "Open"
 off_anim = "Closed"
+start_on_reset = true
+interact_area = NodePath("../../Buttons/Tool Box")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Projects/Tool"]
 libraries = {
 &"": SubResource("AnimationLibrary_tvijt")
 }
 
-[node name="Resume" type="AnimatedSprite2D" parent="Projects" node_paths=PackedStringArray("anim_player")]
+[node name="Resume" type="AnimatedSprite2D" parent="Projects" node_paths=PackedStringArray("anim_player", "interact_area")]
 texture_filter = 1
 position = Vector2(5134, 920)
 sprite_frames = SubResource("SpriteFrames_16jvh")
@@ -6012,6 +6019,7 @@ script = ExtResource("156_gotmd")
 anim_player = NodePath("AnimationPlayer")
 on_anim = "RESET"
 off_anim = "Blowing"
+interact_area = NodePath("../../Buttons/Resume")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Projects/Resume"]
 libraries = {
@@ -6042,7 +6050,7 @@ script = ExtResource("325_vgj11")
 god_target = 10
 aes_target = 8
 
-[node name="Keyboard" type="AnimatedSprite2D" parent="Projects" node_paths=PackedStringArray("anim_player")]
+[node name="Keyboard" type="AnimatedSprite2D" parent="Projects" node_paths=PackedStringArray("anim_player", "interact_area")]
 texture_filter = 1
 position = Vector2(4868, 852)
 sprite_frames = SubResource("SpriteFrames_gw6qm")
@@ -6052,6 +6060,7 @@ script = ExtResource("156_gotmd")
 anim_player = NodePath("AnimationPlayer")
 on_anim = "Keyboard_clicks"
 off_anim = "RESET"
+interact_area = NodePath("../../Buttons/Keyboard")
 one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Projects/Keyboard"]
@@ -6059,7 +6068,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_4cqk1")
 }
 
-[node name="Book" type="AnimatedSprite2D" parent="Projects" node_paths=PackedStringArray("anim_player")]
+[node name="Book" type="AnimatedSprite2D" parent="Projects" node_paths=PackedStringArray("anim_player", "interact_area")]
 texture_filter = 1
 position = Vector2(4622, 832)
 sprite_frames = SubResource("SpriteFrames_nfndr")
@@ -6067,6 +6076,7 @@ animation = &"Fall"
 script = ExtResource("156_gotmd")
 anim_player = NodePath("AnimationPlayer")
 on_anim = "Book_fall"
+interact_area = NodePath("../../Buttons/Book")
 reversed = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Projects/Book"]
@@ -6352,7 +6362,6 @@ script = ExtResource("69_3b7lf")
 outline_text = NodePath("../HoverLabel")
 color_block = NodePath("../ColorRect")
 label_name = "I'm tired."
-long = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Clippy"]
 position = Vector2(3912, 2041)
@@ -6382,6 +6391,7 @@ offset_bottom = 1748.0
 grow_horizontal = 1
 grow_vertical = 1
 format = "Text"
+need_exit = false
 panel = NodePath("../Panel")
 click_box = NodePath("../NOAI Poster")
 
@@ -6390,6 +6400,9 @@ width = 12
 
 [node name="Body" parent="Buttons/AI Poster Look/Text" index="1"]
 body_text = "[center]Rage, rage against the dying of the light[/center]"
+left_margin = 28
+right_margin = 28
+margin_top = 32
 
 [node name="No King Look" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
 visible = false
@@ -6398,15 +6411,19 @@ offset_top = 1524.0
 offset_right = 1726.0
 offset_bottom = 444.0
 format = "Text"
+need_exit = false
 panel = NodePath("../Panel")
 click_box = NodePath("../NokKing Poster")
 
 [node name="Panel" parent="Buttons/No King Look" index="0"]
-height = 4
-width = 10
+height = 3
+width = 11
 
 [node name="Body" parent="Buttons/No King Look/Text" index="1"]
 body_text = "[center]sic semper tyrannis[/center]"
+left_margin = 28
+right_margin = 28
+margin_top = 32
 
 [node name="Clippy Look" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
 visible = false
@@ -6415,18 +6432,19 @@ offset_top = 1962.0
 offset_right = 3454.0
 offset_bottom = 882.0
 format = "Text"
+need_exit = false
 panel = NodePath("../Panel")
 click_box = NodePath("../Clippy")
 
 [node name="Panel" parent="Buttons/Clippy Look" index="0"]
-height = 4
+height = 3
 width = 13
 
 [node name="Body" parent="Buttons/Clippy Look/Text" index="1"]
 body_text = "[center]He just wanted to help.[/center]"
 left_margin = 28
 right_margin = 28
-margin_top = 56
+margin_top = 32
 
 [node name="Projects" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
 visible = false
@@ -6440,7 +6458,21 @@ click_box = NodePath("../Laptop")
 [node name="Panel" parent="Buttons/Projects" index="0"]
 height = 20
 width = 40
-override = true
+
+[node name="Buttons" parent="Buttons/Projects" index="4"]
+button_format = "Projects"
+
+[node name="Films" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
+visible = false
+offset_left = 900.0
+offset_top = 756.0
+offset_right = -1020.0
+offset_bottom = -324.0
+panel = NodePath("../Panel")
+click_box = NodePath("../Film Area")
+
+[node name="Buttons" parent="Buttons/Films" index="4"]
+button_format = "Films"
 
 [node name="Outline Text" type="RichTextLabel" parent="Buttons"]
 visible = false
@@ -6614,6 +6646,7 @@ autostart = true
 [connection signal="mouse_entered" from="Buttons/Yarn Area" to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/Yarn Area" to="." method="_on_mouse_exited"]
 [connection signal="input_event" from="Buttons/Film Area" to="Personal/Film" method="_on_area_input_event"]
+[connection signal="input_event" from="Buttons/Film Area" to="Buttons/Films" method="_on_input_event"]
 [connection signal="mouse_entered" from="Buttons/Film Area" to="." method="_on_mouse_entered"]
 [connection signal="mouse_entered" from="Buttons/Film Area" to="Buttons/Film Area" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/Film Area" to="." method="_on_mouse_exited"]
@@ -6633,11 +6666,14 @@ autostart = true
 [connection signal="mouse_entered" from="Buttons/Clippy" to="Buttons/Clippy" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/Clippy" to="." method="_on_mouse_exited"]
 [connection signal="mouse_exited" from="Buttons/Clippy" to="Buttons/Clippy" method="_on_mouse_exited"]
+[connection signal="gui_input" from="Buttons/Panel" to="Personal/Film" method="_on_panel_gui_input"]
 [connection signal="gui_input" from="Buttons/Panel" to="Projects/Laptop" method="_on_panel_gui_input"]
 [connection signal="gui_input" from="Buttons/Panel" to="Buttons/AI Poster Look" method="_on_panel_gui_input"]
 [connection signal="gui_input" from="Buttons/Panel" to="Buttons/No King Look" method="_on_panel_gui_input"]
 [connection signal="gui_input" from="Buttons/Panel" to="Buttons/Clippy Look" method="_on_panel_gui_input"]
 [connection signal="gui_input" from="Buttons/Panel" to="Buttons/Projects" method="_on_panel_gui_input"]
+[connection signal="gui_input" from="Buttons/Panel" to="Buttons/Films" method="_on_panel_gui_input"]
+[connection signal="pressed" from="Buttons/Projects/Exit" to="Personal/Film" method="_on_exit_pressed"]
 [connection signal="pressed" from="Buttons/Projects/Exit" to="Projects/Laptop" method="_on_exit_pressed"]
 [connection signal="timeout" from="Timer" to="Background" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="Home/Head" method="_on_timer_timeout"]
@@ -6657,3 +6693,4 @@ autostart = true
 [editable path="Buttons/No King Look"]
 [editable path="Buttons/Clippy Look"]
 [editable path="Buttons/Projects"]
+[editable path="Buttons/Films"]
