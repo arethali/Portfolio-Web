@@ -9,7 +9,7 @@ signal overide_panel_size(h, w)
 func _ready():
 	match button_format:
 		"Projects":
-			title.content = "[b]Projects[/b]"
+			title.content = "[b]Design Projects[/b]"
 			emit_signal("overide_panel_size", 20, 40)
 			add_buttons(buttons)
 		"Camera":

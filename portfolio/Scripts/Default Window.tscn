@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cgd2k7ycmvr22"]
+[gd_scene load_steps=39 format=3 uid="uid://cgd2k7ycmvr22"]
 
 [ext_resource type="PackedScene" uid="uid://kp4lldtw5wvt" path="res://Scripts/Panel.tscn" id="1_4a88q"]
 [ext_resource type="Script" uid="uid://ceydd2wfjf7au" path="res://Scripts/default_window.gd" id="1_u3agq"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://gmcbmsgph3p3" path="res://Scripts/setting_buttons_panel.gd" id="10_7vdy2"]
 [ext_resource type="Texture2D" uid="uid://d1xncv25l4wsi" path="res://Assets/UI/Projects/CoAS_normal.png" id="11_br3nd"]
 [ext_resource type="Texture2D" uid="uid://3jicf14fnfiq" path="res://Assets/UI/Projects/Basline_normal.png" id="11_ecr05"]
+[ext_resource type="FontFile" uid="uid://2xexbg02phv6" path="res://Fonts/Bold Display.ttf" id="11_sp3od"]
 [ext_resource type="Texture2D" uid="uid://dfpiwolyxn7ks" path="res://Assets/UI/Projects/CoAS_pressed.png" id="12_4kbrp"]
 [ext_resource type="Script" uid="uid://yo2oetqdsmvh" path="res://Scripts/place_v_box.gd" id="12_7p8p1"]
 [ext_resource type="Texture2D" uid="uid://cmarfcxu8t4p4" path="res://Assets/UI/Projects/Basline_pressed.png" id="12_7vdy2"]
@@ -69,9 +70,9 @@ metadata/_edit_vertical_guides_ = [84.0]
 
 [node name="Panel" parent="." instance=ExtResource("1_4a88q")]
 width = 16
-override = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -131,7 +132,6 @@ script = ExtResource("8_63ls6")
 body_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 left_margin = 20
 right_margin = 40
-margin_y = 20
 
 [node name="Buttons" type="Control" parent="." node_paths=PackedStringArray("buttons", "buttons_container")]
 unique_name_in_owner = true
@@ -153,8 +153,8 @@ offset_right = 455.0
 offset_bottom = 112.0
 theme_override_colors/default_color = Color(0.635294, 0.627451, 0.454902, 1)
 theme_override_constants/line_separation = 16
-theme_override_fonts/normal_font = ExtResource("6_v7ar0")
-theme_override_fonts/bold_font = ExtResource("7_63ls6")
+theme_override_fonts/normal_font = ExtResource("7_63ls6")
+theme_override_fonts/bold_font = ExtResource("11_sp3od")
 theme_override_font_sizes/normal_font_size = 40
 theme_override_font_sizes/bold_font_size = 40
 bbcode_enabled = true
@@ -172,8 +172,8 @@ offset_right = 455.0
 offset_bottom = 112.0
 theme_override_colors/default_color = Color(0.635294, 0.627451, 0.454902, 1)
 theme_override_constants/line_separation = 16
-theme_override_fonts/normal_font = ExtResource("6_v7ar0")
-theme_override_fonts/bold_font = ExtResource("7_63ls6")
+theme_override_fonts/normal_font = ExtResource("7_63ls6")
+theme_override_fonts/bold_font = ExtResource("11_sp3od")
 theme_override_font_sizes/normal_font_size = 40
 theme_override_font_sizes/bold_font_size = 40
 bbcode_enabled = true
@@ -181,7 +181,7 @@ text = "[b]Title[/b]"
 fit_content = true
 autowrap_mode = 0
 script = ExtResource("8_c010p")
-content = "[b]Hover for more information[/b]"
+content = "Hover for more information"
 padding = Vector2(20, 320)
 
 [node name="Body" type="RichTextLabel" parent="Buttons"]

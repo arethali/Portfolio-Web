@@ -12,7 +12,7 @@ extends AnimatedSprite2D
 
 func _ready():
 	if off_anim:
-		anim_player.play(off_anim)
+		anim_player.play("RESET")
 	else:
 		anim_player.play("RESET")
 		if anim_player_2:
@@ -20,19 +20,19 @@ func _ready():
 
 func _on_area_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
-			if event.button_index == MOUSE_BUTTON_LEFT:
-				if on_off == false:
-					anim_player.play(on_anim)
-					if anim_player_2:
-						anim_player_2.play(on_anim)
-					if one_shot == false:
-						on_off = !on_off
-				else:
-					if reversed == true:
-						anim_player.play_backwards(on_anim)
-					else:
-						if off_anim:
-							anim_player.play(off_anim)
-							if anim_player_2:
-								anim_player_2.play(off_anim)
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if on_off == false:
+				anim_player.play(on_anim)
+				if anim_player_2:
+					anim_player_2.play(on_anim)
+				if one_shot == false:
 					on_off = !on_off
+			else:
+				if reversed == true:
+					anim_player.play_backwards(on_anim)
+				else:
+					if off_anim:
+						anim_player.play(off_anim)
+						if anim_player_2:
+							anim_player_2.play(off_anim)
+				on_off = !on_off

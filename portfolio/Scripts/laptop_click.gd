@@ -37,4 +37,5 @@ func _on_exit_pressed():
 func _on_panel_gui_input(event):
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			_toggle_screen()
+			if $"../../Buttons/Laptop".visible == false:
+				_toggle_screen()

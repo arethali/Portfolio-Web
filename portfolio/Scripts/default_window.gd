@@ -33,8 +33,8 @@ func _ready():
 			print_debug("No format selected.")
 			return
 	#Disabled for debugging
-	#await get_tree().process_frame
-	#position = Vector2(position.x - (panel_size_x/2), position.y - panel_size_y)
+	await get_tree().process_frame
+	position = Vector2(position.x - (panel_size_x/2), position.y - panel_size_y)
 
 func _on_exit_pressed():
 	if visible == true:

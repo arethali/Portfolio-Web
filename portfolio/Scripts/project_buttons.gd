@@ -14,7 +14,7 @@ func _ready():
 	default_title = title_label.content
 
 func _on_mouse_entered():
-	title_label.text = "[b]" + title + "[/b]" 
+	title_label.text = title
 	emit_signal("set_body", body)
 
 
