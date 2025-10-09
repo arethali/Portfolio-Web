@@ -18,7 +18,6 @@ func _ready():
 	current = 0
 	stream = playlist[current]
 	await get_tree().process_frame
-	print(Audio.audio_on)
 	if Audio.audio_on == true:
 		play()
 	emit_signal("set_song_title", song_title[current])

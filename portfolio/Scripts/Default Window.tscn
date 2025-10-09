@@ -93,20 +93,20 @@ bg_color = Color(0.792157, 0.803922, 0.705882, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xjxqa"]
 bg_color = Color(0.588235, 0.603922, 0.423529, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_63ls6"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_je1nb"]
 bg_color = Color(0.635294, 0.627451, 0.454902, 1)
 expand_margin_left = 8.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c010p"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gux7"]
 bg_color = Color(1, 0.94902, 0.768627, 1)
 expand_margin_left = 8.0
 
 [sub_resource type="Theme" id="Theme_0i73k"]
-VScrollBar/styles/grabber = SubResource("StyleBoxFlat_63ls6")
-VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_63ls6")
-VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_63ls6")
-VScrollBar/styles/scroll = SubResource("StyleBoxFlat_c010p")
-VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_c010p")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_je1nb")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_je1nb")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_je1nb")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_0gux7")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_0gux7")
 
 [sub_resource type="GDScript" id="GDScript_kwql2"]
 script/source = "extends TextureButton

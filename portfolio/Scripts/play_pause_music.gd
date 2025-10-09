@@ -9,7 +9,6 @@ signal paused
 signal played
 
 func _ready():
-	print(Audio.audio_on)
 	if Audio.audio_on == true:
 		play.visible = false
 		pause.visible = true

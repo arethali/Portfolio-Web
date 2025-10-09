@@ -1,12 +1,28 @@
-[gd_scene load_steps=7 format=3 uid="uid://cpqsrlmu68ecm"]
+[gd_scene load_steps=11 format=3 uid="uid://cpqsrlmu68ecm"]
 
 [ext_resource type="Script" uid="uid://cbjt1x3q27bm4" path="res://Scripts/loading.gd" id="1_8mtyy"]
+[ext_resource type="FontFile" uid="uid://2xexbg02phv6" path="res://Fonts/Bold Display.ttf" id="2_nxbsx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxbsx"]
+bg_color = Color(0.635294, 0.627451, 0.454902, 1)
+expand_margin_left = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b8k2b"]
+bg_color = Color(1, 0.94902, 0.768627, 1)
+expand_margin_left = 8.0
+
+[sub_resource type="Theme" id="Theme_b8k2b"]
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_nxbsx")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_nxbsx")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_nxbsx")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_b8k2b")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_b8k2b")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tb1fa"]
-bg_color = Color(0.521569, 0.552941, 0.368627, 1)
+bg_color = Color(1, 0.94902, 0.768627, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8mtyy"]
-bg_color = Color(1, 0.94902, 0.768627, 1)
+bg_color = Color(0.588235, 0.603922, 0.423529, 1)
 
 [sub_resource type="Animation" id="Animation_8mtyy"]
 resource_name = "Fade_out"
@@ -47,14 +63,6 @@ _data = {
 [node name="Loading" type="CanvasLayer"]
 script = ExtResource("1_8mtyy")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.588235, 0.603922, 0.423529, 1)
-
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
@@ -62,6 +70,42 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.94902, 0.768627, 1)
+
+[node name="Label" type="RichTextLabel" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -231.0
+offset_top = -498.0
+offset_right = 231.0
+offset_bottom = -430.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_b8k2b")
+theme_override_colors/default_color = Color(0.588235, 0.603922, 0.423529, 1)
+theme_override_constants/line_separation = 16
+theme_override_fonts/normal_font = ExtResource("2_nxbsx")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+text = "[center]hello[/center]"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ProgressBar" type="ProgressBar" parent="Control"]
 layout_mode = 1
