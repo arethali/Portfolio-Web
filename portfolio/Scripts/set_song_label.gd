@@ -8,13 +8,14 @@ extends RichTextLabel
 var direction = 1
 var tween: Tween
 @onready var song_box = $".."
-
+var start_pos 
 
 func _ready():
 	await get_tree().process_frame
 	await get_tree().process_frame
 	size = song_box.max_size
 	position = song_box.position
+	start_pos = position.x
 	#await get_tree().process_frame
 	#_set_title()
 
@@ -32,6 +33,7 @@ func animate_marquee(start_pos: Vector2, end_pos: Vector2):
 	tween.tween_interval(pause_duration)
 
 func _set_title():
+	#await get_tree().process_frame
 	text = song_name
 	var text_size_x = get_content_width()
 	var text_size_y = get_content_height()
@@ -51,8 +53,10 @@ func _set_title():
 
 func _on_music_player_set_song_title(song):
 	if tween:
+		hide()
 		tween.kill()
+		position.x = start_pos
 	song_name = song
 	await get_tree().process_frame
-	await get_tree().process_frame
+	show()
 	_set_title()

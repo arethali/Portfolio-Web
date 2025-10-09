@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=3 uid="uid://cpqsrlmu68ecm"]
+
+[ext_resource type="Script" uid="uid://cbjt1x3q27bm4" path="res://Scripts/loading.gd" id="1_8mtyy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tb1fa"]
+bg_color = Color(0.521569, 0.552941, 0.368627, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8mtyy"]
+bg_color = Color(1, 0.94902, 0.768627, 1)
+
+[sub_resource type="Animation" id="Animation_8mtyy"]
+resource_name = "Fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nxbsx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b8k2b"]
+_data = {
+&"Fade_out": SubResource("Animation_8mtyy"),
+&"RESET": SubResource("Animation_nxbsx")
+}
+
+[node name="Loading" type="CanvasLayer"]
+script = ExtResource("1_8mtyy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.588235, 0.603922, 0.423529, 1)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -26.0
+offset_right = 300.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_tb1fa")
+theme_override_styles/fill = SubResource("StyleBoxFlat_8mtyy")
+step = 1.0
+rounded = true
+show_percentage = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_b8k2b")
+}

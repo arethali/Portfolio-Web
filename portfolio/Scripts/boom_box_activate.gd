@@ -7,8 +7,10 @@ extends AnimatedSprite2D
 @onready var on_off = true
 
 func _ready():
-	anim_player.play(on_anim)
-
+	if Audio.audio_on == true:
+		anim_player.play(on_anim)
+	else:
+		anim_player.play(off_anim)
 #func _on_area_input_event(viewport, event, shape_idx):
 	#if event is InputEventMouseButton and event.pressed:
 		#if event.button_index == MOUSE_BUTTON_LEFT:

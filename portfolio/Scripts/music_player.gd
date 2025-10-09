@@ -14,10 +14,13 @@ var pause_pos = 0.0
 func _ready():
 	for i in range(playlist_files.size()):
 		playlist.append(load(playlist_files[i]))
-	#await get_tree().process_frame
+	#
 	current = 0
 	stream = playlist[current]
-	play()
+	await get_tree().process_frame
+	print(Audio.audio_on)
+	if Audio.audio_on == true:
+		play()
 	emit_signal("set_song_title", song_title[current])
 
 func _on_paused():
@@ -51,8 +54,9 @@ func _on_forward():
 	else:
 		current += 1
 	stream = playlist[current]
-	emit_signal("set_song_title", song_title[current])
 	await get_tree().process_frame
+	emit_signal("set_song_title", song_title[current])
+	#await get_tree().process_frame
 	play()
 
 func _on_back():
@@ -61,8 +65,9 @@ func _on_back():
 	else:
 		current -= 1
 	stream = playlist[current]
-	emit_signal("set_song_title", song_title[current])
 	await get_tree().process_frame
+	emit_signal("set_song_title", song_title[current])
+	#await get_tree().process_frame
 	play()
 
 

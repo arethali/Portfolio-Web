@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 general/default_playback_type.web=0
 
+[autoload]
+
+Audio="*res://Scripts/audio_manager.gd"
+Loading="*res://Scripts/loading.gd"
+
 [display]
 
 window/size/viewport_width=1920
