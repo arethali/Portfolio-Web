@@ -18,7 +18,7 @@ func _ready():
 		scroll = text_body.get_v_scroll_bar()
 		await get_tree().process_frame
 		scroll.connect("value_changed", _on_rich_text_label_value_changed)
-		#_set_scroll()
+		_set_scroll()
 	if scroll_container:
 		scroll = scroll_container.get_v_scroll_bar()
 		await get_tree().process_frame

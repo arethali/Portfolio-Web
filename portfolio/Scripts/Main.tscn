@@ -1,4 +1,4 @@
-[gd_scene load_steps=647 format=3 uid="uid://dfhro4he33mwe"]
+[gd_scene load_steps=650 format=3 uid="uid://dfhro4he33mwe"]
 
 [ext_resource type="Texture2D" uid="uid://bldgwkrwu0770" path="res://Stylized outline.png" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://cvgj45t5itakk" path="res://Scripts/PortNav.gd" id="1_uu6xs"]
@@ -373,6 +373,9 @@
 [ext_resource type="Texture2D" uid="uid://b5xccs31gtrjx" path="res://Assets/UI/Global/Cursor/Pointing Hand.png" id="361_4i1ne"]
 [ext_resource type="Texture2D" uid="uid://ncql886xovtu" path="res://Assets/Particles/Small Particle.png" id="361_ypv7r"]
 [ext_resource type="Texture2D" uid="uid://dokpj5j233u37" path="res://Assets/About Me/portrait.png" id="366_meayg"]
+[ext_resource type="FontFile" uid="uid://2xexbg02phv6" path="res://Fonts/Bold Display.ttf" id="367_8nkan"]
+[ext_resource type="Texture2D" uid="uid://bpkj8jvi50npr" path="res://Assets/Birbs/Leo/portrait.png" id="368_qcpgi"]
+[ext_resource type="Texture2D" uid="uid://cw2tts70ru46b" path="res://Assets/Birbs/Alvis/portrait.png" id="369_yep5p"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rchyr"]
 animations = [{
@@ -5072,10 +5075,10 @@ size = Vector2(44, 26.25)
 size = Vector2(38, 27.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibn8e"]
-size = Vector2(36, 34)
+size = Vector2(40, 34)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wgm2v"]
-size = Vector2(36, 23)
+size = Vector2(40, 23)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgj11"]
 size = Vector2(91.5, 279)
@@ -5365,9 +5368,9 @@ texture = ExtResource("29_uy3go")
 
 [node name="Highway" type="TextureRect" parent="Background"]
 texture_filter = 1
-offset_top = 776.0
+offset_top = 780.0
 offset_right = 5760.0
-offset_bottom = 1204.0
+offset_bottom = 1216.0
 mouse_filter = 2
 texture = ExtResource("5_03owx")
 stretch_mode = 2
@@ -5470,7 +5473,7 @@ lamp_L_anim = NodePath("LampL/AnimationPlayer")
 [node name="Mail Shadow" type="AnimatedSprite2D" parent="Home" node_paths=PackedStringArray("anim_tree", "anim_player", "open_input")]
 modulate = Color(1, 1, 1, 0.580392)
 texture_filter = 1
-position = Vector2(2752, 898)
+position = Vector2(2596, 898)
 sprite_frames = SubResource("SpriteFrames_aquj3")
 animation = &"First Open"
 script = ExtResource("92_rlscr")
@@ -5492,7 +5495,7 @@ parameters/conditions/first_open = false
 
 [node name="Mail" type="AnimatedSprite2D" parent="Home" node_paths=PackedStringArray("anim_tree", "anim_player", "open_input", "paper")]
 texture_filter = 1
-position = Vector2(2752, 898)
+position = Vector2(2596, 898)
 sprite_frames = SubResource("SpriteFrames_jhmog")
 animation = &"After Open"
 script = ExtResource("92_rlscr")
@@ -5646,7 +5649,7 @@ parameters/conditions/default = false
 
 [node name="Phone" type="AnimatedSprite2D" parent="Home" node_paths=PackedStringArray("anim_player", "interact_area")]
 texture_filter = 1
-position = Vector2(2854, 964)
+position = Vector2(2822, 964)
 sprite_frames = SubResource("SpriteFrames_6xmvy")
 script = ExtResource("156_gotmd")
 anim_player = NodePath("AnimationPlayer")
@@ -5662,7 +5665,7 @@ libraries = {
 [node name="PhoneShadow" type="Sprite2D" parent="Home"]
 self_modulate = Color(1, 1, 1, 0.580392)
 texture_filter = 1
-position = Vector2(2872, 970)
+position = Vector2(2840, 970)
 texture = ExtResource("124_imbc2")
 
 [node name="ToPersonalShadow" type="Sprite2D" parent="Home"]
@@ -6248,10 +6251,10 @@ position = Vector2(-16, 4)
 script = ExtResource("69_3b7lf")
 outline_text = NodePath("../HoverLabel")
 color_block = NodePath("../ColorRect")
-label_name = "fun fact?"
+label_name = "scroll?"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Phone Area"]
-position = Vector2(2870, 961.75)
+position = Vector2(2839, 965)
 shape = SubResource("RectangleShape2D_rlscr")
 
 [node name="Mail Box" type="Area2D" parent="Buttons" node_paths=PackedStringArray("outline_text", "color_block")]
@@ -6261,11 +6264,11 @@ color_block = NodePath("../ColorRect")
 label_name = "contact me"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Mail Box"]
-position = Vector2(2756, 871)
+position = Vector2(2601, 871)
 shape = SubResource("RectangleShape2D_ibn8e")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Buttons/Mail Box"]
-position = Vector2(2756, 899.5)
+position = Vector2(2601, 899.5)
 shape = SubResource("RectangleShape2D_wgm2v")
 
 [node name="Body Area" type="Area2D" parent="Buttons" node_paths=PackedStringArray("outline_text", "color_block")]
@@ -6467,7 +6470,6 @@ right_margin = 28
 margin_top = 32
 
 [node name="VScrollBar" parent="Buttons/AI Poster Look/Bios" index="1"]
-layout_mode = 0
 offset_bottom = 8.0
 
 [node name="No King Look" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
@@ -6493,7 +6495,6 @@ right_margin = 28
 margin_top = 32
 
 [node name="VScrollBar" parent="Buttons/No King Look/Bios" index="1"]
-layout_mode = 0
 offset_bottom = 8.0
 
 [node name="Clippy Look" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
@@ -6519,7 +6520,6 @@ right_margin = 28
 margin_top = 32
 
 [node name="VScrollBar" parent="Buttons/Clippy Look/Bios" index="1"]
-layout_mode = 0
 offset_bottom = 8.0
 
 [node name="Gaza" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
@@ -6545,7 +6545,6 @@ right_margin = 28
 margin_top = 32
 
 [node name="VScrollBar" parent="Buttons/Gaza/Bios" index="1"]
-layout_mode = 0
 offset_bottom = 8.0
 
 [node name="Projects" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
@@ -6566,7 +6565,6 @@ width = 40
 button_format = "Projects"
 
 [node name="VScrollBar" parent="Buttons/Projects/Bios" index="1"]
-layout_mode = 0
 offset_bottom = 8.0
 
 [node name="Films" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
@@ -6583,7 +6581,6 @@ click_box = NodePath("../Film Area")
 button_format = "Films"
 
 [node name="VScrollBar" parent="Buttons/Films/Bios" index="1"]
-layout_mode = 0
 offset_bottom = 8.0
 
 [node name="Notebook" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
@@ -6600,14 +6597,13 @@ click_box = NodePath("../NoteBook Area")
 button_format = "Art"
 
 [node name="VScrollBar" parent="Buttons/Notebook/Bios" index="1"]
-layout_mode = 0
 offset_bottom = 8.0
 
 [node name="Contact" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
 visible = false
-offset_left = 2754.0
+offset_left = 2598.0
 offset_top = 830.0
-offset_right = 834.0
+offset_right = 678.0
 offset_bottom = -250.0
 format = "Buttons"
 panel = NodePath("../Panel")
@@ -6617,7 +6613,6 @@ click_box = NodePath("../Mail Box")
 button_format = "Contact"
 
 [node name="VScrollBar" parent="Buttons/Contact/Bios" index="1"]
-layout_mode = 0
 offset_bottom = 8.0
 
 [node name="Music" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
@@ -6631,8 +6626,28 @@ panel = NodePath("../Panel")
 click_box = NodePath("../BoomBox Area")
 
 [node name="VScrollBar" parent="Buttons/Music/Bios" index="1"]
-layout_mode = 0
 offset_bottom = 8.0
+
+[node name="Phone" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
+visible = false
+offset_left = 2822.0
+offset_top = 922.0
+offset_right = 902.0
+offset_bottom = -158.0
+format = "Text"
+panel = NodePath("../Panel")
+click_box = NodePath("../Phone Area")
+
+[node name="Panel" parent="Buttons/Phone" index="0"]
+height = 16
+width = 13
+override = false
+
+[node name="VScrollBar" parent="Buttons/Phone/Text" index="0"]
+padding_y_top = 56
+
+[node name="Body" parent="Buttons/Phone/Text" index="1"]
+margin_bottom = 20
 
 [node name="About Me" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
 visible = false
@@ -6644,19 +6659,120 @@ format = "Bios"
 panel = NodePath("../Panel")
 click_box = NodePath("../Body Area")
 
+[node name="Panel" parent="Buttons/About Me" index="0"]
+height = 20
+width = 30
+override = false
+
 [node name="Bios" parent="Buttons/About Me" index="5"]
 padding_sides = Vector2(40, 40)
 padding_vert = Vector2(40, 40)
 texture = ExtResource("366_meayg")
-about_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+about_text = "[b]About Me[/b]
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 list_1_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 list_2_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
 [node name="Portrait" parent="Buttons/About Me/Bios/ScrollContainer/Container/First Row" index="0"]
 texture = ExtResource("366_meayg")
 
+[node name="About" parent="Buttons/About Me/Bios/ScrollContainer/Container/First Row" index="1"]
+theme_override_fonts/bold_font = ExtResource("367_8nkan")
+
+[node name="About Overflow" parent="Buttons/About Me/Bios/ScrollContainer/Container/Overflow" index="0"]
+theme_override_fonts/bold_font = ExtResource("367_8nkan")
+
+[node name="List1" parent="Buttons/About Me/Bios/ScrollContainer/Container/Second Row" index="0"]
+theme_override_fonts/bold_font = ExtResource("367_8nkan")
+
+[node name="List2" parent="Buttons/About Me/Bios/ScrollContainer/Container/Second Row" index="1"]
+theme_override_fonts/bold_font = ExtResource("367_8nkan")
+
 [node name="VScrollBar" parent="Buttons/About Me/Bios" index="1"]
-layout_mode = 0
+offset_bottom = 8.0
+
+[node name="Leo" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
+visible = false
+offset_left = 2926.0
+offset_top = 750.0
+offset_right = 1006.0
+offset_bottom = -330.0
+format = "Bios"
+panel = NodePath("../Panel")
+click_box = NodePath("../Leo Area")
+
+[node name="Panel" parent="Buttons/Leo" index="0"]
+height = 20
+width = 30
+override = false
+
+[node name="Bios" parent="Buttons/Leo" index="5"]
+padding_sides = Vector2(40, 40)
+padding_vert = Vector2(40, 40)
+texture = ExtResource("368_qcpgi")
+about_text = "[b]Leo[/b]
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+list_1_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+list_2_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+[node name="Portrait" parent="Buttons/Leo/Bios/ScrollContainer/Container/First Row" index="0"]
+texture = ExtResource("366_meayg")
+
+[node name="About" parent="Buttons/Leo/Bios/ScrollContainer/Container/First Row" index="1"]
+theme_override_fonts/bold_font = ExtResource("367_8nkan")
+
+[node name="About Overflow" parent="Buttons/Leo/Bios/ScrollContainer/Container/Overflow" index="0"]
+theme_override_fonts/bold_font = ExtResource("367_8nkan")
+
+[node name="List1" parent="Buttons/Leo/Bios/ScrollContainer/Container/Second Row" index="0"]
+theme_override_fonts/bold_font = ExtResource("367_8nkan")
+
+[node name="List2" parent="Buttons/Leo/Bios/ScrollContainer/Container/Second Row" index="1"]
+theme_override_fonts/bold_font = ExtResource("367_8nkan")
+
+[node name="VScrollBar" parent="Buttons/Leo/Bios" index="1"]
+offset_bottom = 8.0
+
+[node name="Alvis" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
+visible = false
+offset_left = 3054.0
+offset_top = 914.0
+offset_right = 1134.0
+offset_bottom = -166.0
+format = "Bios"
+panel = NodePath("../Panel")
+click_box = NodePath("../Alvis Area")
+
+[node name="Panel" parent="Buttons/Alvis" index="0"]
+height = 20
+width = 30
+override = false
+
+[node name="Bios" parent="Buttons/Alvis" index="5"]
+padding_sides = Vector2(40, 40)
+padding_vert = Vector2(40, 40)
+texture = ExtResource("369_yep5p")
+about_text = "[b]Alvis[/b]
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+list_1_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+list_2_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+[node name="Portrait" parent="Buttons/Alvis/Bios/ScrollContainer/Container/First Row" index="0"]
+texture = ExtResource("366_meayg")
+
+[node name="About" parent="Buttons/Alvis/Bios/ScrollContainer/Container/First Row" index="1"]
+theme_override_fonts/bold_font = ExtResource("367_8nkan")
+
+[node name="About Overflow" parent="Buttons/Alvis/Bios/ScrollContainer/Container/Overflow" index="0"]
+theme_override_fonts/bold_font = ExtResource("367_8nkan")
+
+[node name="List1" parent="Buttons/Alvis/Bios/ScrollContainer/Container/Second Row" index="0"]
+theme_override_fonts/bold_font = ExtResource("367_8nkan")
+
+[node name="List2" parent="Buttons/Alvis/Bios/ScrollContainer/Container/Second Row" index="1"]
+theme_override_fonts/bold_font = ExtResource("367_8nkan")
+
+[node name="VScrollBar" parent="Buttons/Alvis/Bios" index="1"]
 offset_bottom = 8.0
 
 [node name="Outline Text" type="RichTextLabel" parent="Buttons"]
@@ -6753,6 +6869,9 @@ autostart = true
 [connection signal="panel_offset" from="." to="Buttons/Contact" method="_on_panel_offset"]
 [connection signal="panel_offset" from="." to="Buttons/Music" method="_on_panel_offset"]
 [connection signal="panel_offset" from="." to="Buttons/About Me" method="_on_panel_offset"]
+[connection signal="panel_offset" from="." to="Buttons/Phone" method="_on_panel_offset"]
+[connection signal="panel_offset" from="." to="Buttons/Leo" method="_on_panel_offset"]
+[connection signal="panel_offset" from="." to="Buttons/Alvis" method="_on_panel_offset"]
 [connection signal="timeout" from="Background/Clouds/Timer_1" to="Background/Clouds" method="_on_timer_1_timeout"]
 [connection signal="timeout" from="Background/Clouds/Timer_2" to="Background/Clouds" method="_on_timer_2_timeout"]
 [connection signal="timeout" from="Background/Clouds/Timer_3" to="Background/Clouds" method="_on_timer_3_timeout"]
@@ -6771,16 +6890,19 @@ autostart = true
 [connection signal="pressed" from="Projects/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Projects/Back" to="VFX" method="_on_back_pressed"]
 [connection signal="input_event" from="Buttons/Leo Area" to="Home/Leo" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Buttons/Leo Area" to="Buttons/Leo" method="_on_input_event"]
 [connection signal="mouse_entered" from="Buttons/Leo Area" to="." method="_on_mouse_entered"]
 [connection signal="mouse_entered" from="Buttons/Leo Area" to="Buttons/Leo Area" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/Leo Area" to="." method="_on_mouse_exited"]
 [connection signal="mouse_exited" from="Buttons/Leo Area" to="Buttons/Leo Area" method="_on_mouse_exited"]
 [connection signal="input_event" from="Buttons/Alvis Area" to="Home/Alvis" method="_on_area_2d_input_event"]
+[connection signal="input_event" from="Buttons/Alvis Area" to="Buttons/Alvis" method="_on_input_event"]
 [connection signal="mouse_entered" from="Buttons/Alvis Area" to="." method="_on_mouse_entered"]
 [connection signal="mouse_entered" from="Buttons/Alvis Area" to="Buttons/Alvis Area" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/Alvis Area" to="." method="_on_mouse_exited"]
 [connection signal="mouse_exited" from="Buttons/Alvis Area" to="Buttons/Alvis Area" method="_on_mouse_exited"]
 [connection signal="input_event" from="Buttons/Phone Area" to="Home/Phone" method="_on_area_input_event"]
+[connection signal="input_event" from="Buttons/Phone Area" to="Buttons/Phone" method="_on_input_event"]
 [connection signal="mouse_entered" from="Buttons/Phone Area" to="." method="_on_mouse_entered"]
 [connection signal="mouse_entered" from="Buttons/Phone Area" to="Buttons/Phone Area" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/Phone Area" to="." method="_on_mouse_exited"]
@@ -6877,6 +6999,7 @@ autostart = true
 [connection signal="mouse_exited" from="Buttons/Clippy" to="Buttons/Clippy" method="_on_mouse_exited"]
 [connection signal="gui_input" from="Buttons/Panel" to="Home/Mail Shadow" method="_on_panel_gui_input"]
 [connection signal="gui_input" from="Buttons/Panel" to="Home/Mail" method="_on_panel_gui_input"]
+[connection signal="gui_input" from="Buttons/Panel" to="Home/Phone" method="_on_panel_gui_input"]
 [connection signal="gui_input" from="Buttons/Panel" to="Personal/Notebook" method="_on_panel_gui_input"]
 [connection signal="gui_input" from="Buttons/Panel" to="Personal/Film" method="_on_panel_gui_input"]
 [connection signal="gui_input" from="Buttons/Panel" to="Projects/Laptop" method="_on_panel_gui_input"]
@@ -6890,6 +7013,9 @@ autostart = true
 [connection signal="gui_input" from="Buttons/Panel" to="Buttons/Contact" method="_on_panel_gui_input"]
 [connection signal="gui_input" from="Buttons/Panel" to="Buttons/Music" method="_on_panel_gui_input"]
 [connection signal="gui_input" from="Buttons/Panel" to="Buttons/About Me" method="_on_panel_gui_input"]
+[connection signal="gui_input" from="Buttons/Panel" to="Buttons/Phone" method="_on_panel_gui_input"]
+[connection signal="gui_input" from="Buttons/Panel" to="Buttons/Leo" method="_on_panel_gui_input"]
+[connection signal="gui_input" from="Buttons/Panel" to="Buttons/Alvis" method="_on_panel_gui_input"]
 [connection signal="pressed" from="Buttons/Projects/Exit" to="Projects/Laptop" method="_on_exit_pressed"]
 [connection signal="pressed" from="Buttons/Films/Exit" to="Personal/Film" method="_on_exit_pressed"]
 [connection signal="pressed" from="Buttons/Notebook/Exit" to="Personal/Notebook" method="_on_exit_pressed"]
@@ -6905,6 +7031,7 @@ autostart = true
 [connection signal="played" from="Buttons/Music/Buttons/Mute" to="Personal/BoomBox" method="_on_played"]
 [connection signal="pressed" from="Buttons/Music/Buttons/Mute" to="Personal/Music Player" method="_on_mute"]
 [connection signal="pressed" from="Buttons/Music/Buttons/Unmute" to="Personal/Music Player" method="_on_unmute"]
+[connection signal="pressed" from="Buttons/Phone/Exit" to="Home/Phone" method="_on_exit_pressed"]
 [connection signal="timeout" from="Timer" to="Background" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="Home/Head" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="Home/Legs" method="_on_timer_timeout"]
@@ -6928,4 +7055,7 @@ autostart = true
 [editable path="Buttons/Notebook"]
 [editable path="Buttons/Contact"]
 [editable path="Buttons/Music"]
+[editable path="Buttons/Phone"]
 [editable path="Buttons/About Me"]
+[editable path="Buttons/Leo"]
+[editable path="Buttons/Alvis"]

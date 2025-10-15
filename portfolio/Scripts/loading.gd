@@ -41,7 +41,7 @@ func _process(delta):
 		load_main()
 		return
 	load_status = ResourceLoader.load_threaded_get_status(main_scene, _progress)
-	print(load_status)
+	#print(load_status)
 	match load_status:
 		0,2:
 			print_debug("ERROR: Loading Failed")
@@ -68,6 +68,6 @@ func load_main():
 	await fade_anim.animation_finished
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	scene_instance.queue_free()
-	print("finished")
-	print("on", Audio.audio_on)
+	#print("finished")
+	#print("on", Audio.audio_on)
 	return

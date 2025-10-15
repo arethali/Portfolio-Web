@@ -20,7 +20,7 @@ func _ready():
 func _hide_buttons():
 	$VBoxContainer/Button.hide()
 	$VBoxContainer/Button2.hide()
-	print("hide")
+	#print("hide")
 	
 func _on_button_pressed():
 	Audio.audio_on = true
@@ -32,7 +32,6 @@ func _on_button_pressed():
 	
 func _on_button_2_pressed():
 	Audio.audio_on = false
-	print("off")
 	_hide_buttons()
 	Loading.load_scene()
 	queue_free()

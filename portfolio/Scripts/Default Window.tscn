@@ -877,12 +877,12 @@ side_padding = 20
 [node name="Bios" type="Control" parent="."]
 unique_name_in_owner = true
 process_mode = 4
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("87_0gux7")
 about_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-about_overflow_text = "OVerflow OVerflowOVerflowOVerflowOVerflowOVerflowOVerflowOVerflow"
 list_1_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
 list_2_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
 
@@ -897,7 +897,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
-theme_override_constants/separation = 24
+theme_override_constants/separation = 16
 
 [node name="First Row" type="HBoxContainer" parent="Bios/ScrollContainer/Container"]
 unique_name_in_owner = true
@@ -988,6 +988,7 @@ fit_content = true
 scroll_active = false
 
 [node name="VScrollBar" type="VScrollBar" parent="Bios" node_paths=PackedStringArray("scroll_container")]
+layout_mode = 0
 offset_right = 8.0
 mouse_filter = 1
 theme_override_styles/scroll = SubResource("StyleBoxFlat_0i73k")
