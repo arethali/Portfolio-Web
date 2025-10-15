@@ -1,4 +1,4 @@
-[gd_scene load_steps=646 format=3 uid="uid://dfhro4he33mwe"]
+[gd_scene load_steps=647 format=3 uid="uid://dfhro4he33mwe"]
 
 [ext_resource type="Texture2D" uid="uid://bldgwkrwu0770" path="res://Stylized outline.png" id="1_glv2v"]
 [ext_resource type="Script" uid="uid://cvgj45t5itakk" path="res://Scripts/PortNav.gd" id="1_uu6xs"]
@@ -372,6 +372,7 @@
 [ext_resource type="Script" uid="uid://buttteguaeg23" path="res://Scripts/pos_parts.gd" id="360_ypv7r"]
 [ext_resource type="Texture2D" uid="uid://b5xccs31gtrjx" path="res://Assets/UI/Global/Cursor/Pointing Hand.png" id="361_4i1ne"]
 [ext_resource type="Texture2D" uid="uid://ncql886xovtu" path="res://Assets/Particles/Small Particle.png" id="361_ypv7r"]
+[ext_resource type="Texture2D" uid="uid://dokpj5j233u37" path="res://Assets/About Me/portrait.png" id="366_meayg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rchyr"]
 animations = [{
@@ -6465,6 +6466,10 @@ left_margin = 28
 right_margin = 28
 margin_top = 32
 
+[node name="VScrollBar" parent="Buttons/AI Poster Look/Bios" index="1"]
+layout_mode = 0
+offset_bottom = 8.0
+
 [node name="No King Look" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
 visible = false
 offset_left = 3646.0
@@ -6486,6 +6491,10 @@ body_text = "[center]sic semper tyrannis[/center]"
 left_margin = 28
 right_margin = 28
 margin_top = 32
+
+[node name="VScrollBar" parent="Buttons/No King Look/Bios" index="1"]
+layout_mode = 0
+offset_bottom = 8.0
 
 [node name="Clippy Look" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
 visible = false
@@ -6509,6 +6518,10 @@ left_margin = 28
 right_margin = 28
 margin_top = 32
 
+[node name="VScrollBar" parent="Buttons/Clippy Look/Bios" index="1"]
+layout_mode = 0
+offset_bottom = 8.0
+
 [node name="Gaza" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
 visible = false
 offset_left = 5262.0
@@ -6531,6 +6544,10 @@ left_margin = 28
 right_margin = 28
 margin_top = 32
 
+[node name="VScrollBar" parent="Buttons/Gaza/Bios" index="1"]
+layout_mode = 0
+offset_bottom = 8.0
+
 [node name="Projects" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
 visible = false
 offset_left = 4750.0
@@ -6548,6 +6565,10 @@ width = 40
 [node name="Buttons" parent="Buttons/Projects" index="4"]
 button_format = "Projects"
 
+[node name="VScrollBar" parent="Buttons/Projects/Bios" index="1"]
+layout_mode = 0
+offset_bottom = 8.0
+
 [node name="Films" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
 visible = false
 offset_left = 900.0
@@ -6560,6 +6581,10 @@ click_box = NodePath("../Film Area")
 
 [node name="Buttons" parent="Buttons/Films" index="4"]
 button_format = "Films"
+
+[node name="VScrollBar" parent="Buttons/Films/Bios" index="1"]
+layout_mode = 0
+offset_bottom = 8.0
 
 [node name="Notebook" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
 visible = false
@@ -6574,6 +6599,10 @@ click_box = NodePath("../NoteBook Area")
 [node name="Buttons" parent="Buttons/Notebook" index="4"]
 button_format = "Art"
 
+[node name="VScrollBar" parent="Buttons/Notebook/Bios" index="1"]
+layout_mode = 0
+offset_bottom = 8.0
+
 [node name="Contact" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
 visible = false
 offset_left = 2754.0
@@ -6587,6 +6616,10 @@ click_box = NodePath("../Mail Box")
 [node name="Buttons" parent="Buttons/Contact" index="4"]
 button_format = "Contact"
 
+[node name="VScrollBar" parent="Buttons/Contact/Bios" index="1"]
+layout_mode = 0
+offset_bottom = 8.0
+
 [node name="Music" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
 visible = false
 offset_left = 612.0
@@ -6596,6 +6629,35 @@ offset_bottom = -232.0
 format = "Buttons"
 panel = NodePath("../Panel")
 click_box = NodePath("../BoomBox Area")
+
+[node name="VScrollBar" parent="Buttons/Music/Bios" index="1"]
+layout_mode = 0
+offset_bottom = 8.0
+
+[node name="About Me" parent="Buttons" node_paths=PackedStringArray("panel", "click_box") instance=ExtResource("358_4i1ne")]
+visible = false
+offset_left = 2930.0
+offset_top = 774.0
+offset_right = 1010.0
+offset_bottom = -306.0
+format = "Bios"
+panel = NodePath("../Panel")
+click_box = NodePath("../Body Area")
+
+[node name="Bios" parent="Buttons/About Me" index="5"]
+padding_sides = Vector2(40, 40)
+padding_vert = Vector2(40, 40)
+texture = ExtResource("366_meayg")
+about_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+list_1_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+list_2_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+[node name="Portrait" parent="Buttons/About Me/Bios/ScrollContainer/Container/First Row" index="0"]
+texture = ExtResource("366_meayg")
+
+[node name="VScrollBar" parent="Buttons/About Me/Bios" index="1"]
+layout_mode = 0
+offset_bottom = 8.0
 
 [node name="Outline Text" type="RichTextLabel" parent="Buttons"]
 visible = false
@@ -6684,11 +6746,13 @@ autostart = true
 [connection signal="panel_offset" from="." to="Buttons/AI Poster Look" method="_on_panel_offset"]
 [connection signal="panel_offset" from="." to="Buttons/No King Look" method="_on_panel_offset"]
 [connection signal="panel_offset" from="." to="Buttons/Clippy Look" method="_on_panel_offset"]
+[connection signal="panel_offset" from="." to="Buttons/Gaza" method="_on_panel_offset"]
 [connection signal="panel_offset" from="." to="Buttons/Projects" method="_on_panel_offset"]
 [connection signal="panel_offset" from="." to="Buttons/Films" method="_on_panel_offset"]
 [connection signal="panel_offset" from="." to="Buttons/Notebook" method="_on_panel_offset"]
 [connection signal="panel_offset" from="." to="Buttons/Contact" method="_on_panel_offset"]
 [connection signal="panel_offset" from="." to="Buttons/Music" method="_on_panel_offset"]
+[connection signal="panel_offset" from="." to="Buttons/About Me" method="_on_panel_offset"]
 [connection signal="timeout" from="Background/Clouds/Timer_1" to="Background/Clouds" method="_on_timer_1_timeout"]
 [connection signal="timeout" from="Background/Clouds/Timer_2" to="Background/Clouds" method="_on_timer_2_timeout"]
 [connection signal="timeout" from="Background/Clouds/Timer_3" to="Background/Clouds" method="_on_timer_3_timeout"]
@@ -6729,6 +6793,7 @@ autostart = true
 [connection signal="mouse_exited" from="Buttons/Mail Box" to="." method="_on_mouse_exited"]
 [connection signal="mouse_exited" from="Buttons/Mail Box" to="Buttons/Mail Box" method="_on_mouse_exited"]
 [connection signal="input_event" from="Buttons/Body Area" to="Home/Body" method="_on_area_input_event"]
+[connection signal="input_event" from="Buttons/Body Area" to="Buttons/About Me" method="_on_input_event"]
 [connection signal="mouse_entered" from="Buttons/Body Area" to="." method="_on_mouse_entered"]
 [connection signal="mouse_entered" from="Buttons/Body Area" to="Buttons/Body Area" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/Body Area" to="." method="_on_mouse_exited"]
@@ -6824,6 +6889,7 @@ autostart = true
 [connection signal="gui_input" from="Buttons/Panel" to="Buttons/Notebook" method="_on_panel_gui_input"]
 [connection signal="gui_input" from="Buttons/Panel" to="Buttons/Contact" method="_on_panel_gui_input"]
 [connection signal="gui_input" from="Buttons/Panel" to="Buttons/Music" method="_on_panel_gui_input"]
+[connection signal="gui_input" from="Buttons/Panel" to="Buttons/About Me" method="_on_panel_gui_input"]
 [connection signal="pressed" from="Buttons/Projects/Exit" to="Projects/Laptop" method="_on_exit_pressed"]
 [connection signal="pressed" from="Buttons/Films/Exit" to="Personal/Film" method="_on_exit_pressed"]
 [connection signal="pressed" from="Buttons/Notebook/Exit" to="Personal/Notebook" method="_on_exit_pressed"]
@@ -6862,3 +6928,4 @@ autostart = true
 [editable path="Buttons/Notebook"]
 [editable path="Buttons/Contact"]
 [editable path="Buttons/Music"]
+[editable path="Buttons/About Me"]

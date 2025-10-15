@@ -1,4 +1,4 @@
-[gd_scene load_steps=96 format=3 uid="uid://cgd2k7ycmvr22"]
+[gd_scene load_steps=97 format=3 uid="uid://cgd2k7ycmvr22"]
 
 [ext_resource type="PackedScene" uid="uid://kp4lldtw5wvt" path="res://Scripts/Panel.tscn" id="1_4a88q"]
 [ext_resource type="Script" uid="uid://ceydd2wfjf7au" path="res://Scripts/default_window.gd" id="1_u3agq"]
@@ -86,6 +86,7 @@
 [ext_resource type="Texture2D" uid="uid://d0wobbbxfall" path="res://Assets/UI/Global/Back/Back_pressed_v2.png" id="60_jnqrh"]
 [ext_resource type="Script" uid="uid://dxdn8g31matrn" path="res://Scripts/place_button.gd" id="61_1u7cx"]
 [ext_resource type="Texture2D" uid="uid://cimb4dvd10yws" path="res://Assets/UI/Global/Back/Back_hovered_v2.png" id="80_0gux7"]
+[ext_resource type="Script" uid="uid://bvs4nkaxpaee8" path="res://Scripts/bios_placement.gd" id="87_0gux7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0i73k"]
 bg_color = Color(0.792157, 0.803922, 0.705882, 1)
@@ -876,10 +877,129 @@ side_padding = 20
 [node name="Bios" type="Control" parent="."]
 unique_name_in_owner = true
 process_mode = 4
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("87_0gux7")
+about_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+about_overflow_text = "OVerflow OVerflowOVerflowOVerflowOVerflowOVerflowOVerflowOVerflow"
+list_1_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+list_2_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Bios"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 237.0
+horizontal_scroll_mode = 0
+
+[node name="Container" type="VBoxContainer" parent="Bios/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/separation = 24
+
+[node name="First Row" type="HBoxContainer" parent="Bios/ScrollContainer/Container"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Portrait" type="TextureRect" parent="Bios/ScrollContainer/Container/First Row"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(208, 288)
+layout_mode = 2
+stretch_mode = 2
+
+[node name="About" type="RichTextLabel" parent="Bios/ScrollContainer/Container/First Row"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_0i73k")
+theme_override_colors/default_color = Color(0.588235, 0.603922, 0.423529, 1)
+theme_override_constants/line_separation = 16
+theme_override_fonts/normal_font = ExtResource("6_v7ar0")
+theme_override_fonts/bold_font = ExtResource("7_63ls6")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+scroll_active = false
+
+[node name="Overflow" type="VBoxContainer" parent="Bios/ScrollContainer/Container"]
+layout_mode = 2
+
+[node name="About Overflow" type="RichTextLabel" parent="Bios/ScrollContainer/Container/Overflow"]
+unique_name_in_owner = true
+texture_filter = 1
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_0i73k")
+theme_override_colors/default_color = Color(0.588235, 0.603922, 0.423529, 1)
+theme_override_constants/line_separation = 16
+theme_override_fonts/normal_font = ExtResource("6_v7ar0")
+theme_override_fonts/bold_font = ExtResource("7_63ls6")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+fit_content = true
+scroll_active = false
+
+[node name="Second Row" type="HBoxContainer" parent="Bios/ScrollContainer/Container"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="List1" type="RichTextLabel" parent="Bios/ScrollContainer/Container/Second Row"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_0i73k")
+theme_override_colors/default_color = Color(0.588235, 0.603922, 0.423529, 1)
+theme_override_constants/line_separation = 16
+theme_override_fonts/normal_font = ExtResource("6_v7ar0")
+theme_override_fonts/bold_font = ExtResource("7_63ls6")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+fit_content = true
+scroll_active = false
+
+[node name="List2" type="RichTextLabel" parent="Bios/ScrollContainer/Container/Second Row"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_0i73k")
+theme_override_colors/default_color = Color(0.588235, 0.603922, 0.423529, 1)
+theme_override_constants/line_separation = 16
+theme_override_fonts/normal_font = ExtResource("6_v7ar0")
+theme_override_fonts/bold_font = ExtResource("7_63ls6")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+fit_content = true
+scroll_active = false
+
+[node name="VScrollBar" type="VScrollBar" parent="Bios" node_paths=PackedStringArray("scroll_container")]
+offset_right = 8.0
+mouse_filter = 1
+theme_override_styles/scroll = SubResource("StyleBoxFlat_0i73k")
+theme_override_styles/scroll_focus = SubResource("StyleBoxFlat_0i73k")
+theme_override_styles/grabber = SubResource("StyleBoxFlat_xjxqa")
+theme_override_styles/grabber_highlight = SubResource("StyleBoxFlat_xjxqa")
+theme_override_styles/grabber_pressed = SubResource("StyleBoxFlat_xjxqa")
+script = ExtResource("6_c010p")
+scroll_container = NodePath("../ScrollContainer")
+padding_x = 8
+padding_y_top = 56
+padding_y_bott = 40
 
 [node name="Resume" type="Control" parent="."]
 unique_name_in_owner = true
@@ -907,9 +1027,11 @@ offset_bottom = 40.0
 [connection signal="top_left" from="Panel" to="Buttons/Song Box" method="_on_panel_top_left"]
 [connection signal="top_left" from="Panel" to="Buttons/Button Container" method="_on_panel_top_left"]
 [connection signal="top_left" from="Panel" to="Buttons/Looky Back" method="_on_panel_top_left"]
+[connection signal="top_left" from="Panel" to="Bios" method="_on_panel_top_left"]
 [connection signal="top_right" from="Panel" to="Exit" method="_on_panel_top_right"]
 [connection signal="top_right" from="Panel" to="Text/VScrollBar" method="_on_panel_top_right"]
 [connection signal="top_right" from="Panel" to="Buttons/TimeLine" method="_on_panel_top_right"]
+[connection signal="top_right" from="Panel" to="Bios/VScrollBar" method="_on_panel_top_right"]
 [connection signal="x_size" from="Panel" to="." method="_on_panel_x_size"]
 [connection signal="x_size" from="Panel" to="Text/Body" method="_on_panel_x_size"]
 [connection signal="x_size" from="Panel" to="Buttons/Title" method="_on_panel_x_size"]
@@ -921,6 +1043,7 @@ offset_bottom = 40.0
 [connection signal="x_size" from="Panel" to="Buttons/Song Box" method="_on_panel_x_size"]
 [connection signal="x_size" from="Panel" to="Buttons/Button Container" method="_on_panel_x_size"]
 [connection signal="x_size" from="Panel" to="Buttons/Looky Back" method="_on_panel_x_size"]
+[connection signal="x_size" from="Panel" to="Bios" method="_on_panel_x_size"]
 [connection signal="y_size" from="Panel" to="." method="_on_panel_y_size"]
 [connection signal="y_size" from="Panel" to="Text/VScrollBar" method="_on_panel_y_size"]
 [connection signal="y_size" from="Panel" to="Text/Body" method="_on_panel_y_size"]
@@ -932,6 +1055,8 @@ offset_bottom = 40.0
 [connection signal="y_size" from="Panel" to="Buttons/Music Buttons" method="_on_panel_y_size"]
 [connection signal="y_size" from="Panel" to="Buttons/Button Container" method="_on_panel_y_size"]
 [connection signal="y_size" from="Panel" to="Buttons/Looky Back" method="_on_panel_y_size"]
+[connection signal="y_size" from="Panel" to="Bios" method="_on_panel_y_size"]
+[connection signal="y_size" from="Panel" to="Bios/VScrollBar" method="_on_panel_y_size"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
 [connection signal="value_changed" from="Text/VScrollBar" to="Text/VScrollBar" method="_on_value_changed"]
 [connection signal="overide_panel_size" from="Buttons" to="Panel" method="_on_overide_panel_size"]
@@ -1018,3 +1143,7 @@ offset_bottom = 40.0
 [connection signal="mouse_exited" from="Buttons/TradArt1" to="Buttons/TradArt1" method="_on_mouse_exited"]
 [connection signal="set_hover" from="Buttons/TradArt1" to="Buttons/TimeLine" method="set_on_hover"]
 [connection signal="pressed" from="Buttons/Looky Back" to="Buttons/DigiArt1" method="_on_back_pressed"]
+[connection signal="overide_panel_size" from="Bios" to="Panel" method="_on_overide_panel_size"]
+[connection signal="set_scroll" from="Bios" to="Bios/VScrollBar" method="_on_bios_set_scroll"]
+[connection signal="resized" from="Bios/ScrollContainer/Container" to="Bios" method="_on_container_resized"]
+[connection signal="value_changed" from="Bios/VScrollBar" to="Bios/VScrollBar" method="_on_value_changed"]

@@ -17,6 +17,7 @@ var arrow = load("res://Assets/UI/Global/Cursor/Arrow_green.png")
 var point = load("res://Assets/UI/Global/Cursor/Pointing Hand small.png")
 
 signal panel_offset(offset)
+
 func _ready():
 	#display settings
 	root_window = get_tree().root
