@@ -1,8 +1,8 @@
 extends Node2D
 
 @onready var home_pos = 1920
-@onready var projects_pos = 3840
-@onready var personal_pos = 0
+@onready var projects_pos = 3828
+@onready var personal_pos = 12
 @export var camera : Camera2D
 #@export var to_projects_button : Button
 #@export var to_presonal_button : Button

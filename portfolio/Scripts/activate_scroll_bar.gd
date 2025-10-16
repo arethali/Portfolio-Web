@@ -33,7 +33,6 @@ func _set_scroll():
 		return
 	max_value = scroll.max_value
 	page = scroll.page
-	print("page", page)
 	position = panel_top_right_corner - Vector2(padding_x, padding_y_top * -1)
 	size.y = (scroll_y_size - padding_y_top - padding_y_bott)
 	return

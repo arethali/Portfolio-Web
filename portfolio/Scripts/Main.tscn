@@ -5813,13 +5813,13 @@ libraries = {
 
 [node name="Barrier" type="Sprite2D" parent="Personal"]
 texture_filter = 1
-position = Vector2(58, 890)
+position = Vector2(70, 890)
 texture = ExtResource("253_uu5u3")
 
 [node name="BarrierShadow" type="Sprite2D" parent="Personal"]
 modulate = Color(1, 1, 1, 0.580392)
 texture_filter = 1
-position = Vector2(58, 890)
+position = Vector2(70, 890)
 texture = ExtResource("254_1mm7m")
 
 [node name="FilmShadow" type="Sprite2D" parent="Personal"]
@@ -6060,13 +6060,13 @@ libraries = {
 
 [node name="RBarrier" type="Sprite2D" parent="Projects"]
 texture_filter = 1
-position = Vector2(5698, 894)
+position = Vector2(5686, 894)
 texture = ExtResource("330_vgoi8")
 
 [node name="RBarrierShadow" type="Sprite2D" parent="Projects"]
 modulate = Color(1, 1, 1, 0.580392)
 texture_filter = 1
-position = Vector2(5698, 894)
+position = Vector2(5686, 894)
 texture = ExtResource("331_rb3cd")
 
 [node name="LampL_Projects" type="AnimatedSprite2D" parent="Projects"]
@@ -6930,6 +6930,7 @@ projects_pos = Vector2(5825, 642)
 personal_pos = Vector2(1945, 642)
 
 [node name="Dead Pixel" type="AnimatedSprite2D" parent="VFX"]
+visible = false
 texture_filter = 1
 position = Vector2(188, 1081)
 sprite_frames = SubResource("SpriteFrames_5tfui")
@@ -7163,6 +7164,7 @@ autostart = true
 [connection signal="pressed" from="Buttons/Experience/Exit" to="Projects/Resume" method="_on_exit_pressed"]
 [connection signal="pressed" from="Buttons/Skills/Exit" to="Projects/Tool" method="_on_exit_pressed"]
 [connection signal="pressed" from="Buttons/Booklist/Exit" to="Projects/Book" method="_on_exit_pressed"]
+[connection signal="visibility_changed" from="VFX/Dead Pixel" to="VFX/Dead Pixel" method="_on_visibility_changed"]
 [connection signal="gui_input" from="VFX/Dead Pixel/Panel" to="VFX/Dead Pixel" method="_on_panel_gui_input"]
 [connection signal="timeout" from="Timer" to="Background" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="Home/Head" method="_on_timer_timeout"]

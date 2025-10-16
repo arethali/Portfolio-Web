@@ -1,6 +1,8 @@
 extends AnimatedSprite2D
 
+@onready var camera_2d = $"../../Camera2D"
 
+var shake_intensity = 4
 func _ready():
 	visible = false
 
@@ -24,5 +26,27 @@ func _on_panel_gui_input(event):
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if frame == 2:
 				visible = false
-				#frame = 0
 			frame += 1
+			#print(shake_intensity)
+			camera_2d.position.x += shake_intensity
+			await get_tree().process_frame
+			camera_2d.position.x -= shake_intensity
+			await get_tree().process_frame
+			camera_2d.position.x -= shake_intensity
+			await get_tree().process_frame
+			camera_2d.position.x += shake_intensity
+			await get_tree().process_frame
+			camera_2d.position.x += shake_intensity
+			await get_tree().process_frame
+			camera_2d.position.x -= shake_intensity
+			await get_tree().process_frame
+			camera_2d.position.x -= shake_intensity
+			await get_tree().process_frame
+			camera_2d.position.x += shake_intensity
+			shake_intensity += 4
+
+
+func _on_visibility_changed():
+	if visible == false:
+		await get_tree().create_timer(.2).timeout
+		shake_intensity = 4
