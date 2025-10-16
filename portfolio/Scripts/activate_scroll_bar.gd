@@ -30,7 +30,9 @@ func _ready():
 func _set_scroll():
 	await get_tree().process_frame
 	if scroll.max_value <= scroll.page:
+		visible = false
 		return
+	visible = true
 	max_value = scroll.max_value
 	page = scroll.page
 	position = panel_top_right_corner - Vector2(padding_x, padding_y_top * -1)

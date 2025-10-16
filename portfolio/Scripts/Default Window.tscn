@@ -167,6 +167,7 @@ offset_right = -1920.0
 offset_bottom = -1080.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_force_pass_scroll_events = false
 mouse_default_cursor_shape = 2
 script = ExtResource("1_u3agq")
 

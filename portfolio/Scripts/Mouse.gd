@@ -6,8 +6,14 @@ extends Area2D
 @export var label_name : String
 @export var long : bool = false
 
+#random  text output
+@export_multiline var text_array : Array[String]
+@export var title : String
+
 @onready var light : Color =  Color(1.0,0.949,0.769)
 @onready var dork : Color =  Color(0.188,0.153,0.024)
+
+signal set_rand_text(rand_text : String)
 
 func _on_mouse_entered():
 	outline_text.text = label_name
@@ -26,3 +32,18 @@ func _on_mouse_exited():
 	outline_text.text = ""
 	outline_text.size = Vector2(0,0)
 	color_block.size = Vector2(0,0)
+
+
+
+#random text output
+func _on_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton and event.pressed:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if text_array.size() == 0:
+				print_debug("Empty text array")
+				return
+			var pos = randi_range(0,text_array.size()-1)
+			if title:
+				emit_signal("set_rand_text", "[b]" + title + "[/b]" + "\n" + text_array[pos])
+				return
+			emit_signal("set_rand_text", text_array[pos])

@@ -10,6 +10,8 @@ var panel_top_left_corner : Vector2
 var panel_x_size : int
 var panel_y_size : int
 
+signal set_scroll
+
 func _on_panel_top_left(dimes):
 	panel_top_left_corner = dimes
 
@@ -39,3 +41,9 @@ func _on_panel_x_size(size):
 
 func _on_panel_y_size(size):
 	panel_y_size = size
+
+
+func _on_set_rand_text(rand_text):
+	$".".text = rand_text
+	await get_tree().process_frame
+	emit_signal("set_scroll")

@@ -70,10 +70,7 @@ func _check_overflow():
 	visible_lines = about.get_visible_line_count()
 	var length = 0
 	if total_lines > visible_lines:
-		#if about_overflow_text == "":
-			#print_debug("Text Overflow")
-			#return
-		print(about_text.length())
+		#print(about_text.length())
 		for i in range(about_text.length()+1):
 			var current_line = about.get_character_line(i)
 			if i == about_text.length():
@@ -89,7 +86,8 @@ func _check_overflow():
 			visible_lines -= 1
 		about.text = _stringify_array(0, visible_lines, lines_array)
 		about_overflow.text = _stringify_array(visible_lines, total_lines, lines_array)
-
+		return
+	about_overflow.visible = false
 func _stringify_array(start : int, end : int, array : Array[String]):
 	var string = ""
 	var pos = start
@@ -101,8 +99,14 @@ func _stringify_array(start : int, end : int, array : Array[String]):
 func _on_container_resized():
 	if bios and cont_set == false and visible == true:
 		cont_set = true
-		print("bios")
 		_check_overflow()
 		await get_tree().process_frame
 		emit_signal("set_scroll")
 		return
+
+
+func _on_set_rand_text(rand_text):
+	about.text = rand_text
+	_check_overflow()
+	await get_tree().process_frame
+	emit_signal("set_scroll")
