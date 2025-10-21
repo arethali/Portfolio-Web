@@ -6124,7 +6124,7 @@ script = ExtResource("69_3b7lf")
 outline_text = NodePath("../HoverLabel")
 color_block = NodePath("../ColorRect")
 label_name = "leo"
-text_array = Array[String](["Despite where he is right now, he is not actually allowed to stay on my head in fear of poops and his growing need for world domination.", "His nicknames include: Beo, Leo Beo, Lelo, Little birb, Baby bird, Little tiny bird, Leeeeoh, Mr. Leo etc.", "He knows how to say “step-up”, but uses it as a threat. "])
+text_array = Array[String](["#1 - Despite where he is right now, he is not actually allowed to stay on my head in fear of poops and feeding his growing need for world domination.", "#2 - His nicknames include: Beo, Leo Beo, Lelo, Little birb, Baby bird, Little tiny bird, Leeeeoh, Mr. Leo, EEEOOOEEEOOO, Leon, and Teo.", "#3 - He knows how to say “step up,” but uses it as a threat.", "#4 - I think he is learning how to say “Hello,” but right now it sounds like “eeoww.”", "#5 - Much like his name suggests, he can meow. Occasionally, he barks too.", "#6 - In lieu of waving hello, he bobs his head and flaps his wings.", "#7 - He can shake your hand, spin, and give you a high five, as long as you give him a treat afterwards.", "#8 - He does a war cry every time he takes off.", "#9 - Occasionally, he crawls into my shirt and chills there. He’ll bite you if you disturb him.", "#10 - He is obsessed with phones, much like the rest of us."])
 title = "Leo"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Leo Area"]
@@ -6136,7 +6136,7 @@ script = ExtResource("69_3b7lf")
 outline_text = NodePath("../HoverLabel")
 color_block = NodePath("../ColorRect")
 label_name = "alvis"
-text_array = Array[String](["She is scared of anything and everything. ", "She is quite the homebody. Even when she is let out, she’ll just chill on top of her cage or on the kitchen door. Sometimes, she doesn’t even come out. ", "Her nicknames include: Alvis Palvis, Old lady, Alves, Avis, etc. "])
+text_array = Array[String](["#1 - She is scared of anything and everything.", "#2 - When she is let out of her cage, she’ll just chill on top of her cage or on the kitchen door. Sometimes, she doesn’t even come out.", "#3 - Her nicknames include Alvis Palvis, Old Lady, Alves, Avis, and Eepy Girl.", "#4 - When you try to give her something to eat, she’ll run away first, then come back when she thinks you aren’t looking.", "#5 - Her original name was Alvin, but she started laying eggs, so we changed her name to Alvis.", "#6 - If left unattended, she will go for the nearest salt shaker. We’ve had to stop using salt shakers because of this (salt, in large amounts, is bad for birds).", "#7 - She sleeps in a little hanging tent. When we first gave it to her, she was petrified of it, but warmed up to it after a while. For the first few years, she would sleep on top of it to assert her dominance.", "#8 - Every once in a while, we let both birds sunbathe in a cage to get some fresh and natural sunlight. I think she made friends with a local California towhee and a hummingbird.", "#9 - If she is not eating, she is sleeping. If she's not sleeping, she's preening. A true inspiration.", "#10 - She baths by dunking her chest in her drink bowl and flapping around. I tried giving her a dish to bathe in, but she got scared and flew away."])
 title = "Alvis"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Alvis Area"]
@@ -6657,10 +6657,48 @@ override = false
 padding_sides = Vector2(40, 40)
 padding_vert = Vector2(40, 40)
 texture = ExtResource("366_meayg")
-about_text = "[b]About Me[/b]
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-list_1_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-list_2_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+Title_text = "[b]Hello! My name is Aretha Li.[/b]"
+about_text = "As a UCSD alum who double majored in cognitive science (with a specialization in design and interaction) and ICAM (Interdisciplinary Computing and the Arts major) with a focus in music, I am a versatile interdisciplinary creative with expertise in UX/UI design, game development, video editing, music production, and photography. With my skills, I aim to blend creativity with technical proficiency to aid in the production of engaging and thought-provoking media that bring awareness to pressing issues within our society. 
+I am currently looking for UX/UI design work. Feel free to reach out to me at aretha0115li@gmail.com."
+list_1_text = "[b]Age:[/b] 
+22
+[b]Job Status:[/b] 
+Looking for work
+[b]Likes:[/b]
+- Making things
+- Drawing
+- Photography
+- Game Dev
+- Mindless repetitive tasks (ie. crocheting)
+- My birds
+- Sleeping
+- Reading
+- Playing Video games (when I have the time)
+[b]Current Hyperfixation(s):[/b] 
+- Godot
+- Pixel Art
+- Crocheting
+- Cross stitching"
+list_2_text = "[b]Pronouns:[/b] 
+She/They
+[b]Current project:[/b] 
+The Case of Arcadia Springs
+[b]Dislikes:[/b] 
+- Endless uncreative time-sinks (ie. my phone)
+- My chronic TMJ
+- Crowded spaces 
+- Game Dev
+- Blinding LED headlights at night
+- Mosquitoes
+- The not-so-slow descent into late stage capitalism
+- Eggplants
+[b]Current Worry(s):[/b] 
+- Finishing TCOAS
+- My perpetual unemployment
+- Finding a career that won't drive me to an early grave"
+
+[node name="Container" parent="Buttons/About Me/Bios/ScrollContainer" index="0"]
+theme_override_constants/separation = 8
 
 [node name="Portrait" parent="Buttons/About Me/Bios/ScrollContainer/Container/First Row" index="0"]
 texture = ExtResource("366_meayg")
@@ -6705,10 +6743,34 @@ override = false
 padding_sides = Vector2(40, 40)
 padding_vert = Vector2(40, 40)
 texture = ExtResource("368_qcpgi")
-about_text = "[b]Leo[/b]
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-list_1_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-list_2_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+Title_text = "[b]Leo[/b]"
+about_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+list_1_text = "[b]Age:[/b] 
+1
+[b]Gender:[/b]
+Male
+[b]Likes:[/b] 
+- Biting
+- Skritches
+- Yelling at his food
+- Pistachios
+- Pooping on my shoulder
+- Grapes
+- Corn
+- Kisses
+"
+list_2_text = "[b]Birthday:[/b] 
+April 4, 2024
+[b]Species:[/b] 
+Conure
+[b]Dislikes:[/b] 
+- Nail Clipping
+- Going back into his cage
+- Sun-time
+- Running water"
+
+[node name="Container" parent="Buttons/Leo/Bios/ScrollContainer" index="0"]
+theme_override_constants/separation = 8
 
 [node name="Portrait" parent="Buttons/Leo/Bios/ScrollContainer/Container/First Row" index="0"]
 texture = ExtResource("366_meayg")
@@ -6753,10 +6815,34 @@ override = false
 padding_sides = Vector2(40, 40)
 padding_vert = Vector2(40, 40)
 texture = ExtResource("369_yep5p")
-about_text = "[b]Alvis[/b]
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-list_1_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-list_2_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+Title_text = "[b]Alvis[/b]"
+about_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+list_1_text = "[b]Age:[/b] 
+13
+[b]Gender:[/b]
+Female
+[b]Likes:[/b] 
+- Sleeping
+- Pistachios
+- Millet
+- The occasional skritch
+-  Preening
+- Corn
+- Salt
+- The kitchen door"
+list_2_text = "[b]Birthday:[/b]
+May 5, 2012
+[b]Species:[/b]
+Cockatiel
+[b]Dislikes:[/b]
+- You
+- Me
+- Anything that moves too quickly
+- Anything that get too close
+- Change"
+
+[node name="Container" parent="Buttons/Alvis/Bios/ScrollContainer" index="0"]
+theme_override_constants/separation = 8
 
 [node name="Portrait" parent="Buttons/Alvis/Bios/ScrollContainer/Container/First Row" index="0"]
 texture = ExtResource("366_meayg")
@@ -6845,6 +6931,11 @@ click_box = NodePath("../Tool Box")
 height = 20
 width = 26
 override = false
+
+[node name="Bios" parent="Buttons/Skills" index="5"]
+about_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+list_1_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+list_2_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 
 [node name="Skills" parent="Buttons/Skills" index="7"]
 padding_sides = Vector2(40, 40)

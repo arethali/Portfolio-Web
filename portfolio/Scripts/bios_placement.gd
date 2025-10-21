@@ -5,14 +5,15 @@ var panel_x_size
 var panel_y_size
 var cont_set = false
 
-var visible_lines
 var min_size : Vector2
+var set_rand = false
+@export var max_about_line_count : int = 4
 @export var padding_sides : Vector2
 @export var padding_vert : Vector2
 
 @export var texture : Texture2D
+@export var Title_text : String
 @export_multiline var about_text : String
-#@export var about_overflow_text : String
 @export_multiline var list_1_text : String
 @export_multiline var list_2_text : String
 @export var top_line_clipped = false
@@ -60,37 +61,41 @@ func _on_panel_y_size(size):
 func _on_panel_top_left(dimes):
 	panel_top_left_corner = dimes
 
-
+#DO NOT USE BBCS IN TEXT, FUCKS WITH THE COUNTING OR SOMETHING
 func _check_overflow():
 	await get_tree().process_frame
 	var lines_array : Array[String]
 	var prev_line = 0
 	var string_to_add = ""
 	var total_lines = about.get_line_count()
-	visible_lines = about.get_visible_line_count()
-	var length = 0
-	if total_lines > visible_lines:
-		#print(about_text.length())
+	if total_lines > max_about_line_count:
+		#await get_tree().process_frame
 		for i in range(about_text.length()+1):
 			var current_line = about.get_character_line(i)
 			if i == about_text.length():
 				lines_array.append(string_to_add)
 				break
-			if current_line > prev_line :
+			if current_line > prev_line:
 				lines_array.append(string_to_add)
 				string_to_add = ""
+				prev_line = current_line
 			string_to_add += about.text[i]
-			length += 1
-			prev_line = current_line
 		if top_line_clipped == true:
-			visible_lines -= 1
-		about.text = _stringify_array(0, visible_lines, lines_array)
-		about_overflow.text = _stringify_array(visible_lines, total_lines, lines_array)
+			max_about_line_count -= 1
+		about.text = Title_text + "\n" + _stringify_array(0, max_about_line_count, lines_array)
+		about_overflow.visible = true
+		about_overflow.text = _stringify_array(max_about_line_count, lines_array.size(), lines_array)
+		set_rand = false
 		return
+	about.text = Title_text + "\n" + about_text
+	about_overflow.text = ""
 	about_overflow.visible = false
+	set_rand = false
+
 func _stringify_array(start : int, end : int, array : Array[String]):
 	var string = ""
 	var pos = start
+	var bcc_add_pos = 0
 	for i in range(end-start):
 		string += array[pos]
 		pos += 1
@@ -99,6 +104,7 @@ func _stringify_array(start : int, end : int, array : Array[String]):
 func _on_container_resized():
 	if bios and cont_set == false and visible == true:
 		cont_set = true
+		await get_tree().process_frame
 		_check_overflow()
 		await get_tree().process_frame
 		emit_signal("set_scroll")
@@ -106,7 +112,16 @@ func _on_container_resized():
 
 
 func _on_set_rand_text(rand_text):
-	about.text = rand_text
-	_check_overflow()
-	await get_tree().process_frame
-	emit_signal("set_scroll")
+	about_text = rand_text
+	about.text = about_text
+	if set_rand == false and cont_set == true:
+		set_rand = true
+		about_text = rand_text
+		about.text = about_text
+		_check_overflow()
+		await get_tree().process_frame
+		emit_signal("set_scroll")
+		await get_tree().process_frame
+		
+		
+		
