@@ -12,6 +12,7 @@ extends AnimatedSprite2D
 
 @export var one_shot : bool = false
 @export var reversed : bool = false
+@export var sound : String
 
 func _ready():
 	if off_anim:
@@ -27,6 +28,7 @@ func _ready():
 func _on_area_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
+			ButtonsSound.add_sound(sound)
 			_toggle_screen()
 
 func _on_panel_gui_input(event):

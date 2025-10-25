@@ -1,6 +1,7 @@
 extends CanvasLayer
 
-var audio_on : bool
+var audio_on : bool 
+var fxs_on : bool = true
 
 var root_window
 
@@ -24,17 +25,19 @@ func _hide_buttons():
 	
 func _on_button_pressed():
 	Audio.audio_on = true
-	print("on", Audio.audio_on)
-	
+	Audio.fxs_on = true
+	ButtonsSound.clicked()
 	Loading.load_scene()
 	queue_free()
 	
 	
 func _on_button_2_pressed():
 	Audio.audio_on = false
+	Audio.fxs_on = false
 	_hide_buttons()
 	Loading.load_scene()
 	queue_free()
+	ButtonsSound.clicked()
 
 func _on_window_size_changed():
 	var aspect_ratio = float(get_viewport().size.x)/float(get_viewport().size.y)
@@ -42,3 +45,7 @@ func _on_window_size_changed():
 		root_window.content_scale_mode = Window.CONTENT_SCALE_MODE_CANVAS_ITEMS
 	else: 
 		root_window.content_scale_mode = Window.CONTENT_SCALE_MODE_DISABLED
+
+
+func _on_button_mouse_entered():
+	ButtonsSound.hover()

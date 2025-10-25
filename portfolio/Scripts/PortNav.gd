@@ -45,17 +45,21 @@ func _on_window_size_changed():
 	
 
 func _on_projects_pressed():
+	ButtonsSound.clicked()
 	camera.position.x = projects_pos
 	#$AnimationPlayer.play("Cam_Home_to_Projects")
 
 func _on_personal_pressed():
+	ButtonsSound.clicked()
 	camera.position.x = personal_pos
 
 
 func _on_back_pressed():
+	ButtonsSound.clicked()
 	camera.position.x = home_pos
 
 func _on_mouse_entered():
+	ButtonsSound.hover()
 	label.show()
 	color_block.show()
 	set_process(true)
@@ -72,3 +76,7 @@ func _process(delta):
 	label.position = mouse_pos + Vector2(-1,-1) + Vector2(12 ,12)
 	color_block.position = mouse_pos + Vector2(-1,-1) + Vector2(8 ,8)
 	
+
+
+func _on_sign_entered():
+	ButtonsSound.hover()

@@ -17,6 +17,7 @@ func _ready():
 		pause.visible = false
 
 func _on_pressed():
+	ButtonsSound.clicked()
 	if Audio.audio_on == true:
 		Audio.audio_on = false
 		play.visible = true
@@ -30,6 +31,7 @@ func _on_pressed():
 		emit_signal("played")
 
 func _on_dir_pressed():
+	ButtonsSound.clicked()
 	if Audio.audio_on == false:
 		Audio.audio_on = true
 		play.visible = false

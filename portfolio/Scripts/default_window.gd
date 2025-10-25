@@ -63,12 +63,14 @@ func _ready():
 
 func _on_exit_pressed():
 	if visible == true:
+		ButtonsSound.clicked()
 		visible = false
 		panel.visible = false
 		click_box.visible = true
 
 func _show_window():
 	if visible == false:
+		ButtonsSound.clicked()
 		visible = true
 		panel.visible = true
 		click_box.visible = false

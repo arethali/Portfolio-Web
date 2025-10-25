@@ -6,6 +6,7 @@ var panel_bot_right
 var on : bool
 @onready var mute = $"."
 @onready var unmute = $"../Unmute"
+@onready var buttons = %Buttons
 
 signal paused
 signal played
@@ -17,19 +18,27 @@ func _ready():
 	await  get_tree().process_frame
 	mute.position = panel_bot_right - padding
 	unmute.position = panel_bot_right - padding
-	on = true
-	#mute.visible = true
-	#unmute.visible = false
+	if buttons.button_format != "Music":
+		return 
+	if Audio.fxs_on == true:
+		#on = true
+		mute.visible = true
+		unmute.visible = false
+		return
+	#on = false
+	mute.visible = false
+	unmute.visible = true
 
 func _on_pressed():
-	if on == true:
-		on = false
+	ButtonsSound.clicked()
+	if Audio.fxs_on == true:
+		Audio.fxs_on = false
 		mute.visible = false
 		unmute.visible = true
 		emit_signal("paused")
 		
 	else:
-		on = true
+		Audio.fxs_on = true
 		mute.visible = true
 		unmute.visible = false
 		emit_signal("played")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bedbr83bv8o57"]
 
-[ext_resource type="Script" uid="uid://gmfiuv5m3t10" path="res://set_skills.gd" id="1_4tqyc"]
+[ext_resource type="Script" uid="uid://gmfiuv5m3t10" path="res://Scripts/set_skills.gd" id="1_4tqyc"]
 [ext_resource type="Texture2D" uid="uid://bnqd52k1suayi" path="res://Assets/UI/Skills/Skill1_updated.png" id="2_1gqug"]
 [ext_resource type="FontFile" uid="uid://dsy7a4r455j54" path="res://Fonts/Default.ttf" id="3_e885t"]
 [ext_resource type="FontFile" uid="uid://db0nxlp577mr6" path="res://Fonts/Display.ttf" id="4_o3000"]

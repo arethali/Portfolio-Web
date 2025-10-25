@@ -20,3 +20,7 @@ func _on_panel_x_size(size):
 
 func _on_panel_y_size(size):
 	panel_y_size = size
+
+
+func _on_mouse_entered():
+	ButtonsSound.hover()

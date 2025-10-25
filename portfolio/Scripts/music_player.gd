@@ -24,9 +24,7 @@ func _ready():
 
 func _on_paused():
 	pause_pos = get_playback_position()
-	print(pause_pos)
 	await get_tree().process_frame
-	print("stop")
 	stop()
 	set_stream_paused(true)
 	

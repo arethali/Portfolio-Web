@@ -11,3 +11,7 @@ func _ready():
 	await get_tree().process_frame
 	position = panel_top_right_corner - Vector2(padding.x, padding.y * -1)
 	#print(position)
+
+
+func _on_mouse_entered():
+	ButtonsSound.hover()

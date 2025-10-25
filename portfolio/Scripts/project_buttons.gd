@@ -32,6 +32,7 @@ func _ready():
 		default_title = title_label.content
 
 func _on_mouse_entered():
+	ButtonsSound.hover()
 	title_label.text = title
 	time_label.visible = true
 	emit_signal("set_hover", time)
@@ -48,6 +49,7 @@ func _on_mouse_exited():
 
 
 func _on_pressed():
+	ButtonsSound.clicked()
 	match button_type:
 		"Link":
 			if link_path:
@@ -81,5 +83,6 @@ func _toggle_window(visiblity : bool):
 
 
 func _on_back_pressed():
+	ButtonsSound.clicked()
 	_toggle_buttons(true)
 	_toggle_window(false)
