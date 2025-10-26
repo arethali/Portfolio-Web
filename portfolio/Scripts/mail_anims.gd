@@ -43,6 +43,7 @@ func _toggle_contact():
 		first_open = true
 		in_anim= true
 		anim_tree.set("parameters/conditions/first_open", true)
+		ButtonsSound.add_sound("res://Audio/Paper Rustle.wav")
 		await get_tree().create_timer(1.4).timeout
 		anim_tree.set("parameters/conditions/first_open", false)
 		in_anim= false

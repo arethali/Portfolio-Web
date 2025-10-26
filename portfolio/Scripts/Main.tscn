@@ -5408,6 +5408,7 @@ libraries = {
 
 [node name="Wind noises" type="AudioStreamPlayer" parent="Background"]
 stream = ExtResource("60_8nkan")
+volume_db = -10.0
 script = ExtResource("61_qcpgi")
 
 [node name="Home" type="Node" parent="." node_paths=PackedStringArray("lamp_R_anim", "lamp_L_anim")]
@@ -5551,6 +5552,7 @@ anim_tree = NodePath("AnimationTree")
 conditions_array = Array[String](["Alert", "Hair", "Sleep"])
 target_array = Array[int]([6, 8, 10])
 timing_array = Array[float]([1.0, 4.0, 0.6])
+sound = "res://Audio/Leo.wav"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Home/Leo"]
 libraries = {
@@ -5576,6 +5578,7 @@ anim_tree = NodePath("AnimationTree")
 conditions_array = Array[String](["Alert", "Sleep"])
 target_array = Array[int]([12, 5])
 timing_array = Array[float]([1.0, 0.6])
+sound = "res://Audio/Alvis.wav"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Home/Alvis"]
 libraries = {
@@ -5750,7 +5753,7 @@ on_anim = "Flash"
 off_anim = "RESET"
 interact_area = NodePath("../../Buttons/Camera Area")
 one_shot = true
-sound = "res://Audio/camera-shutter-187326.mp3"
+sound = "res://Audio/Camera.wav"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Personal/Camera"]
 libraries = {
@@ -5788,6 +5791,7 @@ anim_player = NodePath("AnimationPlayer")
 on_anim = "Open"
 interact_area = NodePath("../../Buttons/NoteBook Area")
 reversed = true
+sound = "res://Audio/Paper Rustle.wav"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Personal/Notebook"]
 libraries = {
@@ -5881,6 +5885,7 @@ on_anim = "Play"
 off_anim = "RESET"
 joint_sprite = NodePath("../Light")
 interact_area = NodePath("../../Buttons/Film Area")
+sound = "res://Audio/Projector.wav"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Personal/Film"]
 libraries = {
@@ -6061,6 +6066,7 @@ on_anim = "Keyboard_clicks"
 off_anim = "RESET"
 interact_area = NodePath("../../Buttons/Keyboard")
 one_shot = true
+sound = "res://Audio/Keyboard.wav"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Projects/Keyboard"]
 libraries = {
@@ -6175,7 +6181,7 @@ script = ExtResource("69_3b7lf")
 outline_text = NodePath("../HoverLabel")
 color_block = NodePath("../ColorRect")
 label_name = "alvis"
-text_array = Array[String](["#1 - She is scared of anything and everything.", "#2 - When she is let out of her cage, she’ll just chill on top of her cage or on the kitchen door. Sometimes, she doesn’t even come out.", "#3 - Her nicknames include Alvis Palvis, Old Lady, Alves, Avis, and Eepy Girl.", "#4 - When you try to give her something to eat, she’ll run away first, then come back when she thinks you aren’t looking.", "#5 - Her original name was Alvin, but she started laying eggs, so we changed her name to Alvis.", "#6 - If left unattended, she will go for the nearest salt shaker. We’ve had to stop using salt shakers because of this (salt, in large amounts, is bad for birds).", "#7 - She sleeps in a little hanging tent. When we first gave it to her, she was petrified of it, but warmed up to it after a while. For the first few years, she would sleep on top of it to assert her dominance.", "#8 - Every once in a while, we let both birds sunbathe in a cage to get some fresh and natural sunlight. I think she made friends with a local California towhee and a hummingbird.", "#9 - If she is not eating, she is sleeping. If she's not sleeping, she's preening. A true inspiration.", "#10 - She baths by dunking her chest in her drink bowl and flapping around. I tried giving her a dish to bathe in, but she got scared and flew away."])
+text_array = Array[String](["#2 - When she is let out of her cage, she’ll just chill on top of her cage or on the kitchen door. Sometimes, she doesn’t even come out.", "#4 - When you try to give her something to eat, she’ll run away first, then come back when she thinks you aren’t looking.", "#7 - She sleeps in a little hanging tent. When we first gave it to her, she was petrified of it, but warmed up to it after a while. For the first few years, she would sleep on top of it to assert her dominance.", "#6 - If left unattended, she will go for the nearest salt shaker. We’ve had to stop using salt shakers because of this (salt, in large amounts, is bad for birds).", "#8 - Every once in a while, we let both birds sunbathe in a cage to get some fresh and natural sunlight. I think she made friends with a local California towhee and a hummingbird.", "#1 - She is scared of anything and everything.", "#3 - Her nicknames include Alvis Palvis, Old Lady, Alves, Avis, and Eepy Girl.", "#5 - Her original name was Alvin, but she started laying eggs, so we changed her name to Alvis.", "#9 - If she is not eating, she is sleeping. If she's not sleeping, she's preening. A true inspiration.", "#10 - She baths by dunking her chest in her drink bowl and flapping around. I tried giving her a dish to bathe in, but she got scared and flew away."])
 title = "Alvis"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buttons/Alvis Area"]
@@ -7527,6 +7533,7 @@ sprite_frames = SubResource("SpriteFrames_5tfui")
 animation = &"crunch"
 centered = false
 script = ExtResource("37_nx4yo")
+sound_arr = Array[String](["res://Audio/Glitch1.wav", "res://Audio/Glitch2.wav", "res://Audio/Glitch1.wav"])
 
 [node name="Panel" type="Panel" parent="VFX/Dead Pixel"]
 modulate = Color(1, 1, 1, 0)

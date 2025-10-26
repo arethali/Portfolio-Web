@@ -5,9 +5,11 @@ extends AnimatedSprite2D
 @export var target_array : Array[int]
 @export var timing_array : Array[float]
 
+@export var sound : String
+
 @onready var state : String
 @onready var time : float
-
+var sleep = false
 
 func _on_timer_timeout():
 	if state == "":
@@ -45,7 +47,11 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 			anim_tree.get("parameters/playback").travel("Default")
 			anim_tree.set("parameters/conditions/Yell", true)
 			#print(anim_tree.get("parameters/playback"))
-			await get_tree().create_timer(.7).timeout
+			if sleep == false:
+				ButtonsSound.add_sound(sound)
+			await get_tree().create_timer(.7).timeout 
+			if sleep == true:
+				ButtonsSound.add_sound(sound)
 			anim_tree.set("parameters/conditions/Yell", false)
 			anim_tree.get("parameters/playback").travel("Default")
 			state = ""
@@ -62,6 +68,7 @@ func _play_condition_anim(anim_tree: AnimationTree, condition : String, time : f
 
 func _play_sleep_anim(anim_tree: AnimationTree, time : float):
 	#print("play sleep")
+	sleep = true
 	anim_tree.set("parameters/conditions/Sleep", true)
 	await get_tree().create_timer(time).timeout
 	anim_tree.set("parameters/conditions/Sleep", false)
@@ -70,4 +77,5 @@ func _play_sleep_anim(anim_tree: AnimationTree, time : float):
 	anim_tree.set("parameters/conditions/Awake", true)
 	await get_tree().create_timer(time).timeout
 	anim_tree.set("parameters/conditions/Awake", false)
+	sleep = false
 	state = ""

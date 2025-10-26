@@ -47,5 +47,4 @@ func _on_input_event(viewport, event, shape_idx):
 			if curr_pos == pos:
 				while curr_pos == pos:
 					pos = randi_range(0,text_array.size()-1)
-					await get_tree().process_frame
 			emit_signal("set_rand_text", text_array[pos])

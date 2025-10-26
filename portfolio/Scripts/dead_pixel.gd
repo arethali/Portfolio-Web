@@ -2,7 +2,7 @@ extends AnimatedSprite2D
 
 @onready var camera_2d = $"../../Camera2D"
 @onready var glitch_layer = $"../Glitch Layer"
-
+@export var sound_arr : Array[String]
 var shake_intensity = 4
 func _ready():
 	visible = false
@@ -28,6 +28,7 @@ func _on_panel_gui_input(event):
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if frame == 2:
 				visible = false
+			ButtonsSound.add_sound(sound_arr[frame])
 			frame += 1
 			#print(shake_intensity)
 			camera_2d.position.x += shake_intensity
