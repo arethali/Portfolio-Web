@@ -3,11 +3,15 @@ extends TileMapLayer
 @export var height : int
 @export var width : int
 @export var override : bool
+@export var light_arrow : bool
 
-@export var arrow_sprite : AnimatedSprite2D
+@onready var white_arrow = %"White Arrow"
+@onready var green_arrow = %"Green Arrow"
+
 @export var anim_play : AnimationPlayer
 @onready var color_rect = $ColorRect
 
+var arrow_anim : String
 var source_id : int = 1
 var layer : int = 0
 var atlas_coor_array : Array[Vector2i] = [Vector2i(0,0), Vector2i(2,2), Vector2i(4,2), Vector2i(0,2), Vector2i(0,4), Vector2i(2,4), Vector2i(4,4),]
@@ -73,8 +77,15 @@ func _ready():
 			#print("place w:" + str(w) + "h: " + str(h))
 			set_cell(Vector2i(w, h), source_id, tile_to_place)
 	#print(_get_bottom_center())
-	arrow_sprite.position = _get_bottom_center()
-	anim_play.play("Idle")
+	if light_arrow:
+		green_arrow.visible = false
+		white_arrow.position = _get_bottom_center()
+		arrow_anim = "White"
+	else:
+		white_arrow.visible = false
+		green_arrow.position = _get_bottom_center()
+		arrow_anim = "Idle"
+	anim_play.play(arrow_anim)
 
 
 func get_global_dimensions():

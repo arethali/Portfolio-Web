@@ -6,5 +6,3 @@
 volume_db = -3.0
 pitch_scale = 0.9
 script = ExtResource("1_devy7")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

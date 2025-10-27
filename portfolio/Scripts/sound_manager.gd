@@ -26,6 +26,7 @@ func add_sound(sound_file : String = ""):
 	if sound_file:
 		var file = load(sound_file)
 		await get_tree().create_timer(.1).timeout
+		button_sounds.volume_db = -6.0
 		button_sounds.stream = file
 		button_sounds.play()
 		return

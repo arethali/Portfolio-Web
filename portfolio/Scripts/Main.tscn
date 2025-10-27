@@ -6794,6 +6794,9 @@ format = "Buttons"
 panel = NodePath("../Panel")
 click_box = NodePath("../NoteBook Area")
 
+[node name="Panel" parent="Buttons/Notebook" index="0"]
+light_arrow = true
+
 [node name="Buttons" parent="Buttons/Notebook" index="4"]
 button_format = "Art"
 
@@ -6861,6 +6864,7 @@ click_box = NodePath("../Phone Area")
 height = 16
 width = 13
 override = false
+light_arrow = true
 
 [node name="VScrollBar" parent="Buttons/Phone/Text" index="0"]
 padding_y_top = 56
@@ -7003,7 +7007,7 @@ Male
 list_2_text = "[b]Birthday:[/b] 
 April 4, 2024
 [b]Species:[/b] 
-Conure
+Peach fronted Conure
 [b]Dislikes:[/b] 
 - Nail Clipping
 - Going back into his cage
@@ -7051,6 +7055,7 @@ click_box = NodePath("../Alvis Area")
 height = 20
 width = 24
 override = false
+light_arrow = true
 
 [node name="Bios" parent="Buttons/Alvis" index="5"]
 padding_sides = Vector2(40, 40)
@@ -7074,7 +7079,7 @@ Female
 list_2_text = "[b]Birthday:[/b]
 May 5, 2012
 [b]Species:[/b]
-Cockatiel
+Pearl-pied Cockatiel
 [b]Dislikes:[/b]
 - You
 - Me
@@ -7123,6 +7128,7 @@ click_box = NodePath("../Resume")
 height = 20
 width = 32
 override = false
+light_arrow = true
 
 [node name="Resume" parent="Buttons/Experience" index="6"]
 padding_sides = Vector2(40, 40)
@@ -7423,6 +7429,9 @@ format = "Buttons"
 panel = NodePath("../Panel")
 click_box = NodePath("../Camera Area")
 
+[node name="Panel" parent="Buttons/CameraPhotos" index="0"]
+light_arrow = true
+
 [node name="Buttons" parent="Buttons/CameraPhotos" index="4"]
 button_format = "Camera"
 
@@ -7446,7 +7455,7 @@ padding_y_top = 56
 padding_y_bott = 40
 
 [node name="Body" parent="Buttons/Letter1/Text" index="1"]
-body_text = "We are glad to inform you that your transfer has been successful. Please continue to follow the post crash procedure. If you find that something is missing, please do not contact us. We will not be here. If any visual distortions materialize, poke it a few times. It will go away eventually. Stay safe and farewell."
+body_text = "We are glad to inform you that your transfer has been successful. Please continue to follow the post crash procedure. If you find that something is missing, please do not contact us. We will not be here. If any visual distortions materialize, poke at it a few times. It should go away eventually. Stay safe and farewell."
 left_margin = 40
 margin_top = 40
 margin_bottom = 40

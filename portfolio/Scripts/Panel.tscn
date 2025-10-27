@@ -1,11 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://kp4lldtw5wvt"]
+[gd_scene load_steps=21 format=3 uid="uid://kp4lldtw5wvt"]
 
 [ext_resource type="Texture2D" uid="uid://dw2ap6lakiv4v" path="res://Assets/UI/Panel Tiles/TileMap.png" id="1_7tpco"]
 [ext_resource type="Script" uid="uid://byneh2xh5h2ro" path="res://Scripts/panel_script.gd" id="2_iwtbq"]
+[ext_resource type="Texture2D" uid="uid://dma5g874xcu4x" path="res://Assets/UI/Global/Arrow/arrow_white1.png" id="3_c2hsg"]
 [ext_resource type="Texture2D" uid="uid://ivh0hy8sbn0t" path="res://Assets/UI/Global/Arrow/Arrow1.png" id="3_d7o5g"]
+[ext_resource type="Texture2D" uid="uid://c2gsykbauvvem" path="res://Assets/UI/Global/Arrow/arrow_white2.png" id="4_kb0gd"]
 [ext_resource type="Texture2D" uid="uid://dodl7pcoo1g6j" path="res://Assets/UI/Global/Arrow/Arrow2.png" id="4_vu0vy"]
+[ext_resource type="Texture2D" uid="uid://cgrqisgmn1wu6" path="res://Assets/UI/Global/Arrow/arrow_white3.png" id="5_hg7cn"]
 [ext_resource type="Texture2D" uid="uid://0tfmglilfhsm" path="res://Assets/UI/Global/Arrow/Arrow3.png" id="5_ny4dj"]
+[ext_resource type="Texture2D" uid="uid://bf5xlgjnceiy5" path="res://Assets/UI/Global/Arrow/arrow_white4.png" id="6_4i33e"]
 [ext_resource type="Texture2D" uid="uid://1ltglve64vyf" path="res://Assets/UI/Global/Arrow/Arrow4.png" id="6_qtg28"]
+[ext_resource type="Texture2D" uid="uid://crpsgxifhbd1k" path="res://Assets/UI/Global/Arrow/arrow_white5.png" id="7_qoeqn"]
 [ext_resource type="Texture2D" uid="uid://ppufg6h08w87" path="res://Assets/UI/Global/Arrow/Arrow5.png" id="7_unhe0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iwtbq"]
@@ -30,6 +35,29 @@ tile_size = Vector2i(32, 32)
 custom_data_layer_0/name = ""
 custom_data_layer_0/type = 0
 sources/1 = SubResource("TileSetAtlasSource_iwtbq")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i78c8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_c2hsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kb0gd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hg7cn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4i33e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qoeqn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_c2hsg"]
 animations = [{
@@ -110,27 +138,61 @@ tracks/1/keys = {
 "values": [&"default"]
 }
 
+[sub_resource type="Animation" id="Animation_sxhq6"]
+resource_name = "White"
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../White Arrow:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../White Arrow:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4i33e"]
 _data = {
 &"Idle": SubResource("Animation_kb0gd"),
-&"RESET": SubResource("Animation_hg7cn")
+&"RESET": SubResource("Animation_hg7cn"),
+&"White": SubResource("Animation_sxhq6")
 }
 
-[node name="Panel" type="TileMapLayer" node_paths=PackedStringArray("arrow_sprite", "anim_play")]
+[node name="Panel" type="TileMapLayer" node_paths=PackedStringArray("anim_play")]
 texture_filter = 1
 tile_set = SubResource("TileSet_vt1hh")
 rendering_quadrant_size = 32
 script = ExtResource("2_iwtbq")
 height = 5
 width = 10
-arrow_sprite = NodePath("Arrow")
-anim_play = NodePath("Arrow/AnimationPlayer")
+anim_play = NodePath("Green Arrow/AnimationPlayer")
 
-[node name="Arrow" type="AnimatedSprite2D" parent="."]
+[node name="White Arrow" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_i78c8")
+
+[node name="Green Arrow" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_c2hsg")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Arrow"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Green Arrow"]
 libraries = {
 &"": SubResource("AnimationLibrary_4i33e")
 }
