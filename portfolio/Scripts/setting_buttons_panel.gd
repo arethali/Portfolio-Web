@@ -38,13 +38,13 @@ func _ready():
 			add_buttons(project_buttons , row_container, 6)
 		"Camera":
 			title.content = "[b]Photos[/b]"
-			emit_signal("overide_panel_size", 20, 18)
+			emit_signal("overide_panel_size", 20, 17)
 			project_name.visible = false
 			cam_scroll.visible = true
 			cam_scroll_bar.visible = true
 			place_image.top_bott_padding= Vector2(100, 80)
 			place_image.side_padding = 20
-			subwindow_title.padding = Vector2(100, 580.0)
+			subwindow_title.padding = Vector2(76, 580.0)
 			subwindow_title.left_alignment = false
 			cam_back.top_padding = 584.0
 		"Contact":

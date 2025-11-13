@@ -47,6 +47,7 @@ func _on_panel_top_right(dimes):
 	panel_top_right_corner = dimes
 
 func _on_meta_clicked(meta):
+	ButtonsSound.clicked()
 	if FileAccess.file_exists(meta):
 		OS.shell_open(ProjectSettings.globalize_path(meta))
 		return
@@ -54,6 +55,7 @@ func _on_meta_clicked(meta):
 	return
 
 func _on_meta_hover_started(meta):
+	ButtonsSound.hover()
 	var text_size_x = get_content_width() - 6
 	var text_size_y = get_content_height() - 30
 	subwindow_title.add_theme_color_override("default_color", Color(1.0,0.949,0.769,1.0))

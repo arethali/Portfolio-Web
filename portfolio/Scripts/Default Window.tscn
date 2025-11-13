@@ -219,7 +219,7 @@ script = ExtResource("10_7vdy2")
 button_format = "Music"
 project_buttons = [NodePath("Project_TCOAS"), NodePath("Project_Portfolio"), NodePath("Project_TRW"), NodePath("Project_Ecotime"), NodePath("Project_grocery"), NodePath("Project_Basline")]
 film_buttons = [NodePath("Film1"), NodePath("Film2"), NodePath("Film3"), NodePath("Film4"), NodePath("Film5"), NodePath("Film6"), NodePath("Film7"), NodePath("Film8"), NodePath("Film9"), NodePath("Film10")]
-art_buttons = [NodePath("PixelArt1"), NodePath("PixelArt2"), NodePath("PixelArt3"), NodePath("PixelArt4"), NodePath("PixelArt5"), NodePath("PixelArt6"), NodePath("PixelArt7"), NodePath("PixelArt8"), NodePath("PixelArt10"), NodePath("PixelArt11"), NodePath("PixelArt12"), NodePath("PixelArt13"), NodePath("PixelArt14"), NodePath("PixelArt15"), NodePath("PixelArt16"), NodePath("PixelArt17"), NodePath("PixelArt9"), NodePath("DigiArt1"), NodePath("DigiArt2"), NodePath("TradArt1"), NodePath("DigiArt3"), NodePath("TradArt2"), NodePath("TradArt3")]
+art_buttons = [NodePath("PixelArt1"), NodePath("PixelArt2"), NodePath("PixelArt3"), NodePath("PixelArt4"), NodePath("PixelArt5"), NodePath("PixelArt6"), NodePath("PixelArt7"), NodePath("PixelArt8"), NodePath("PixelArt10"), NodePath("PixelArt11"), NodePath("PixelArt12"), NodePath("PixelArt13"), NodePath("PixelArt14"), NodePath("PixelArt16"), NodePath("PixelArt17"), NodePath("PixelArt9"), NodePath("DigiArt1"), NodePath("DigiArt2"), NodePath("TradArt1"), NodePath("DigiArt3"), NodePath("TradArt2"), NodePath("TradArt3")]
 contact_buttons = [NodePath("Contact_Mail"), NodePath("Contact_Insta"), NodePath("Contact_LinkedIn"), NodePath("Contact_Youtube"), NodePath("Contact_BlueSky")]
 row_container = [NodePath("Button Container/Row 1"), NodePath("Button Container/Row 2"), NodePath("Button Container/Row 3"), NodePath("Button Container/Row 4")]
 buttons_container = NodePath("Button Container")
@@ -803,7 +803,7 @@ texture_hover = ExtResource("41_8iyxp")
 script = ExtResource("16_6v0q4")
 button_type = "Window"
 gif = true
-frames = ["res://Open Files/Art/ABR Frames/ABR1.png", "res://Open Files/Art/ABR Frames/ABR2.png", "res://Open Files/Art/ABR Frames/ABR3.png", "res://Open Files/Art/ABR Frames/ABR4.png", "res://Open Files/Art/ABR Frames/ABR5.png", "res://Open Files/Art/ABR Frames/ABR6.png", "res://Open Files/Art/ABR Frames/ABR7.png", "res://Open Files/Art/ABR Frames/ABR8.png", "res://Open Files/Art/ABR Frames/ABR9.png", "res://Open Files/Art/ABR Frames/ABR10.png", "res://Open Files/Art/ABR Frames/ABR11.png", "res://Open Files/Art/ABR Frames/ABR12.png", "res://Open Files/Art/ABR Frames/ABR13.png", "res://Open Files/Art/ABR Frames/ABR14.png", "res://Open Files/Art/ABR Frames/ABR15.png", "res://Open Files/Art/ABR Frames/ABR16.png", "res://Open Files/Art/ABR Frames/ABR17.png", "res://Open Files/Art/ABR Frames/ABR18.png", "res://Open Files/Art/ABR Frames/ABR19.png", "res://Open Files/Art/ABR Frames/ABR20.png", "res://Open Files/Art/ABR Frames/ABR21.png", "res://Open Files/Art/ABR Frames/ABR22.png", "res://Open Files/Art/ABR Frames/ABR23.png", "res://Open Files/Art/ABR Frames/ABR24.png", "res://Open Files/Art/ABR Frames/ABR25.png", "res://Open Files/Art/ABR Frames/ABR26.png", "res://Open Files/Art/ABR Frames/ABR27.png", "res://Open Files/Art/ABR Frames/ABR28.png", "res://Open Files/Art/ABR Frames/ABR29.png", "res://Open Files/Art/ABR Frames/ABR30.png", "res://Open Files/Art/ABR Frames/ABR31.png", "res://Open Files/Art/ABR Frames/ABR32.png", "res://Open Files/Art/ABR Frames/ABR33.png", "res://Open Files/Art/ABR Frames/ABR34.png", "res://Open Files/Art/ABR Frames/ABR35.png", "res://Open Files/Art/ABR Frames/ABR36.png", "res://Open Files/Art/ABR Frames/ABR37.png", "res://Open Files/Art/ABR Frames/ABR38.png", "res://Open Files/Art/ABR Frames/ABR39.png", "res://Open Files/Art/ABR Frames/ABR40.png", "res://Open Files/Art/ABR Frames/ABR41.png", "res://Open Files/Art/ABR Frames/ABR42.png", "res://Open Files/Art/ABR Frames/ABR43.png", "res://Open Files/Art/ABR Frames/ABR44.png", "res://Open Files/Art/ABR Frames/ABR45.png", "res://Open Files/Art/ABR Frames/ABR46.png", "res://Open Files/Art/ABR Frames/ABR47.png", "res://Open Files/Art/ABR Frames/ABR48.png", "res://Open Files/Art/ABR Frames/ABR49.png", "res://Open Files/Art/ABR Frames/ABR50.png", "res://Open Files/Art/ABR Frames/ABR51.png", "res://Open Files/Art/ABR Frames/ABR52.png", "res://Open Files/Art/ABR Frames/ABR53.png", "res://Open Files/Art/ABR Frames/ABR54.png", "res://Open Files/Art/ABR Frames/ABR55.png", "res://Open Files/Art/ABR Frames/ABR56.png", "res://Open Files/Art/ABR Frames/ABR57.png", "res://Open Files/Art/ABR Frames/ABR58.png", "res://Open Files/Art/ABR Frames/ABR59.png", "res://Open Files/Art/ABR Frames/ABR60.png", "res://Open Files/Art/ABR Frames/ABR61.png", "res://Open Files/Art/ABR Frames/ABR62.png", "res://Open Files/Art/ABR Frames/ABR63.png", "res://Open Files/Art/ABR Frames/ABR64.png", "res://Open Files/Art/ABR Frames/ABR65.png"]
+frames = Array[String](["res://Open Files/Art/ABR Frames/ABR1.png", "res://Open Files/Art/ABR Frames/ABR2.png", "res://Open Files/Art/ABR Frames/ABR3.png", "res://Open Files/Art/ABR Frames/ABR4.png", "res://Open Files/Art/ABR Frames/ABR5.png", "res://Open Files/Art/ABR Frames/ABR6.png", "res://Open Files/Art/ABR Frames/ABR7.png", "res://Open Files/Art/ABR Frames/ABR8.png", "res://Open Files/Art/ABR Frames/ABR9.png", "res://Open Files/Art/ABR Frames/ABR10.png", "res://Open Files/Art/ABR Frames/ABR11.png", "res://Open Files/Art/ABR Frames/ABR12.png", "res://Open Files/Art/ABR Frames/ABR13.png", "res://Open Files/Art/ABR Frames/ABR14.png", "res://Open Files/Art/ABR Frames/ABR15.png", "res://Open Files/Art/ABR Frames/ABR16.png", "res://Open Files/Art/ABR Frames/ABR17.png", "res://Open Files/Art/ABR Frames/ABR18.png", "res://Open Files/Art/ABR Frames/ABR19.png", "res://Open Files/Art/ABR Frames/ABR20.png", "res://Open Files/Art/ABR Frames/ABR21.png", "res://Open Files/Art/ABR Frames/ABR22.png", "res://Open Files/Art/ABR Frames/ABR23.png", "res://Open Files/Art/ABR Frames/ABR24.png", "res://Open Files/Art/ABR Frames/ABR25.png", "res://Open Files/Art/ABR Frames/ABR26.png", "res://Open Files/Art/ABR Frames/ABR27.png", "res://Open Files/Art/ABR Frames/ABR28.png", "res://Open Files/Art/ABR Frames/ABR29.png", "res://Open Files/Art/ABR Frames/ABR30.png", "res://Open Files/Art/ABR Frames/ABR31.png", "res://Open Files/Art/ABR Frames/ABR32.png", "res://Open Files/Art/ABR Frames/ABR33.png", "res://Open Files/Art/ABR Frames/ABR34.png", "res://Open Files/Art/ABR Frames/ABR35.png", "res://Open Files/Art/ABR Frames/ABR36.png", "res://Open Files/Art/ABR Frames/ABR37.png", "res://Open Files/Art/ABR Frames/ABR38.png", "res://Open Files/Art/ABR Frames/ABR39.png", "res://Open Files/Art/ABR Frames/ABR40.png", "res://Open Files/Art/ABR Frames/ABR41.png", "res://Open Files/Art/ABR Frames/ABR42.png", "res://Open Files/Art/ABR Frames/ABR43.png", "res://Open Files/Art/ABR Frames/ABR44.png", "res://Open Files/Art/ABR Frames/ABR45.png", "res://Open Files/Art/ABR Frames/ABR46.png", "res://Open Files/Art/ABR Frames/ABR47.png", "res://Open Files/Art/ABR Frames/ABR48.png", "res://Open Files/Art/ABR Frames/ABR49.png", "res://Open Files/Art/ABR Frames/ABR50.png", "res://Open Files/Art/ABR Frames/ABR51.png", "res://Open Files/Art/ABR Frames/ABR52.png", "res://Open Files/Art/ABR Frames/ABR53.png", "res://Open Files/Art/ABR Frames/ABR54.png", "res://Open Files/Art/ABR Frames/ABR55.png", "res://Open Files/Art/ABR Frames/ABR56.png", "res://Open Files/Art/ABR Frames/ABR57.png", "res://Open Files/Art/ABR Frames/ABR58.png", "res://Open Files/Art/ABR Frames/ABR59.png", "res://Open Files/Art/ABR Frames/ABR60.png", "res://Open Files/Art/ABR Frames/ABR61.png", "res://Open Files/Art/ABR Frames/ABR62.png", "res://Open Files/Art/ABR Frames/ABR63.png", "res://Open Files/Art/ABR Frames/ABR64.png", "res://Open Files/Art/ABR Frames/ABR65.png"])
 fps = 0.15
 title_label = NodePath("../Project Name")
 time_label = NodePath("../TimeLine")
@@ -959,24 +959,6 @@ time = "09/05/2025"
 pic_file = "res://Open Files/Art/Affirmation.png"
 
 [node name="PixelArt14" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
-visible = false
-texture_filter = 1
-layout_mode = 0
-offset_right = 68.0
-offset_bottom = 68.0
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource("40_5tn1p")
-texture_pressed = ExtResource("42_jqdcr")
-texture_hover = ExtResource("41_8iyxp")
-script = ExtResource("16_6v0q4")
-button_type = "Window"
-title_label = NodePath("../Project Name")
-time_label = NodePath("../TimeLine")
-title = "Of Mice and Toilets"
-time = "02/03/2025"
-pic_file = "res://Open Files/Art/Of Mice and Toilets.png"
-
-[node name="PixelArt15" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -1287,7 +1269,7 @@ cam_scroll_bar = NodePath("../../../../../CamScrollBar")
 subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
-pic_file = "res://Assets/UI/Camera/Photo1.png"
+pic_file = "res://Open Files/Downsized/2024_02_17_Horizon_26_of_82.jpg"
 
 [node name="Photo2" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row1" index="1" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1296,7 +1278,7 @@ cam_scroll_bar = NodePath("../../../../../CamScrollBar")
 subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
-pic_file = "res://Assets/UI/Camera/Photo2.png"
+pic_file = "res://Open Files/Downsized/2024_02_17_Horizon_43_of_82.jpg"
 
 [node name="Photo12" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row1" index="2" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1305,7 +1287,7 @@ cam_scroll_bar = NodePath("../../../../../CamScrollBar")
 subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
-pic_file = "res://Assets/UI/Camera/Photo12.png"
+pic_file = "res://Open Files/Downsized/2024_02_17_Horizon_74_of_82.jpg"
 
 [node name="Photo3" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row1" index="3" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1314,7 +1296,7 @@ cam_scroll_bar = NodePath("../../../../../CamScrollBar")
 subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
-pic_file = "res://Assets/UI/Camera/Photo3.png"
+pic_file = "res://Open Files/Downsized/2024_02_25_ICCA_SoundCheck_16_of_29.jpg"
 
 [node name="Photo17" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row2" index="0" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1323,7 +1305,7 @@ cam_scroll_bar = NodePath("../../../../../CamScrollBar")
 subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
-pic_file = "res://Assets/UI/Camera/Photo17.png"
+pic_file = "res://Open Files/Downsized/2024_02_25_ICCA_Canyon_Crescendos_7_of_30.jpg"
 
 [node name="Photo4" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row2" index="1" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1332,7 +1314,7 @@ cam_scroll_bar = NodePath("../../../../../CamScrollBar")
 subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
-pic_file = "res://Assets/UI/Camera/Photo4.png"
+pic_file = "res://Open Files/Downsized/2024_02_25_ICCA_SoundWave_38_of_38.jpg"
 
 [node name="Photo13" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row2" index="2" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1341,7 +1323,7 @@ cam_scroll_bar = NodePath("../../../../../CamScrollBar")
 subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
-pic_file = "res://Assets/UI/Camera/Photo13.png"
+pic_file = "res://Open Files/Downsized/Suncave2.jpg"
 
 [node name="Photo5" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row3" index="0" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1350,7 +1332,7 @@ cam_scroll_bar = NodePath("../../../../../CamScrollBar")
 subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
-pic_file = "res://Assets/UI/Camera/Photo5.png"
+pic_file = "res://Open Files/Downsized/2023_07_10_Insta_phots_11_of_30.jpg"
 
 [node name="Photo6" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row3" index="1" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1359,7 +1341,7 @@ cam_scroll_bar = NodePath("../../../../../CamScrollBar")
 subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
-pic_file = "res://Assets/UI/Camera/Photo6.png"
+pic_file = "res://Open Files/Downsized/2023_06_10_Isa_Photoshoot_20_of_114.jpg"
 
 [node name="Photo16" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row3" index="2" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1368,7 +1350,7 @@ cam_scroll_bar = NodePath("../../../../../CamScrollBar")
 subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
-pic_file = "res://Assets/UI/Camera/Photo16.png"
+pic_file = "res://Open Files/Downsized/IDEAS_fusion.jpg"
 
 [node name="Photo7" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row3" index="3" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1377,7 +1359,7 @@ cam_scroll_bar = NodePath("../../../../../CamScrollBar")
 subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
-pic_file = "res://Assets/UI/Camera/Photo7.png"
+pic_file = "res://Open Files/Downsized/2022_11_26_Winter_10_of_80.jpg"
 
 [node name="Photo8" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row4" index="0" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1386,7 +1368,7 @@ cam_scroll_bar = NodePath("../../../../../CamScrollBar")
 subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
-pic_file = "res://Assets/UI/Camera/Photo8.png"
+pic_file = "res://Open Files/Downsized/2023_06_15_Trebles_Grad_Photoshoot_30_of_113.jpg"
 
 [node name="Photo15" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row4" index="1" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1395,7 +1377,7 @@ cam_scroll_bar = NodePath("../../../../../CamScrollBar")
 subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
-pic_file = "res://Assets/UI/Camera/Photo15.png"
+pic_file = "res://Open Files/Downsized/Suncave1.jpg"
 
 [node name="Photo9" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row4" index="2" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1404,7 +1386,7 @@ cam_scroll_bar = NodePath("../../../../../CamScrollBar")
 subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
-pic_file = "res://Assets/UI/Camera/Photo9.png"
+pic_file = "res://Open Files/Downsized/2022_11_26_Winter_7_of_80.jpg"
 
 [node name="Photo11" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row4" index="3" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1413,7 +1395,7 @@ cam_scroll_bar = NodePath("../../../../../CamScrollBar")
 subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
-pic_file = "res://Assets/UI/Camera/Photo11.png"
+pic_file = "res://Open Files/Downsized/2023_07_10_Insta_phots_26_of_30.jpg"
 
 [node name="Photo10" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row5" index="0" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1422,7 +1404,7 @@ cam_scroll_bar = NodePath("../../../../../CamScrollBar")
 subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
-pic_file = "res://Assets/UI/Camera/Photo10.png"
+pic_file = "res://Open Files/Downsized/2023_06_15_Trebles_Grad_Photoshoot_82_of_113.jpg"
 
 [node name="Photo14" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row5" index="1" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1431,7 +1413,7 @@ cam_scroll_bar = NodePath("../../../../../CamScrollBar")
 subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
-pic_file = "res://Assets/UI/Camera/Photo14.png"
+pic_file = "res://Open Files/Downsized/2022_11_26_Winter_5_of_80.jpg"
 
 [node name="Photo19" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row5" index="2" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1440,7 +1422,7 @@ cam_scroll_bar = NodePath("../../../../../CamScrollBar")
 subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
-pic_file = "res://Assets/UI/Camera/Photo19.png"
+pic_file = "res://Open Files/Downsized/2023_07_10_Insta_phots_3_of_30_1.jpg"
 
 [node name="Photo20" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row6" index="0" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1449,7 +1431,7 @@ cam_scroll_bar = NodePath("../../../../../CamScrollBar")
 subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
-pic_file = "res://Assets/UI/Camera/Photo20.png"
+pic_file = "res://Open Files/Downsized/2023_07_10_Insta_phots_14_of_30.jpg"
 
 [node name="Photo18" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row6" index="1" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1458,7 +1440,7 @@ cam_scroll_bar = NodePath("../../../../../CamScrollBar")
 subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
-pic_file = "res://Assets/UI/Camera/Photo18.png"
+pic_file = "res://Open Files/Downsized/2023_06_10_Isa_Photoshoot_41_of_114.jpg"
 
 [node name="CamScrollBar" type="VScrollBar" parent="Buttons" node_paths=PackedStringArray("scroll_container")]
 unique_name_in_owner = true
@@ -2167,12 +2149,6 @@ padding_y_bott = 40
 [connection signal="send_pic_file" from="Buttons/PixelArt14" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
 [connection signal="set_hover" from="Buttons/PixelArt14" to="Buttons/TimeLine" method="set_on_hover"]
 [connection signal="set_link" from="Buttons/PixelArt14" to="Buttons/Subwindow title" method="_on_set_link"]
-[connection signal="mouse_entered" from="Buttons/PixelArt15" to="Buttons/PixelArt15" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Buttons/PixelArt15" to="Buttons/PixelArt15" method="_on_mouse_exited"]
-[connection signal="pressed" from="Buttons/PixelArt15" to="Buttons/PixelArt15" method="_on_pressed"]
-[connection signal="send_pic_file" from="Buttons/PixelArt15" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
-[connection signal="set_hover" from="Buttons/PixelArt15" to="Buttons/TimeLine" method="set_on_hover"]
-[connection signal="set_link" from="Buttons/PixelArt15" to="Buttons/Subwindow title" method="_on_set_link"]
 [connection signal="mouse_entered" from="Buttons/PixelArt16" to="Buttons/PixelArt16" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Buttons/PixelArt16" to="Buttons/PixelArt16" method="_on_mouse_exited"]
 [connection signal="pressed" from="Buttons/PixelArt16" to="Buttons/PixelArt16" method="_on_pressed"]
@@ -2233,54 +2209,96 @@ padding_y_bott = 40
 [connection signal="send_pic_file" from="Buttons/TradArt3" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
 [connection signal="set_hover" from="Buttons/TradArt3" to="Buttons/TimeLine" method="set_on_hover"]
 [connection signal="set_link" from="Buttons/TradArt3" to="Buttons/Subwindow title" method="_on_set_link"]
+[connection signal="mouse_entered" from="Buttons/Looky Back" to="Buttons/Looky Back" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/Looky Back" to="Buttons/PlaceImage" method="_on_back_pressed"]
 [connection signal="pressed" from="Buttons/Looky Back" to="Buttons/PixelArt1" method="_on_back_pressed"]
 [connection signal="pressed" from="Buttons/Looky Back" to="Buttons/PixelArt2" method="_on_back_pressed"]
 [connection signal="pressed" from="Buttons/Looky Back" to="Buttons/PixelArt3" method="_on_back_pressed"]
 [connection signal="pressed" from="Buttons/Looky Back" to="Buttons/DigiArt1" method="_on_back_pressed"]
+[connection signal="mouse_entered" from="Buttons/Cam Back" to="Buttons/Cam Back" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/Cam Back" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo1" method="_on_cam_back_pressed"]
 [connection signal="set_scroll" from="Buttons/CamScroll" to="Buttons/CamScrollBar" method="_on_set_scroll"]
 [connection signal="resized" from="Buttons/CamScroll/VBoxContainer" to="Buttons/CamScroll" method="_on_container_resized"]
+[connection signal="mouse_entered" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo1" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo1" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo1" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo1" method="_on_pressed"]
 [connection signal="send_pic_file" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo1" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
+[connection signal="set_link" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo1" to="Buttons/Subwindow title" method="_on_set_link"]
+[connection signal="mouse_entered" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo2" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo2" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo2" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo2" method="_on_pressed"]
 [connection signal="send_pic_file" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo2" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
+[connection signal="set_link" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo2" to="Buttons/Subwindow title" method="_on_set_link"]
+[connection signal="mouse_entered" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo12" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo12" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo12" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo12" method="_on_pressed"]
 [connection signal="send_pic_file" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo12" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
+[connection signal="set_link" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo12" to="Buttons/Subwindow title" method="_on_set_link"]
+[connection signal="mouse_entered" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo3" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo3" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo3" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo3" method="_on_pressed"]
 [connection signal="send_pic_file" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo3" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
+[connection signal="set_link" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row1/Photo3" to="Buttons/Subwindow title" method="_on_set_link"]
+[connection signal="mouse_entered" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row2/Photo17" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row2/Photo17" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row2/Photo17" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row2/Photo17" method="_on_pressed"]
 [connection signal="send_pic_file" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row2/Photo17" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
+[connection signal="set_link" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row2/Photo17" to="Buttons/Subwindow title" method="_on_set_link"]
+[connection signal="mouse_entered" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row2/Photo4" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row2/Photo4" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row2/Photo4" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row2/Photo4" method="_on_pressed"]
 [connection signal="send_pic_file" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row2/Photo4" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
+[connection signal="set_link" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row2/Photo4" to="Buttons/Subwindow title" method="_on_set_link"]
+[connection signal="mouse_entered" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row2/Photo13" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row2/Photo13" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row2/Photo13" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row2/Photo13" method="_on_pressed"]
 [connection signal="send_pic_file" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row2/Photo13" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
+[connection signal="set_link" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row2/Photo13" to="Buttons/Subwindow title" method="_on_set_link"]
+[connection signal="mouse_entered" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo5" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo5" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo5" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo5" method="_on_pressed"]
 [connection signal="send_pic_file" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo5" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
+[connection signal="set_link" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo5" to="Buttons/Subwindow title" method="_on_set_link"]
+[connection signal="mouse_entered" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo6" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo6" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo6" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo6" method="_on_pressed"]
 [connection signal="send_pic_file" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo6" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
+[connection signal="set_link" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo6" to="Buttons/Subwindow title" method="_on_set_link"]
+[connection signal="mouse_entered" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo16" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo16" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo16" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo16" method="_on_pressed"]
 [connection signal="send_pic_file" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo16" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
+[connection signal="set_link" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo16" to="Buttons/Subwindow title" method="_on_set_link"]
+[connection signal="mouse_entered" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo7" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo7" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo7" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo7" method="_on_pressed"]
 [connection signal="send_pic_file" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo7" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
+[connection signal="set_link" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row3/Photo7" to="Buttons/Subwindow title" method="_on_set_link"]
+[connection signal="mouse_entered" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo8" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo8" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo8" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo8" method="_on_pressed"]
 [connection signal="send_pic_file" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo8" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
+[connection signal="set_link" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo8" to="Buttons/Subwindow title" method="_on_set_link"]
+[connection signal="mouse_entered" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo15" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo15" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo15" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo15" method="_on_pressed"]
 [connection signal="send_pic_file" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo15" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
+[connection signal="set_link" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo15" to="Buttons/Subwindow title" method="_on_set_link"]
+[connection signal="mouse_entered" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo9" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo9" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo9" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo9" method="_on_pressed"]
 [connection signal="send_pic_file" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo9" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
+[connection signal="set_link" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo9" to="Buttons/Subwindow title" method="_on_set_link"]
+[connection signal="mouse_entered" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo11" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo11" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo11" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo11" method="_on_pressed"]
 [connection signal="send_pic_file" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo11" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
+[connection signal="set_link" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row4/Photo11" to="Buttons/Subwindow title" method="_on_set_link"]
+[connection signal="mouse_entered" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row5/Photo10" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row5/Photo10" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row5/Photo10" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row5/Photo10" method="_on_pressed"]
 [connection signal="send_pic_file" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row5/Photo10" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
+[connection signal="set_link" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row5/Photo10" to="Buttons/Subwindow title" method="_on_set_link"]
+[connection signal="mouse_entered" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row5/Photo14" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row5/Photo14" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row5/Photo14" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row5/Photo14" method="_on_pressed"]
 [connection signal="send_pic_file" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row5/Photo14" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
+[connection signal="set_link" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row5/Photo14" to="Buttons/Subwindow title" method="_on_set_link"]
+[connection signal="mouse_entered" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row5/Photo19" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row5/Photo19" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row5/Photo19" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row5/Photo19" method="_on_pressed"]
 [connection signal="send_pic_file" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row5/Photo19" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
+[connection signal="set_link" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row5/Photo19" to="Buttons/Subwindow title" method="_on_set_link"]
+[connection signal="mouse_entered" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row6/Photo20" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row6/Photo20" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row6/Photo20" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row6/Photo20" method="_on_pressed"]
 [connection signal="send_pic_file" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row6/Photo20" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
+[connection signal="set_link" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row6/Photo20" to="Buttons/Subwindow title" method="_on_set_link"]
+[connection signal="mouse_entered" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row6/Photo18" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row6/Photo18" method="_on_mouse_entered"]
 [connection signal="pressed" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row6/Photo18" to="Buttons/CamScroll/VBoxContainer/CamGallery/Row6/Photo18" method="_on_pressed"]
 [connection signal="send_pic_file" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row6/Photo18" to="Buttons/PlaceImage" method="_on_recieve_pic_file"]
+[connection signal="set_link" from="Buttons/CamScroll/VBoxContainer/CamGallery/Row6/Photo18" to="Buttons/Subwindow title" method="_on_set_link"]
 [connection signal="value_changed" from="Buttons/CamScrollBar" to="Buttons/CamScrollBar" method="_on_value_changed"]
 [connection signal="set_scroll" from="Bios" to="Bios/VScrollBar" method="_on_set_scroll"]
 [connection signal="resized" from="Bios/ScrollContainer/Container" to="Bios" method="_on_container_resized"]
