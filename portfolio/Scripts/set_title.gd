@@ -48,10 +48,7 @@ func _on_panel_top_right(dimes):
 
 func _on_meta_clicked(meta):
 	ButtonsSound.clicked()
-	if FileAccess.file_exists(meta):
-		OS.shell_open(ProjectSettings.globalize_path(meta))
-		return
-	print_debug("File doesn't exist")
+	OS.shell_open(meta)
 	return
 
 func _on_meta_hover_started(meta):

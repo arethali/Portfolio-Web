@@ -802,6 +802,7 @@ time_label = NodePath("../TimeLine")
 title = "One Last Day"
 time = "WIP"
 pic_file = "res://Open Files/Art/One_Last_Day.png"
+pic_link = "https://www.dropbox.com/scl/fi/fbh94hewnkncrglk2w1gb/One-Last-Day.png?rlkey=x8n8wb4tn8zzs7sl8p1x76tvn&st=tf0zc7iy&dl=0"
 
 [node name="PixelArt2" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -820,6 +821,7 @@ time_label = NodePath("../TimeLine")
 title = "Salvation"
 time = "WIP"
 pic_file = "res://Open Files/Art/Salvation.png"
+pic_link = "https://www.dropbox.com/scl/fi/h6aqj3xeog4gzuydbqb0i/Salvation.png?rlkey=yov7lgg7szowcw0hg5xadnhtz&st=l2r8jlsp&dl=0"
 
 [node name="PixelArt3" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -841,6 +843,7 @@ time_label = NodePath("../TimeLine")
 title = "A Brief Reunion"
 time = "6/7/2025"
 pic_file = "res://Open Files/Art/A_brief_reunion.gif"
+pic_link = "https://drive.google.com/open?id=1Yi0i3iQfMBAw2vJIqjuntfmuMUBzFIKD&usp=drive_copy"
 
 [node name="PixelArt4" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -859,6 +862,7 @@ time_label = NodePath("../TimeLine")
 title = "Outer Wilds"
 time = "10/10/2024"
 pic_file = "res://Open Files/Art/Pixel poster.png"
+pic_link = "https://www.dropbox.com/scl/fi/vdasvgvno8c5z8zdnnnqo/Outer-Wilds-Pixel.png?rlkey=i36uhj4fod5u0yytp0yn3ricj&st=cambmhnh&dl=0"
 
 [node name="PixelArt5" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -877,6 +881,7 @@ time_label = NodePath("../TimeLine")
 title = "The Case of Arcadia Springs"
 time = "9/29/2025"
 pic_file = "res://Open Files/Art/TCOAS Header.png"
+pic_link = "https://www.dropbox.com/scl/fi/h9fahebw696hjhoc9ytm0/The-Case-of-Arcadia-Springs.png?rlkey=bnicvbfqxlw2zphpnr4fpxttc&st=7roontvc&dl=0"
 
 [node name="PixelArt6" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -898,6 +903,7 @@ time_label = NodePath("../TimeLine")
 title = "Detectives Driving"
 time = "11/29/2024"
 pic_file = "res://Open Files/Art/driving.gif"
+pic_link = "https://drive.google.com/open?id=1EAlcKG9Kfu15c6bu3-j_kGWbXsEMQcrt&usp=drive_copy"
 
 [node name="PixelArt7" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -916,6 +922,7 @@ time_label = NodePath("../TimeLine")
 title = "Punisher"
 time = "10/31/2024"
 pic_file = "res://Open Files/Art/Punisher.png"
+pic_link = "https://www.dropbox.com/scl/fi/ctxbg0144me3i58dimmig/Punisher.png?rlkey=1sovpkzvs3qcyjknoev54hbgk&st=xnswuhd8&dl=0"
 
 [node name="PixelArt10" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -934,6 +941,7 @@ time_label = NodePath("../TimeLine")
 title = "Small Sierra"
 time = "3/14/2025"
 pic_file = "res://Open Files/Art/SmallSierra.png"
+pic_link = "https://www.dropbox.com/scl/fi/773ef5uglqqbluita9frv/Small-Sierra.png?rlkey=nowujxdwarb1ffwyn2t3sbc52&st=z60uk59b&dl=0"
 
 [node name="PixelArt11" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -952,6 +960,7 @@ time_label = NodePath("../TimeLine")
 title = "Hartley’s Hearty Cafe and Eatery"
 time = "10/16/2024"
 pic_file = "res://Open Files/Art/Hartley’s Hearty Cafe and Eatery.png"
+pic_link = "https://www.dropbox.com/scl/fi/u9rw9m5ju625by1zp5hum/Hartley-s-Hearty-Cafe-and-Eatery.png?rlkey=soepvac2o16oxc891dmy4c582&st=929jictj&dl=0"
 
 [node name="PixelArt12" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -970,6 +979,7 @@ time_label = NodePath("../TimeLine")
 title = "Welcome to Lodbus"
 time = "09/30/2024"
 pic_file = "res://Open Files/Art/Welcome to Lodbus.png"
+pic_link = "https://www.dropbox.com/scl/fi/eyqz5h3jkie41ntit75er/Welcome-to-Lodbus.png?rlkey=dhnqqekkvsyh3jp4hejpcl6ie&st=6vgxekm7&dl=0"
 
 [node name="PixelArt13" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -988,6 +998,7 @@ time_label = NodePath("../TimeLine")
 title = "A Broke Raccoon's Affirmation"
 time = "09/05/2025"
 pic_file = "res://Open Files/Art/Affirmation.png"
+pic_link = "https://www.dropbox.com/scl/fi/j4g5m9kg7zq299ahcwil1/A-Broke-Raccoon-s-Affirmation.png?rlkey=we4zajd4s5uncihccyqbepq4c&st=2y84iofy&dl=0"
 
 [node name="PixelArt14" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -1006,6 +1017,7 @@ time_label = NodePath("../TimeLine")
 title = "Of Mice and Toilets"
 time = "02/03/2025"
 pic_file = "res://Open Files/Art/Of Mice and Toilets.png"
+pic_link = "https://www.dropbox.com/scl/fi/e9i3q862qiaf9fnksdnqa/Of-Mice-and-Toilets.png?rlkey=rhrmxgk8urjr6f9kxr9b38zp5&st=kgk9x5gt&dl=0"
 
 [node name="PixelArt16" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -1024,6 +1036,7 @@ time_label = NodePath("../TimeLine")
 title = "Untethered"
 time = "09/22/2024"
 pic_file = "res://Open Files/Art/Untethered.png"
+pic_link = "https://www.dropbox.com/scl/fi/e3e8wb7eizvgl1duudamd/Untethered.png?rlkey=jibswg67wosb19tor3se8m2u8&st=p46bhq3a&dl=0"
 
 [node name="PixelArt17" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -1042,6 +1055,7 @@ time_label = NodePath("../TimeLine")
 title = "Micah's Rage"
 time = "09/19/2024"
 pic_file = "res://Open Files/Art/Micah Rage.png"
+pic_link = "https://www.dropbox.com/scl/fi/1hobllsyp5rnpmn6tmuzf/Micah-s-Rage.png?rlkey=pry0cer3hkm0l7c4olfags0lw&st=cphfnocy&dl=0"
 
 [node name="PixelArt8" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -1063,6 +1077,7 @@ time_label = NodePath("../TimeLine")
 title = "ILYSFM"
 time = "10/27/2024"
 pic_file = "res://Open Files/Art/ILYSFM Poster.gif"
+pic_link = "https://drive.google.com/open?id=1Yi0i3iQfMBAw2vJIqjuntfmuMUBzFIKD&usp=drive_copy"
 
 [node name="PixelArt9" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -1084,6 +1099,7 @@ time_label = NodePath("../TimeLine")
 title = "Theia Luna"
 time = "08/24/2024"
 pic_file = "res://Open Files/Art/Theia_Luna.gif"
+pic_link = "https://drive.google.com/open?id=1P81afpLBLMhZxysrGziANXdagfyNV0Jo&usp=drive_copy"
 
 [node name="DigiArt1" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -1102,6 +1118,7 @@ time_label = NodePath("../TimeLine")
 title = "Where Our Blue Is"
 time = "1/11/2024"
 pic_file = "res://Open Files/Art/WOBI.png"
+pic_link = "https://www.dropbox.com/scl/fi/vblrppqgfxiwut3n4qpz2/Where-Our-Blue-Is.png?rlkey=sjmrc4q5p0rnq6kmkhikclydk&st=upldgngf&dl=0"
 
 [node name="DigiArt2" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -1120,6 +1137,7 @@ time_label = NodePath("../TimeLine")
 title = "Outer Wilds"
 time = "2/21/2024"
 pic_file = "res://Open Files/Art/Digi poster.png"
+pic_link = "https://www.dropbox.com/scl/fi/fdk7a82sk9q66e0dhzy8y/Outer-Wilds-Digital.png?rlkey=f9eizsevx4u3fgdaod5er9kdr&st=fnvlc4hf&dl=0"
 
 [node name="TradArt1" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -1138,6 +1156,7 @@ time_label = NodePath("../TimeLine")
 title = "The Last Tomorrow"
 time = "9/5/2023"
 pic_file = "res://Open Files/Art/2025_11_12_trigun-07548.jpg"
+pic_link = "https://www.dropbox.com/scl/fi/uq53v4eshmgn09u3arkpy/The-Last-Tomorrow.jpg?rlkey=u60bgnwgmnm48o91y38cci7u7&st=x5j3a0ko&dl=0"
 
 [node name="DigiArt3" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -1156,6 +1175,7 @@ time_label = NodePath("../TimeLine")
 title = "Dead on Arrival"
 time = "2/21/2024"
 pic_file = "res://Open Files/Art/Dead on Arrival.png"
+pic_link = "https://www.dropbox.com/scl/fi/eo9rq9iwhb2n0quz8jlfn/Dead-on-Arrival.png?rlkey=6hn9niyj2bm82asl83ruuchvs&st=ep26qa3e&dl=0"
 
 [node name="TradArt2" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -1174,6 +1194,7 @@ time_label = NodePath("../TimeLine")
 title = "Photographs and Butterflies"
 time = "09/13/2023"
 pic_file = "res://Open Files/Art/2025_11_12_Link_click-07655.jpg"
+pic_link = "https://www.dropbox.com/scl/fi/anahwutqenzy1j5cfe8qe/Photographs-and-Butterflies.jpg?rlkey=rqcbzr45oxg8e7czsnj6824tx&st=a5wbuljl&dl=0"
 
 [node name="TradArt3" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("title_label", "time_label")]
 visible = false
@@ -1192,6 +1213,7 @@ time_label = NodePath("../TimeLine")
 title = "Le Petite Yuuji"
 time = "01/03/2024"
 pic_file = "res://Open Files/Art/2025_11_12_Port_pic-07567.jpg"
+pic_link = "https://www.dropbox.com/scl/fi/kfv61djjryjmhfmrqihlu/Le-Petite-Yuuji.jpg?rlkey=zhe84fv5gso6lm1kzukiz6eta&st=twvtzjyd&dl=0"
 
 [node name="Contact_Mail" type="TextureButton" parent="Buttons" node_paths=PackedStringArray("body_label")]
 visible = false
@@ -1323,6 +1345,7 @@ subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
 pic_file = "res://Open Files/Downsized/2024_02_17_Horizon_26_of_82.jpg"
+pic_link = "https://www.dropbox.com/scl/fi/bj5e23y2j74wz5d737w65/2024_02_17_Horizon_26_of_82.jpg?rlkey=0o61xo90fnvr1u1s9r3f2rvqp&st=h804oqax&dl=0"
 
 [node name="Photo2" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row1" index="1" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1332,6 +1355,7 @@ subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
 pic_file = "res://Open Files/Downsized/2024_02_17_Horizon_43_of_82.jpg"
+pic_link = "https://www.dropbox.com/scl/fi/8flbghfydw0353509n2de/2024_02_17_Horizon_43_of_82.jpg?rlkey=m1pblbmulwg9eduikc9s3ujo8&st=zeymadip&dl=0"
 
 [node name="Photo12" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row1" index="2" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1341,6 +1365,7 @@ subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
 pic_file = "res://Open Files/Downsized/2024_02_17_Horizon_74_of_82.jpg"
+pic_link = "https://www.dropbox.com/scl/fi/18a175b4u3zix8souexrb/2024_02_17_Horizon_74_of_82.jpg?rlkey=bor6e212soql861qlky65hmt1&st=s9hw5bz6&dl=0"
 
 [node name="Photo3" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row1" index="3" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1350,6 +1375,7 @@ subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
 pic_file = "res://Open Files/Downsized/2024_02_25_ICCA_SoundCheck_16_of_29.jpg"
+pic_link = "https://www.dropbox.com/scl/fi/3phh7cxg7w1c5inohnoxb/2024_02_25_ICCA_SoundCheck_16_of_29.jpg?rlkey=59v6u7rgqmi9i32us4n20z9t5&st=9zr1t6x1&dl=0"
 
 [node name="Photo17" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row2" index="0" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1359,6 +1385,7 @@ subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
 pic_file = "res://Open Files/Downsized/2024_02_25_ICCA_Canyon_Crescendos_7_of_30.jpg"
+pic_link = "https://www.dropbox.com/scl/fi/oeurm8jpxmf1mrudozzhh/2024_02_25_ICCA_Canyon_Crescendos_7_of_30.jpg?rlkey=gy82wjoktza2kjtlcx1ihq5t8&st=111m920f&dl=0"
 
 [node name="Photo4" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row2" index="1" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1368,6 +1395,7 @@ subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
 pic_file = "res://Open Files/Downsized/2024_02_25_ICCA_SoundWave_38_of_38.jpg"
+pic_link = "https://www.dropbox.com/scl/fi/g9jcr6hbl2l1ie43qoamo/2024_02_25_ICCA_SoundWave_38_of_38.jpg?rlkey=j5luqbf2gx65jgbobl6osm0nz&st=jp8002es&dl=0"
 
 [node name="Photo13" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row2" index="2" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1377,6 +1405,7 @@ subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
 pic_file = "res://Open Files/Downsized/Suncave2.jpg"
+pic_link = "https://www.dropbox.com/scl/fi/8m7ug9midrsl30y1ax8oj/Suncave2.jpg?rlkey=eykkaxv4jdyxl6f55k9cpelf3&st=azsvd1jl&dl=0"
 
 [node name="Photo5" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row3" index="0" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1386,6 +1415,7 @@ subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
 pic_file = "res://Open Files/Downsized/2023_07_10_Insta_phots_11_of_30.jpg"
+pic_link = "https://www.dropbox.com/scl/fi/0hs6fqa43scdphf8a3nhx/2023_07_10_Insta_phots_11_of_30.jpg?rlkey=pahruxf02mss7zwg8z6wcts46&st=6md4kt7n&dl=0"
 
 [node name="Photo6" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row3" index="1" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1395,6 +1425,7 @@ subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
 pic_file = "res://Open Files/Downsized/2023_06_10_Isa_Photoshoot_20_of_114.jpg"
+pic_link = "https://www.dropbox.com/scl/fi/7ogv7f4iwr0qm3bcul8xx/2023_06_10_Isa_Photoshoot_20_of_114.jpg?rlkey=rs4gc8xotjnzbfgqrlexe4ya9&st=e0hmju3z&dl=0"
 
 [node name="Photo16" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row3" index="2" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1404,6 +1435,7 @@ subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
 pic_file = "res://Open Files/Downsized/IDEAS_fusion.jpg"
+pic_link = "https://www.dropbox.com/scl/fi/tl6t6c5exmyimdsfqk6rq/IDEAS_fusion.jpg?rlkey=g0ft4yajgczc3y5u6pu9ibps1&st=l63utker&dl=0"
 
 [node name="Photo7" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row3" index="3" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1413,6 +1445,7 @@ subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
 pic_file = "res://Open Files/Downsized/2022_11_26_Winter_10_of_80.jpg"
+pic_link = "https://www.dropbox.com/scl/fi/pzlv0keti5sm16d71alzp/2022_11_26_Winter_10_of_80.jpg?rlkey=3jto97tg9cr99bj7gz0ek9tq9&st=g3gtx10w&dl=0"
 
 [node name="Photo8" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row4" index="0" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1422,6 +1455,7 @@ subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
 pic_file = "res://Open Files/Downsized/2023_06_15_Trebles_Grad_Photoshoot_30_of_113.jpg"
+pic_link = "https://www.dropbox.com/scl/fi/mjgbgo34crkq4uzg5zx8i/2023_06_15_Trebles_Grad_Photoshoot_30_of_113.jpg?rlkey=tvdl2s2toxapk99ecx5ltaft3&st=3fij2dr8&dl=0"
 
 [node name="Photo15" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row4" index="1" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1431,6 +1465,7 @@ subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
 pic_file = "res://Open Files/Downsized/Suncave1.jpg"
+pic_link = "https://www.dropbox.com/scl/fi/8ulv3zt40gu6lc750mv5v/Suncave1.jpg?rlkey=6wc013hkqyvw2133r76jicrj8&st=5xl0xx38&dl=0"
 
 [node name="Photo9" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row4" index="2" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1440,6 +1475,7 @@ subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
 pic_file = "res://Open Files/Downsized/2022_11_26_Winter_7_of_80.jpg"
+pic_link = "https://www.dropbox.com/scl/fi/uc1vbaneq8vgp2jt6yu38/2022_11_26_Winter_7_of_80.jpg?rlkey=1dyv520f5yk1eadvrg54o3si1&st=5b3yqzdy&dl=0"
 
 [node name="Photo11" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row4" index="3" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1449,6 +1485,7 @@ subwindow_title = NodePath("../../../../../Subwindow title")
 place_image = NodePath("../../../../../PlaceImage")
 looky_back = NodePath("../../../../../Cam Back")
 pic_file = "res://Open Files/Downsized/2023_07_10_Insta_phots_26_of_30.jpg"
+pic_link = "https://www.dropbox.com/scl/fi/hss2kbdb9vk0tho8iyfdj/2023_07_10_Insta_phots_26_of_30.jpg?rlkey=rx5wzwrh3ni61osl35y8kvbde&st=pfjqef5u&dl=0"
 
 [node name="Photo10" parent="Buttons/CamScroll/VBoxContainer/CamGallery/Row5" index="0" node_paths=PackedStringArray("cam_scroll", "cam_scroll_bar", "subwindow_title", "place_image", "looky_back")]
 mouse_default_cursor_shape = 2
@@ -1729,7 +1766,7 @@ theme_override_fonts/bold_font = ExtResource("11_sp3od")
 theme_override_font_sizes/normal_font_size = 40
 theme_override_font_sizes/bold_font_size = 40
 bbcode_enabled = true
-text = "[url=res://Open Files/Aretha Li, Resume.pdf]Click to view PDF version[/url]"
+text = "[url=https://www.dropbox.com/scl/fi/2frezewshnsyy6br6s91u/Aretha-Li-Resume.pdf?rlkey=cxqb0mnjqp7jfytdjeevb5g83&st=319r7gow&dl=0]Click to view PDF version[/url]"
 fit_content = true
 autowrap_mode = 0
 vertical_alignment = 2

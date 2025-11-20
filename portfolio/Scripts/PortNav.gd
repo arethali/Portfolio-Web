@@ -47,7 +47,8 @@ func _on_window_size_changed():
 
 #fix maximize bug(?)
 func _on_window_focus_exited():
-	_on_window_size_changed()
+	if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_MAXIMIZED:
+		_on_window_size_changed()
 
 func _on_projects_pressed():
 	ButtonsSound.clicked()

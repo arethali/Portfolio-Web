@@ -6,6 +6,7 @@ extends TextureButton
 @export var place_image : TextureRect
 @export var looky_back : TextureButton
 @export var pic_file : String
+@export var pic_link : String
 
 signal send_pic_file(file: String)
 signal set_link(file: String)
@@ -15,7 +16,7 @@ func _on_pressed():
 	_toggle_buttons(false)
 	_toggle_window(true)
 	emit_signal("send_pic_file", pic_file)
-	emit_signal("set_link", pic_file)
+	emit_signal("set_link", pic_link)
 
 func _toggle_buttons(visiblity : bool):
 	cam_scroll.visible = visiblity

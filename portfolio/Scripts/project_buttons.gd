@@ -15,6 +15,7 @@ extends TextureButton
 @export_multiline var body : String
 
 @export var pic_file : String
+@export var pic_link : String
 @export var mail : bool = false
 #hide when window
 @onready var cam_scroll = %CamScroll
@@ -73,7 +74,7 @@ func _on_pressed():
 				emit_signal("send_gif_file", frames, fps)
 			else:
 				emit_signal("send_pic_file", pic_file)
-			emit_signal("set_link", pic_file)
+			emit_signal("set_link", pic_link)
 			return
 		"Mail":
 			if link_path:

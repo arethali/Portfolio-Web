@@ -4,10 +4,7 @@ extends RichTextLabel
 @onready var click = $"."
 
 func _on_meta_clicked(meta):
-	if FileAccess.file_exists(meta):
-		OS.shell_open(ProjectSettings.globalize_path(meta))
-		return
-	print_debug("File doesn't exist")
+	OS.shell_open(meta)
 	return
 
 
