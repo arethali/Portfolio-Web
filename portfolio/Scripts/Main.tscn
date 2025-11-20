@@ -5478,6 +5478,13 @@ libraries = {
 &"": SubResource("AnimationLibrary_ib0kn")
 }
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Background"]
+offset_left = 2485.0
+offset_top = 111.0
+offset_right = 3148.0
+offset_bottom = 497.0
+theme_override_font_sizes/normal_font_size = 40
+
 [node name="Home" type="Node" parent="." node_paths=PackedStringArray("lamp_R_anim", "lamp_L_anim")]
 script = ExtResource("70_kq445")
 lamp_R_anim = NodePath("LampR/AnimationPlayer")
@@ -7901,6 +7908,11 @@ small_particles = NodePath("Smol Particles")
 home_pos = Vector2(3925, 642)
 projects_pos = Vector2(5825, 642)
 personal_pos = Vector2(1945, 642)
+
+[node name="Portrait" type="Sprite2D" parent="VFX"]
+visible = false
+position = Vector2(2913, 564)
+texture = ExtResource("369_yep5p")
 
 [node name="Dead Pixel" type="AnimatedSprite2D" parent="VFX"]
 visible = false

@@ -21,10 +21,10 @@ signal panel_offset(offset)
 func _ready():
 	#display settings
 	root_window = get_tree().root
-	DisplayServer.window_set_min_size(Vector2i(0, 480))
-	DisplayServer.window_set_max_size(Vector2i(1920, 4200))
+	#DisplayServer.window_set_min_size(Vector2i(0, 480))
+	#DisplayServer.window_set_max_size(Vector2i(1920, 4200))
 	root_window.size_changed.connect(_on_window_size_changed)
-	root_window.focus_exited.connect(_on_window_focus_exited)
+	#root_window.focus_exited.connect(_on_window_focus_exited)
 	#Set cursors
 	Input.set_custom_mouse_cursor(arrow, Input.CURSOR_ARROW, Vector2(10,10))
 	Input.set_custom_mouse_cursor(point, Input.CURSOR_POINTING_HAND, Vector2(0, 0))
@@ -35,6 +35,7 @@ func _ready():
 	print("Hello There!\nThis portfolio was inspired by Buche.dev. \nGo check it out!\nMade in Aesprite and Godot.\nHosted by GitHub Pages.")
 #
 func _on_window_size_changed():
+	await get_tree().process_frame
 	var aspect_ratio = float(get_viewport().size.x)/float(get_viewport().size.y)
 	if aspect_ratio <= 1920.0/1080.0:
 		camera.offset.y = 0
@@ -45,10 +46,8 @@ func _on_window_size_changed():
 		camera.offset.x = float(1920.0 - float(get_viewport().size.x))
 		emit_signal("panel_offset", camera.offset)
 
-#fix maximize bug(?)
-func _on_window_focus_exited():
-	if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_MAXIMIZED:
-		_on_window_size_changed()
+			
+
 
 func _on_projects_pressed():
 	ButtonsSound.clicked()

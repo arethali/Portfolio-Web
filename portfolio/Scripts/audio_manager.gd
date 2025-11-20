@@ -44,6 +44,7 @@ func _on_button_2_pressed():
 	ButtonsSound.clicked()
 
 func _on_window_size_changed():
+	await get_tree().process_frame
 	var aspect_ratio = float(get_viewport().size.x)/float(get_viewport().size.y)
 	if aspect_ratio <= 1920.0/1080.0:
 		root_window.content_scale_mode = Window.CONTENT_SCALE_MODE_CANVAS_ITEMS
